@@ -8,10 +8,7 @@ const ErrorPage = props => {
   return (
     <div className="error-page">
       <h1>An Error has occured</h1>
-      <h2>
-        Status code:
-        {statusCode}
-      </h2>
+      <h2>Status code: {statusCode}</h2>
     </div>
   )
 }
