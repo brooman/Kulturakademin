@@ -7,7 +7,7 @@ const VideoView = props => {
   let tagCounter = 0
 
   return (
-    <div className={styles.container}>
+    <div className="wrapper">
       <div>
         <h2>{title}</h2>
         <iframe title={title} width="560" height="315" src={url} />

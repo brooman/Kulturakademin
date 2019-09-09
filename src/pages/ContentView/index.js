@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 import ErrorPage from '../ErrorPage'
 
-import TextView from '../../components/TextView'
 import VideoView from '../../components/VideoView'
 import AudioView from '../../components/AudioView'
 
@@ -40,8 +39,6 @@ class ContentView extends Component {
     const { resource } = this.state
 
     switch (resource.type) {
-      case 'text':
-        return <TextView title={resource.title} content={resource.content} tags={resource.tags} />
       case 'video':
         return (
           <VideoView
