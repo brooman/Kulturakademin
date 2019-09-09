@@ -1,0 +1,12 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+
+  height: calc(100% - 70px);
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+
+  background-color: hotpink;
+}

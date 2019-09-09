@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './index.module.scss'
+import styles from './index.module.scss'
 
 /**
  * Calculate average reading time based on Words / Average "Words per Minute" reading speed
@@ -19,7 +19,7 @@ const ReadEstimate = props => {
   const { text } = props
   const time = calculateEstimate(text)
 
-  return <div className="read-estimate">{time}</div>
+  return <div className={styles.readEstimate}>{time}</div>
 }
 
 ReadEstimate.propTypes = {
