@@ -37,7 +37,11 @@ app.get('/audio/:id', (req, res) => {
     return obj.id == id
   })
 
-  res.send(resource)
+  if (resource) {
+    res.send(resource)
+  }
+
+  res.status(404).send('{}')
 })
 
 app.get('/text/:id', (req, res) => {
@@ -48,7 +52,11 @@ app.get('/text/:id', (req, res) => {
     return obj.id == id
   })
 
-  res.send(resource)
+  if (resource) {
+    res.send(resource)
+  }
+
+  res.status(404).send('{}')
 })
 
 app.get('/video/:id', (req, res) => {
@@ -59,7 +67,11 @@ app.get('/video/:id', (req, res) => {
     return obj.id == id
   })
 
-  res.send(resource)
+  if (resource) {
+    res.send(resource)
+  }
+
+  res.status(404).send('{}')
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
