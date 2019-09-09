@@ -1,26 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './index.module.scss'
-
+import styles from './index.module.scss'
 
 const VideoView = props => {
   const { title, content, url, tags } = props
   let tagCounter = 0
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <div>
         <h2>{title}</h2>
         <iframe width="560" height="315" src={url}></iframe>
         <p>{content}</p>
       </div>
 
-      <div className="tags">
+      <div className={styles.tags}>
         {tags.map(tag => {
           tagCounter += 1
 
           return (
-            <p className="tag" key={tagCounter}>
+            <p className={styles.tag} key={tagCounter}>
               {tag}
             </p>
           )
