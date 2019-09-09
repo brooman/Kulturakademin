@@ -11,7 +11,7 @@ const VideoView = props => {
     <div className="container">
       <div>
         <h2>{title}</h2>
-        <iframe width="560" height="315" src="{url}"></iframe>
+        <iframe width="560" height="315" src={url}></iframe>
         <p>{content}</p>
       </div>
 
