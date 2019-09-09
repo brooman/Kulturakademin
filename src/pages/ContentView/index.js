@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import TextView from '../../components/TextView'
+import VideoView from '../../components/VideoView'
 
 class ContentView extends Component {
   constructor({ match }) {
@@ -43,6 +44,7 @@ class ContentView extends Component {
       case 'text':
         return <TextView title={resource.title} content={resource.content} tags={resource.tags} />
       case 'video':
+        return <VideoView title={resource.title} content={resource.content} url={resource.url} tags={resource.tags} />
       case 'audio':
       default:
         return null
