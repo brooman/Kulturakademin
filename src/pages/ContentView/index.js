@@ -42,7 +42,14 @@ class ContentView extends Component {
       case 'text':
         return <TextView title={resource.title} content={resource.content} tags={resource.tags} />
       case 'video':
-        return <VideoView title={resource.title} content={resource.content} url={resource.url} tags={resource.tags} />
+        return (
+          <VideoView
+            title={resource.title}
+            content={resource.content}
+            url={resource.url}
+            tags={resource.tags}
+          />
+        )
       case 'audio':
       default:
         return <ErrorPage statusCode="404" />
