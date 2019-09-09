@@ -23,8 +23,6 @@ class ContentView extends Component {
   fetchContent(resourceType, resourceId) {
     const endpoint = `${process.env.REACT_APP_API_URL}/${resourceType}/${resourceId}`
 
-    console.log(endpoint)
-
     fetch(endpoint)
       .then(res => res.json())
       .then(json => {
@@ -36,8 +34,6 @@ class ContentView extends Component {
 
   render() {
     const { resource } = this.state
-
-    console.log(resource)
 
     switch (resource.type) {
       case 'text':
