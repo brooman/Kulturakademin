@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './index.module.scss'
+import styles from './index.module.scss'
 
 import ReadEstimate from '../ReadEstimate'
 
@@ -9,7 +9,7 @@ const TextView = props => {
   let tagCounter = 0
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <div>
         <h2>{title}</h2>
         <ReadEstimate text={content} />
@@ -17,12 +17,12 @@ const TextView = props => {
 
       <article>{content}</article>
 
-      <div className="tags">
+      <div className={styles.tags}>
         {tags.map(tag => {
           tagCounter += 1
 
           return (
-            <p className="tag" key={tagCounter}>
+            <p className={styles.tag} key={tagCounter}>
               {tag}
             </p>
           )
