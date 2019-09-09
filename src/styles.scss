@@ -24,16 +24,24 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  position: sticky;
+  position: absolute;
   top: 0;
 
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
 
   width: 100%;
   height: $headerHeight;
 
   color: $defaultWhite;
-  background-color: $defaultBackground;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  margin-top: $headerHeight;
 }
 
 .logo {
@@ -44,9 +52,4 @@ header {
   color: $defaultWhite;
   font-weight: 300;
   font-size: 16px;
-}
-
-.content {
-  margin-top: $headerHeight;
-  padding: 1rem;
 }
