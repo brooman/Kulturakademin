@@ -4,6 +4,7 @@ import ErrorPage from '../ErrorPage'
 
 import TextView from '../../components/TextView'
 import VideoView from '../../components/VideoView'
+import AudioView from '../../components/AudioView'
 
 class ContentView extends Component {
   constructor({ match }) {
@@ -51,6 +52,14 @@ class ContentView extends Component {
           />
         )
       case 'audio':
+        return (
+          <AudioView
+            title={resource.title}
+            content={resource.content}
+            trackingId={resource.trackingId}
+            tags={resource.tags}
+          />
+        )
       default:
         return <ErrorPage statusCode="404" />
     }
