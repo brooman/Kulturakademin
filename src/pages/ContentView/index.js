@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import ErrorPage from '../ErrorPage'
+
 import TextView from '../../components/TextView'
 import VideoView from '../../components/VideoView'
 
@@ -43,7 +45,7 @@ class ContentView extends Component {
         return <VideoView title={resource.title} content={resource.content} url={resource.url} tags={resource.tags} />
       case 'audio':
       default:
-        return null
+        return <ErrorPage statusCode="404" />
     }
   }
 }
