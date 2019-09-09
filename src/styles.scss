@@ -1,1 +1,52 @@
 @import 'variables.scss';
+@import 'util.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  padding: 0;
+
+  width: 100vw;
+  min-height: 100vh;
+
+  color: $defaultWhite;
+  background-color: $defaultBackground;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+
+  padding: 0.5rem 1rem;
+
+  width: 100%;
+  height: $headerHeight;
+
+  color: $defaultWhite;
+  background-color: $defaultBackground;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.filter-btn {
+  color: $defaultWhite;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.content {
+  margin-top: $headerHeight;
+  padding: 1rem;
+}

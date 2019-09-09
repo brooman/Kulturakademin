@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './index.module.scss'
+import styles from './index.module.scss'
 
 const ErrorPage = props => {
   const { statusCode } = props
 
   return (
-    <div className="error-page">
+    <div className={styles.errorPage}>
       <h1>An Error has occured</h1>
       <h2>
         Status code:
