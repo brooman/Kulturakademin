@@ -35,7 +35,7 @@ class App extends Component {
             <Logo />
             <div className="navbar">
               <Search />
-              <button className="btn filter-btn" type="button" onClick={this.toggleMenu}>
+              <button className="btn menu-btn" type="button" onClick={this.toggleMenu}>
                 <Hamburger />
               </button>
             </div>
