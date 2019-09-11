@@ -6,6 +6,7 @@ import About from './pages/About'
 import ContentView from './pages/ContentView'
 
 import Filter from './components/Filter'
+import Discover from './pages/Discover'
 
 class App extends Component {
   constructor(props) {
@@ -40,6 +41,7 @@ class App extends Component {
 
           <div className="content">
             <Route path="/" exact component={Home} />
+            <Route path="/discover" component={Discover} />
             <Route path="/view/:type/:id" component={ContentView} />
             <Route path="/about/" component={About} />
           </div>

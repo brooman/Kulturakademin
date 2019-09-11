@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $defaultLightDark;
+}
+
+.body {
+  display: flex;
+}
+
+.listView {
+  flex-direction: column;
+}
+
+.gridView {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  align-items: stretch;
+}
