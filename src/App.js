@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import ContentView from './pages/ContentView'
+import Logo from './icons/Logo'
 
 import Menu from './components/Menu'
 
@@ -29,13 +30,13 @@ class App extends Component {
       <Router>
         <div className="App">
           <header>
+            <Logo />
             <div className="logo">K</div>
             <button className="btn filter-btn" type="button" onClick={this.toggleMenu}>
               Menu v
             </button>
             <div className="mykplay">&lt;3</div>
           </header>
-
           <Menu show={menuShown} />
 
           <div className="content">
