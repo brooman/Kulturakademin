@@ -3,41 +3,90 @@
 
 .card {
   display: flex;
-  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
 
   h3,
   p,
   a {
     color: $defaultWhite;
     text-decoration: none;
-
   }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
 }
 
 .content {
   padding: 1rem;
+  overflow: hidden;
 }
 
 .listView {
   flex-direction: row;
-  max-height: 250px;
-  width: 100%;
 
   .image {
-    height: 100%;
-    width: 250px;
+    min-width: 5rem;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .readMore {
+    position: relative;
   }
 }
 
 .gridView {
   flex-direction: column;
-  min-width: 33%;
+  min-width: 8rem;
 
   .image {
-    height: 250px;
+    height: 8rem;
     width: 100%;
   }
+
+  .description {
+    max-height: 10rem;
+    overflow: hidden;
+  }
+
+  .readMore {
+    position: absolute;
+  }
 }
+
+.readMore {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  bottom: 0;
+
+  p {
+    padding: 0 1rem;
+  }
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  color: $defaultWhite;
+  background-color: $defaultHighlight;
+}
+
 
 .dark {
   background-color: $defaultDark;

@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom'
 
 import styles from './index.module.scss'
 
-import ReadMore from '../ReadMore'
-
 const DiscoverCard = props => {
   const { order, item, displayMode } = props
-  const { id, type, title, content } = item
-  // const img = { backgroundImage: `url('${image}')` }
+  const { id, type, title, image, content } = item
+  const img = { backgroundImage: `url('images/${image}')` }
 
   const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
   const background = order % 2 === 1 ? styles.dark : styles.light
@@ -17,15 +15,16 @@ const DiscoverCard = props => {
 
   return (
     <div className={[styles.card, viewStyle, background].join(' ')}>
-      <Link to={link}>
-        <div className={styles.image} />
-      </Link>
+      <div className={styles.image} style={img} />
       <div className={styles.body}>
         <div className={styles.content}>
           <h3>{title}</h3>
-          <p>{content}</p>
+          <p className={styles.description}>{content}</p>
         </div>
-        <ReadMore />
+        <div className={styles.readMore}>
+          <p>Read more</p>
+          <div className={styles.arrow}>-&gt;</div>
+        </div>
       </div>
     </div>
   )
