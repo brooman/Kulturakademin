@@ -33,10 +33,12 @@ class App extends Component {
         <div className="App">
           <header>
             <Logo />
-            <button className="btn filter-btn" type="button" onClick={this.toggleMenu}>
-              <Hamburger />
-            </button>
-            <Search />
+            <div className="navbar">
+              <Search />
+              <button className="btn filter-btn" type="button" onClick={this.toggleMenu}>
+                <Hamburger />
+              </button>
+            </div>
           </header>
           <Menu show={menuShown} />
 
