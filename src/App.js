@@ -6,6 +6,7 @@ import About from './pages/About'
 import ContentView from './pages/ContentView'
 import Logo from './icons/Logo'
 import Hamburger from './icons/Hamburger'
+import Search from './icons/Search'
 
 import Menu from './components/Menu'
 
@@ -35,6 +36,7 @@ class App extends Component {
             <button className="btn filter-btn" type="button" onClick={this.toggleMenu}>
               <Hamburger />
             </button>
+            <Search />
           </header>
           <Menu show={menuShown} />
 
