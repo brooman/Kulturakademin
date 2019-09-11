@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import ContentView from './pages/ContentView'
 import Logo from './icons/Logo'
+import Hamburger from './icons/Hamburger'
 
 import Menu from './components/Menu'
 
@@ -31,11 +32,9 @@ class App extends Component {
         <div className="App">
           <header>
             <Logo />
-            <div className="logo">K</div>
             <button className="btn filter-btn" type="button" onClick={this.toggleMenu}>
-              Menu v
+              <Hamburger />
             </button>
-            <div className="mykplay">&lt;3</div>
           </header>
           <Menu show={menuShown} />
 
