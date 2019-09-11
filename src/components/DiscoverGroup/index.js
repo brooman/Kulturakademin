@@ -26,7 +26,7 @@ class DiscoverGroup extends Component {
     let cardCounter = 0
 
     return (
-      <div>
+      <div className={styles.group}>
         <div className={styles.header}>
           <h2>{title}</h2>
           <button type="button" onClick={this.toggleDisplayMode}>
