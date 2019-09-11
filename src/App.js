@@ -5,38 +5,38 @@ import Home from './pages/Home'
 import About from './pages/About'
 import ContentView from './pages/ContentView'
 
-import Filter from './components/Filter'
+import Menu from './components/Menu'
 
 class App extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      filterShown: false,
+      menuShown: false,
     }
   }
 
-  toggleFilter = () => {
+  toggleMenu = () => {
     this.setState(prevState => {
-      return { filterShown: !prevState.filterShown }
+      return { menuShown: !prevState.menuShown }
     })
   }
 
   render() {
-    const { filterShown } = this.state
+    const { menuShown } = this.state
 
     return (
       <Router>
         <div className="App">
           <header>
             <div className="logo">K</div>
-            <button className="btn filter-btn" type="button" onClick={this.toggleFilter}>
-              Filter v
+            <button className="btn filter-btn" type="button" onClick={this.toggleMenu}>
+              Menu v
             </button>
             <div className="mykplay">&lt;3</div>
           </header>
 
-          <Filter show={filterShown} />
+          <Menu show={menuShown} />
 
           <div className="content">
             <Route path="/" exact component={Home} />
