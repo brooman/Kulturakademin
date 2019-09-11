@@ -32,7 +32,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <header>
-            <Logo />
+            <a href="/">
+              <Logo />
+            </a>
             <div className="navbar">
               <Search />
               <button className="btn menu-btn" type="button" onClick={this.toggleMenu}>
