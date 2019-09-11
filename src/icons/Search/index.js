@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Hamburger = props => {
+const Search = props => {
   const { color } = props
 
   return (
@@ -14,12 +14,12 @@ const Hamburger = props => {
   )
 }
 
-Hamburger.propTypes = {
+Search.propTypes = {
   color: PropTypes.string,
 }
 
-Hamburger.defaultProps = {
+Search.defaultProps = {
   color: '#fff',
 }
 
-export default Hamburger
+export default Search
