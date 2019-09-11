@@ -1,0 +1,48 @@
+@import '../../variables.scss';
+
+
+.card {
+  display: flex;
+  justify-content: space-between;
+
+  h3,
+  p,
+  a {
+    color: $defaultWhite;
+    text-decoration: none;
+
+  }
+}
+
+.content {
+  padding: 1rem;
+}
+
+.listView {
+  flex-direction: row;
+  max-height: 250px;
+  width: 100%;
+
+  .image {
+    height: 100%;
+    width: 250px;
+  }
+}
+
+.gridView {
+  flex-direction: column;
+  min-width: 33%;
+
+  .image {
+    height: 250px;
+    width: 100%;
+  }
+}
+
+.dark {
+  background-color: $defaultDark;
+}
+
+.light {
+  background-color: $defaultLightDark;
+}
