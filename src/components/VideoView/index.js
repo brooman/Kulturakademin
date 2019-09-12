@@ -20,8 +20,13 @@ const VideoView = props => {
         <div className={styles.infoWrapper}>
           <div className={styles.overviewInfo}>
             <p>
-              {year} | Avsnitt
-              {episodeNo}/{episodeNos}{' '}
+              {year}
+              {' '}
+| Avsnitt
+              {episodeNo}
+/
+              {episodeNos}
+              {' '}
             </p>
           </div>
           <div className={styles.mainInfo}>
@@ -52,7 +57,7 @@ VideoView.propTypes = {
   episodeNo: PropTypes.number.isRequired,
   episodeNos: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  // url: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string),
 }
