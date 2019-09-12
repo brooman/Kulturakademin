@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Logo = props => {
+const LogoIcon = props => {
   const { color, backgroundColor } = props
 
   return (
@@ -27,14 +27,14 @@ const Logo = props => {
   )
 }
 
-Logo.propTypes = {
+LogoIcon.propTypes = {
   color: PropTypes.string,
   backgroundColor: PropTypes.string,
 }
 
-Logo.defaultProps = {
+LogoIcon.defaultProps = {
   color: '#fff',
   backgroundColor: '#262626',
 }
 
-export default Logo
+export default LogoIcon

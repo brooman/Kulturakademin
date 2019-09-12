@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import ContentView from './pages/ContentView'
-import Logo from './icons/Logo'
-import Hamburger from './icons/Hamburger'
-import Search from './icons/Search'
+import LogoIcon from './icons/LogoIcon'
+import HamburgerIcon from './icons/HamburgerIcon'
+import SearchIcon from './icons/SearchIcon'
 
 import Menu from './components/Menu'
 import Discover from './pages/Discover'
@@ -34,13 +34,13 @@ class App extends Component {
         <div className="App">
           <header>
             <Link to="/">
-              <Logo />
+              <LogoIcon />
             </Link>
 
             <div className="navbar">
-              <Search />
+              <SearchIcon />
               <button className="btn menu-btn" type="button" onClick={this.toggleMenu}>
-                <Hamburger />
+                <HamburgerIcon />
               </button>
             </div>
           </header>
