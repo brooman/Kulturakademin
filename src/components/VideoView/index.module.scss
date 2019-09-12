@@ -1,0 +1,32 @@
+@import '../../variables.scss';
+
+.infoWrapper {
+  font-family: Muli;
+  font-style: normal;
+  font-weight: 900;
+
+  .overviewInfo {
+    padding: 20px 16px 0 16px;
+
+    font-size: 10px;
+    line-height: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  .mainInfo {
+    padding: 0 60px 0 16px;
+
+    .title {
+      font-size: 24px;
+      line-height: 117.5%;
+      color: #e9e9e9;
+    }
+
+    .content {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+}
