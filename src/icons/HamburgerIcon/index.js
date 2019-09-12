@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Hamburger = props => {
+const HamburgerIcon = props => {
   const { color } = props
 
   return (
@@ -15,12 +15,12 @@ const Hamburger = props => {
   )
 }
 
-Hamburger.propTypes = {
+HamburgerIcon.propTypes = {
   color: PropTypes.string,
 }
 
-Hamburger.defaultProps = {
+HamburgerIcon.defaultProps = {
   color: '#fff',
 }
 
-export default Hamburger
+export default HamburgerIcon

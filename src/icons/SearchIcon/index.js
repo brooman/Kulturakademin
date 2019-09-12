@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Search = props => {
+const SearchIcon = props => {
   const { color } = props
 
   return (
@@ -16,12 +16,12 @@ const Search = props => {
   )
 }
 
-Search.propTypes = {
+SearchIcon.propTypes = {
   color: PropTypes.string,
 }
 
-Search.defaultProps = {
+SearchIcon.defaultProps = {
   color: '#fff',
 }
 
-export default Search
+export default SearchIcon
