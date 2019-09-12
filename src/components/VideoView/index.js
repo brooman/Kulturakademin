@@ -16,7 +16,7 @@ const VideoView = props => {
     <div className="wrapper">
       <div>
         <Hero image="video.png" text="" />
-        <VideoPlaybar play="play" save="save" />
+        <VideoPlaybar />
         <div className={styles.infoWrapper}>
           <div className={styles.overviewInfo}>
             <p>
@@ -27,18 +27,19 @@ const VideoView = props => {
             <h2 className={styles.title}>{title}</h2>
             <p className={styles.content}>{content}</p>
           </div>
-        </div>
 
-        <div className={styles.tags}>
-          {tags.map(tag => {
-            tagCounter += 1
+          <div className={styles.tags}>
+            <p className={styles.tagsTitle}>Taggar</p>
+            {tags.map(tag => {
+              tagCounter += 1
 
-            return (
-              <p className={styles.tag} key={tagCounter}>
-                {tag}
-              </p>
-            )
-          })}
+              return (
+                <p className={styles.tag} key={tagCounter}>
+                  {tag}
+                </p>
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>
