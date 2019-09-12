@@ -4,10 +4,12 @@ import PropTypes from 'prop-types'
 import styles from './index.module.scss'
 
 const VideoPlaybar = props => {
+  const { play, save } = props
+
   return (
     <div className={styles.wrapper}>
-      <p>{props.play}</p>
-      <p>{props.save}</p>
+      <p>{play}</p>
+      <p>{save}</p>
     </div>
   )
 }
