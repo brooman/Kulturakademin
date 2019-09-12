@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 import styles from './index.module.scss'
 
-import Hero from './../Hero'
-import VideoPlaybar from './../VideoPlaybar'
+import Hero from '../Hero'
+import VideoPlaybar from '../VideoPlaybar'
 
 const VideoView = props => {
-  const { year, episodeNo, episodeNos, title, content, url, tags } = props
+  const { year, episodeNo, episodeNos, title, content, tags } = props
   let tagCounter = 0
 
   // <iframe title={title} width="560" height="315" src={url} />
@@ -16,11 +16,12 @@ const VideoView = props => {
     <div className="wrapper">
       <div>
         <Hero image="video.png" text="" />
-        <VideoPlaybar />
+        <VideoPlaybar play="play" save="save" />
         <div className={styles.infoWrapper}>
           <div className={styles.overviewInfo}>
             <p>
-              {year} | Avsnitt {episodeNo}/{episodeNos}{' '}
+              {year} | Avsnitt
+              {episodeNo}/{episodeNos}{' '}
             </p>
           </div>
           <div className={styles.mainInfo}>
