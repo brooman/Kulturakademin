@@ -1,12 +1,14 @@
 @import '../../variables.scss';
 
 .infoWrapper {
+  padding-left: 16px;
+
   font-family: Muli;
   font-style: normal;
   font-weight: 900;
 
   .overviewInfo {
-    padding: 20px 16px 0 16px;
+    padding-top: 20px;
 
     font-size: 10px;
     line-height: 13px;
@@ -15,8 +17,6 @@
   }
 
   .mainInfo {
-    padding: 0 60px 0 16px;
-
     .title {
       font-size: 24px;
       line-height: 117.5%;
@@ -28,5 +28,17 @@
       font-size: 14px;
       line-height: 150%;
     }
+  }
+
+  .tagsTitle {
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 0.2em;
+  }
+
+  .tags {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 12px;
   }
 }
