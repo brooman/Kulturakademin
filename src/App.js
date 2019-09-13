@@ -4,42 +4,51 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import ContentView from './pages/ContentView'
+import LogoIcon from './icons/LogoIcon'
+import HamburgerIcon from './icons/HamburgerIcon'
+import SearchIcon from './icons/SearchIcon'
 
-import Filter from './components/Filter'
+import Menu from './components/Menu'
+import Discover from './pages/Discover'
 
 class App extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      filterShown: false,
+      menuShown: false,
     }
   }
 
-  toggleFilter = () => {
+  toggleMenu = () => {
     this.setState(prevState => {
-      return { filterShown: !prevState.filterShown }
+      return { menuShown: !prevState.menuShown }
     })
   }
 
   render() {
-    const { filterShown } = this.state
+    const { menuShown } = this.state
 
     return (
       <Router>
         <div className="App">
           <header>
-            <div className="logo">K</div>
-            <button className="btn filter-btn" type="button" onClick={this.toggleFilter}>
-              Filter v
-            </button>
-            <div className="mykplay">&lt;3</div>
-          </header>
+            <Link to="/">
+              <LogoIcon />
+            </Link>
 
-          <Filter show={filterShown} />
+            <div className="navbar">
+              <SearchIcon />
+              <button className="btn menu-btn" type="button" onClick={this.toggleMenu}>
+                <HamburgerIcon />
+              </button>
+            </div>
+          </header>
+          <Menu show={menuShown} />
 
           <div className="content">
             <Route path="/" exact component={Home} />
+            <Route path="/discover" component={Discover} />
             <Route path="/view/:type/:id" component={ContentView} />
             <Route path="/about/" component={About} />
           </div>
@@ -50,7 +59,7 @@ class App extends Component {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/view/text/129">View</Link>
+                <Link to="/view/video/128">View</Link>
               </li>
               <li>
                 <Link to="/about/">About</Link>
