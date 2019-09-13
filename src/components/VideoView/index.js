@@ -20,13 +20,12 @@ const VideoView = props => {
         <div className={styles.infoWrapper}>
           <div className={styles.overviewInfo}>
             <p>
-              {year}
-              {' '}
-| Avsnitt
-              {episodeNo}
-/
-              {episodeNos}
-              {' '}
+              <span>{year}</span>
+              <span> | </span>
+              <span>Avsnitt</span>
+              <span>{episodeNo}</span>
+              <span>/</span>
+              <span>{episodeNos}</span>
             </p>
           </div>
           <div className={styles.mainInfo}>
