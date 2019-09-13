@@ -33,9 +33,9 @@ app.get('/audio/:id', (req, res) => {
 
   if (resource) {
     res.send(resource)
+  } else {
+    res.status(404).send('{}')
   }
-
-  res.status(404).send('{}')
 })
 
 app.get('/video/:id', (req, res) => {
@@ -48,9 +48,9 @@ app.get('/video/:id', (req, res) => {
 
   if (resource) {
     res.send(resource)
+  } else {
+    res.status(404).send('{}')
   }
-
-  res.status(404).send('{}')
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
