@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import ReadMoreIcon from '../../icons/ReadMoreIcon'
 
 import styles from './index.module.scss'
 
@@ -23,7 +24,9 @@ const DiscoverCard = props => {
         </div>
         <div className={styles.readMore}>
           <p>Read more</p>
-          <div className={styles.arrow}>-&gt;</div>
+          <div className={styles.arrow}>
+            <ReadMoreIcon />
+          </div>
         </div>
       </div>
     </div>
