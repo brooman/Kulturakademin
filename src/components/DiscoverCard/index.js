@@ -6,6 +6,7 @@ import ReadMoreIcon from '../../icons/ReadMoreIcon'
 import styles from './index.module.scss'
 
 const DiscoverCard = props => {
+  // Just fake data wich will update with data from api later
   const year = '2019'
   const length = '34'
   const episodeNo = '1'
@@ -24,12 +25,18 @@ const DiscoverCard = props => {
       <div className={styles.body}>
         <div className={styles.content}>
           <div className={styles.cardInfo}>
-            <p>{length} min</p>
+            <p>
+              <span>{length}</span>
+              <span> min</span>
+            </p>
             <p>{year}</p>
           </div>
           <div className={styles.episodeInfo}>
-            <p>Avsnitt {episodeNo}/</p>
-            <p>{episodeNos}</p>
+            <p>
+              <span>Avsnitt </span>
+              <span>{episodeNo}</span>
+              <span>{episodeNos}</span>
+            </p>
           </div>
           <h3>{title}</h3>
           <p className={styles.description}>{content}</p>
