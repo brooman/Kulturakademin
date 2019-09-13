@@ -44,6 +44,9 @@ class ContentView extends Component {
           <VideoView
             title={resource.title}
             content={resource.content}
+            year={2019}
+            episodeNo={1}
+            episodeNos={8}
             url={resource.url}
             tags={resource.tags}
           />
