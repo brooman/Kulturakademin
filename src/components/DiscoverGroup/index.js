@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import styles from './index.module.scss'
 import DiscoverCard from '../DiscoverCard'
+import GridViewIcon from '../../icons/GridViewIcon'
 
 class DiscoverGroup extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class DiscoverGroup extends Component {
           <h2>{title}</h2>
           <button type="button" onClick={this.toggleDisplayMode}>
             {displayMode.text}
+            <GridViewIcon />
           </button>
         </div>
         <div className={[styles.body, viewStyle].join(' ')}>
