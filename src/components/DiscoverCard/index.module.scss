@@ -95,3 +95,24 @@
 .light {
   background-color: $defaultLightDark;
 }
+
+.cardInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+.episodeInfo {
+  display: flex;
+  flex-direction: row;
+
+  p {
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
