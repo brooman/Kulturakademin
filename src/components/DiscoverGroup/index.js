@@ -22,7 +22,6 @@ class DiscoverGroup extends Component {
   render() {
     const { title, items } = this.props
     const { displayMode } = this.state
-    console.log(items)
     const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
     let cardCounter = 0
 
