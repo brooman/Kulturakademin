@@ -48,7 +48,6 @@ class Discover extends Component {
 
           {data.map(group => {
             const { title, items } = group
-            console.log(items)
             groupCount += 1
             return <DiscoverGroup key={groupCount} title={title} items={items} />
           })}
