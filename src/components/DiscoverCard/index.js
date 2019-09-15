@@ -1,23 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import ReadMoreIcon from '../../icons/ReadMoreIcon'
 
 import styles from './index.module.scss'
 
 const DiscoverCard = props => {
-  // Just fake data wich will update with data from api later
+  // Data så länge, ska byta ut.
   const length = '34'
-  const episodeNo = '1'
-  const episodeNos = '8'
 
   const { order, item, displayMode } = props
 
-  const { id, type, year, episodeNr, episodesInSeries, title, image, content } = item
+  const { year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('images/${image}')` }
   const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
   const background = order % 2 === 1 ? styles.dark : styles.light
-  const link = `/view/${type}/${id}`
+  // const link = `/view/${type}/${id}`
 
   return (
     <div className={[styles.card, viewStyle, background].join(' ')}>
