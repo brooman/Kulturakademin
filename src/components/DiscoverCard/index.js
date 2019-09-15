@@ -7,13 +7,13 @@ import styles from './index.module.scss'
 
 const DiscoverCard = props => {
   // Just fake data wich will update with data from api later
-  const year = '2019'
   const length = '34'
   const episodeNo = '1'
   const episodeNos = '8'
 
   const { order, item, displayMode } = props
-  const { id, type, title, image, content } = item
+
+  const { id, type, year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('images/${image}')` }
   const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
   const background = order % 2 === 1 ? styles.dark : styles.light
@@ -34,8 +34,8 @@ const DiscoverCard = props => {
           <div className={styles.episodeInfo}>
             <p>
               <span>Avsnitt </span>
-              <span>{episodeNo}</span>
-              <span>{episodeNos}</span>
+              <span>{episodeNr}</span>
+              <span>{episodesInSeries}</span>
             </p>
           </div>
           <h3>{title}</h3>

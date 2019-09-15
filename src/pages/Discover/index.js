@@ -10,68 +10,30 @@ class Discover extends Component {
 
     this.state = {
       shownTypes: 'all',
-      data: [
-        {
-          title: 'Latest',
-          items: [
+      data: [],
+    }
+  }
+
+  componentDidMount() {
+    const endpoint = `${process.env.REACT_APP_API_URL}/video/`
+
+    fetch(endpoint)
+      .then(res => res.json())
+      .then(json => {
+        this.setState({
+          data: [
             {
-              id: 129,
-              type: 'video',
-              title: 'Masterclass med Pia Olby - Vad är skönsång (del 3 av 4)',
-              image: 'felix-mooneeram-evlkOfkQ5rE-unsplash.jpg',
-              content:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              url: 'https://www.youtube.com/embed/Nmf2V55mlgw',
-              tags: ['webcast', 'learning'],
-            },
-            {
-              id: 128,
-              type: 'video',
-              title: 'Masterclass med Pia Olby - Vad är sånggestaltning (del 1 av 4)',
-              image: 'jakob-owens-CiUR8zISX60-unsplash.jpg',
-              content:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              url: 'https://www.youtube.com/embed/OO-v7--wOtU',
-              tags: ['webcast', 'learning'],
-            },
-            {
-              id: 127,
-              type: 'video',
-              title: 'Masterclass med Pia Olby - Textgestaltning och sånggestaltning (del 2 av 4)',
-              image: 'jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
-              content:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              url: 'https://www.youtube.com/embed/qgjKQrgL0o0',
-              tags: ['webcast', 'learning'],
-            },
-            {
-              id: 126,
-              type: 'video',
-              title: 'Masterclass med Pia Olby - Kroppens betydelse i sång (del 4 av 4)',
-              image: 'felix-mooneeram-evlkOfkQ5rE-unsplash.jpg',
-              content:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              url: 'https://www.youtube.com/embed/l2vcqaClw-A',
-              tags: ['webcast', 'learning'],
-            },
-            {
-              id: 125,
-              type: 'video',
-              title: 'NEW ON THE MAP: REInvent Studios',
-              image: 'jakob-owens-CiUR8zISX60-unsplash.jpg',
-              content:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              url: 'https://www.youtube.com/embed/yGkn5KYk6sg',
-              tags: ['webcast', 'learning'],
+              title: 'Latest',
+              items: json,
             },
           ],
-        },
-      ],
-    }
+        })
+      })
   }
 
   render() {
     const { data } = this.state
+    let groupCount = 0
 
     return (
       <>
@@ -86,7 +48,9 @@ class Discover extends Component {
 
           {data.map(group => {
             const { title, items } = group
-            return <DiscoverGroup title={title} items={items} />
+            console.log(items)
+            groupCount += 1
+            return <DiscoverGroup key={groupCount} title={title} items={items} />
           })}
         </div>
       </>

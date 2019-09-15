@@ -21,7 +21,7 @@ GridViewiconIcon.propTypes = {
 }
 
 GridViewiconIcon.defaultProps = {
-  color: '#fff',
+  color: '#C4C4C4',
 }
 
 export default GridViewiconIcon
