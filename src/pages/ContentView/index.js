@@ -27,7 +27,7 @@ class ContentView extends Component {
           <VideoView
             title={resource.title}
             content={resource.content}
-            time={'34 min'}
+            time="34 min"
             year={2019}
             episodeNo={1}
             episodeNos={8}
