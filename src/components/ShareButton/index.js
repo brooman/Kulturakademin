@@ -13,7 +13,7 @@ const share = () => {
       .then(() => console.log('Successful share'))
       .catch(error => console.log('Error sharing', error))
   } else {
-    alert('Not on mobile...')
+    console.log('Not on mobile...')
   }
 }
 
