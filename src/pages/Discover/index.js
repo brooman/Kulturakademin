@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Hero from '../../components/Hero'
 import DiscoverGroup from '../../components/DiscoverGroup'
 import FilterTypes from '../../components/FilterTypes'
+import Mocker from '../../mock/mocker'
 
 class Discover extends Component {
   constructor({ match }) {
@@ -15,20 +16,14 @@ class Discover extends Component {
   }
 
   componentDidMount() {
-    const endpoint = `${process.env.REACT_APP_API_URL}/video/`
-
-    fetch(endpoint)
-      .then(res => res.json())
-      .then(json => {
-        this.setState({
-          data: [
-            {
-              title: 'Latest',
-              items: json,
-            },
-          ],
-        })
-      })
+    this.setState({
+      data: [
+        {
+          title: 'Latest',
+          items: Mocker('video'),
+        },
+      ],
+    })
   }
 
   render() {
