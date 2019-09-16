@@ -1,1 +1,72 @@
 @import 'variables.scss';
+@import 'util.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  padding: 0;
+
+  width: 100vw;
+  min-height: 100vh;
+
+  color: $defaultWhite;
+  background-color: $defaultBackground;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+
+  padding: 0 1rem;
+
+  width: 100%;
+  height: $headerHeight;
+
+  color: $defaultWhite;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  padding: 1rem 1rem 0 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  margin-top: $headerHeight;
+}
+
+.container {
+  margin: 1rem;
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu-btn {
+  color: $defaultWhite;
+  font-weight: 300;
+  font-size: 16px;
+}

@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 
-import TextView from '../../components/TextView'
+import ErrorPage from '../ErrorPage'
+
 import VideoView from '../../components/VideoView'
+import AudioView from '../../components/AudioView'
 
 class ContentView extends Component {
   constructor({ match }) {
@@ -24,8 +26,6 @@ class ContentView extends Component {
   fetchContent(resourceType, resourceId) {
     const endpoint = `${process.env.REACT_APP_API_URL}/${resourceType}/${resourceId}`
 
-    console.log(endpoint)
-
     fetch(endpoint)
       .then(res => res.json())
       .then(json => {
@@ -38,16 +38,30 @@ class ContentView extends Component {
   render() {
     const { resource } = this.state
 
-    console.log(resource)
-
     switch (resource.type) {
-      case 'text':
-        return <TextView title={resource.title} content={resource.content} tags={resource.tags} />
       case 'video':
-        return <VideoView title={resource.title} content={resource.content} url={resource.url} tags={resource.tags} />
+        return (
+          <VideoView
+            title={resource.title}
+            content={resource.content}
+            year={2019}
+            episodeNo={1}
+            episodeNos={8}
+            url={resource.url}
+            tags={resource.tags}
+          />
+        )
       case 'audio':
+        return (
+          <AudioView
+            title={resource.title}
+            content={resource.content}
+            trackingId={resource.trackingId}
+            tags={resource.tags}
+          />
+        )
       default:
-        return null
+        return <ErrorPage statusCode="404" />
     }
   }
 }

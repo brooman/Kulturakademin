@@ -1,0 +1,118 @@
+@import '../../variables.scss';
+
+.card {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  h3,
+  p,
+  a {
+    color: $defaultWhite;
+    text-decoration: none;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.listView {
+  flex-direction: row;
+
+  .image {
+    min-width: 8rem;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .readMore {
+    position: relative;
+  }
+}
+
+.gridView {
+  flex-direction: column;
+  min-width: 11rem;
+
+  .image {
+    height: 8rem;
+    width: 100%;
+  }
+
+  .description {
+    max-height: 10rem;
+    overflow: hidden;
+  }
+
+  .readMore {
+    position: absolute;
+  }
+}
+
+.readMore {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  bottom: 0;
+  width: 100%;
+
+  p {
+    padding: 0 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  color: $defaultWhite;
+  background-color: $defaultHighlight;
+}
+
+.dark {
+  background-color: $defaultDark;
+}
+
+.light {
+  background-color: $defaultLightDark;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+.episodeInfo {
+  display: flex;
+  flex-direction: row;
+
+  p {
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
