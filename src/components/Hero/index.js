@@ -7,7 +7,7 @@ const Hero = props => {
   const { image, text } = props
 
   const style = {
-    backgroundImage: `${process.env.PUBLIC_URL}/${image})`,
+    backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')`,
   }
 
   return (
