@@ -15,7 +15,7 @@ const VideoView = props => {
 
   return (
     <div className="wrapper">
-      <Hero image="video.png" text="" />
+      <Hero image="images/video.png" text="" />
       <VideoPlaybar play="play" save="save" />
       <div className={styles.infoWrapper}>
         <div className={styles.overviewInfo}>
