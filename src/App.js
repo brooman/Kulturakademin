@@ -33,7 +33,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <header>
-            <Link to="/">
+            <Link to={process.env.PUBLIC_URL + '/'}>
               <LogoIcon />
             </Link>
 
@@ -56,13 +56,13 @@ class App extends Component {
           <footer>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to={process.env.PUBLIC_URL + '/'}>Home</Link>
               </li>
               <li>
-                <Link to="/view/video/128">View</Link>
+                <Link to={process.env.PUBLIC_URL + '/view/video/128'}>View</Link>
               </li>
               <li>
-                <Link to="/about/">About</Link>
+                <Link to={process.env.PUBLIC_URL + '/about/'}>About</Link>
               </li>
             </ul>
           </footer>
