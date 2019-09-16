@@ -1,6 +1,5 @@
 @import '../../variables.scss';
 
-
 .card {
   display: flex;
   position: relative;
@@ -50,7 +49,7 @@
 
 .gridView {
   flex-direction: column;
-  min-width: 8rem;
+  min-width: 11rem;
 
   .image {
     height: 8rem;
@@ -72,9 +71,11 @@
   justify-content: space-between;
   align-items: stretch;
   bottom: 0;
+  width: 100%;
 
   p {
     padding: 0 1rem;
+    text-transform: uppercase;
   }
 }
 
@@ -82,11 +83,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 52px;
+  width: 40%;
   color: $defaultWhite;
   background-color: $defaultHighlight;
 }
-
 
 .dark {
   background-color: $defaultDark;
@@ -94,4 +94,25 @@
 
 .light {
   background-color: $defaultLightDark;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+.episodeInfo {
+  display: flex;
+  flex-direction: row;
+
+  p {
+    margin: 0;
+    text-transform: uppercase;
+  }
 }
