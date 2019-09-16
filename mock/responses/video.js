@@ -2,57 +2,64 @@ const Video = [
   {
     id: 129,
     type: 'video',
-    title: 'Masterclass med Pia Olby - Vad är skönsång (del 3 av 4)',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    year: '2019',
+    episodeNr: 3,
+    episodesInSeries: 4,
+    title: 'Masterclass med Pia Olby',
+    image: 'images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg',
+    content: 'Vad är skönsång',
     url: 'https://www.youtube.com/embed/Nmf2V55mlgw',
     tags: ['webcast', 'learning'],
   },
   {
     id: 128,
     type: 'video',
-    title: 'Masterclass med Pia Olby - Vad är sånggestaltning (del 1 av 4)',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    year: '2019',
+    episodeNr: 1,
+    episodesInSeries: 4,
+    title: 'Masterclass med Pia Olby',
+    image: 'images/jakob-owens-CiUR8zISX60-unsplash.jpg',
+    content: 'Vad är sånggestaltning',
     url: 'https://www.youtube.com/embed/OO-v7--wOtU',
     tags: ['webcast', 'learning'],
   },
   {
     id: 127,
     type: 'video',
-    title: 'Masterclass med Pia Olby - Textgestaltning och sånggestaltning (del 2 av 4)',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    year: '2019',
+    episodeNr: 2,
+    episodesInSeries: 4,
+    title: 'Masterclass med Pia Olby',
+    image: 'images/jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
+    content: 'Textgestaltning och sånggestaltning',
     url: 'https://www.youtube.com/embed/qgjKQrgL0o0',
     tags: ['webcast', 'learning'],
   },
   {
     id: 126,
     type: 'video',
-    title: 'Masterclass med Pia Olby - Kroppens betydelse i sång (del 4 av 4)',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    year: '2019',
+    episodeNr: 4,
+    episodesInSeries: 4,
+    title: 'Masterclass med Pia Olby',
+    image: 'images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg',
+    content: 'Kroppens betydelse i sång',
     url: 'https://www.youtube.com/embed/l2vcqaClw-A',
     tags: ['webcast', 'learning'],
   },
   {
     id: 125,
     type: 'video',
+    year: '2017',
+    episodeNr: 1,
+    episodesInSeries: 1,
     title: 'NEW ON THE MAP: REInvent Studios',
+    image: 'images/jakob-owens-CiUR8zISX60-unsplash.jpg',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     url: 'https://www.youtube.com/embed/yGkn5KYk6sg',
     tags: ['webcast', 'learning'],
   },
-  {
-    id: 124,
-    type: 'video',
-    title: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
-    tags: ['webcast', 'learning'],
-  },
-];
+]
 
-module.exports = Video;
+module.exports = Video

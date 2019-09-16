@@ -4,7 +4,6 @@ const app = express()
 const port = 3300
 
 const audio = require('./responses/audio')
-const text = require('./responses/text')
 const video = require('./responses/video')
 
 app.use(cors())
@@ -17,11 +16,6 @@ app.get('/', (req, res) => {
 app.get('/audio/', (req, res) => {
   console.log('/audio/')
   res.send(audio)
-})
-
-app.get('/text/', (req, res) => {
-  console.log('/text/')
-  res.send(text)
 })
 
 app.get('/video/', (req, res) => {
@@ -37,18 +31,11 @@ app.get('/audio/:id', (req, res) => {
     return obj.id == id
   })
 
-  res.send(resource)
-})
-
-app.get('/text/:id', (req, res) => {
-  const { id } = req.params
-  console.log('/text/' + id)
-
-  const resource = text.find(function(obj) {
-    return obj.id == id
-  })
-
-  res.send(resource)
+  if (resource) {
+    res.send(resource)
+  } else {
+    res.status(404).send('{}')
+  }
 })
 
 app.get('/video/:id', (req, res) => {
@@ -59,7 +46,11 @@ app.get('/video/:id', (req, res) => {
     return obj.id == id
   })
 
-  res.send(resource)
+  if (resource) {
+    res.send(resource)
+  } else {
+    res.status(404).send('{}')
+  }
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

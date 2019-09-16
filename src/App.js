@@ -1,36 +1,75 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import Home from './pages/Home'
 import About from './pages/About'
 import ContentView from './pages/ContentView'
+import LogoIcon from './icons/LogoIcon'
+import HamburgerIcon from './icons/HamburgerIcon'
+import SearchIcon from './icons/SearchIcon'
 
-const App = () => {
-  return (
-    <Router>
-      <div className="App">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/view/text/129">View</Link>
-            </li>
-            <li>
-              <Link to="/about/">About</Link>
-            </li>
-          </ul>
-        </nav>
+import Menu from './components/Menu'
+import Discover from './pages/Discover'
 
-        <Route path="/" exact component={Home} />
+class App extends Component {
+  constructor(props) {
+    super(props)
 
-        <Route path="/view/:type/:id" component={ContentView} />
+    this.state = {
+      menuShown: false,
+    }
+  }
 
-        <Route path="/about/" component={About} />
-      </div>
-    </Router>
-  )
+  toggleMenu = () => {
+    this.setState(prevState => {
+      return { menuShown: !prevState.menuShown }
+    })
+  }
+
+  render() {
+    const { menuShown } = this.state
+
+    return (
+      <Router>
+        <div className="App">
+          <header>
+            <Link to="/">
+              <LogoIcon />
+            </Link>
+
+            <div className="navbar">
+              <SearchIcon />
+              <button className="btn menu-btn" type="button" onClick={this.toggleMenu}>
+                <HamburgerIcon />
+              </button>
+            </div>
+          </header>
+          <Menu show={menuShown} />
+
+          <div className="content">
+            <Route path="/" exact component={Home} />
+            <Route path="/discover" component={Discover} />
+            <Route path="/view/:type/:id" component={ContentView} />
+            <Route path="/about/" component={About} />
+          </div>
+
+          <footer>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/view/video/128">View</Link>
+              </li>
+              <li>
+                <Link to="/about/">About</Link>
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </Router>
+    )
+  }
 }
 
 export default App
