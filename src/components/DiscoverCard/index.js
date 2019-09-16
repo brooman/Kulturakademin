@@ -12,7 +12,7 @@ const DiscoverCard = props => {
   const { order, item, displayMode } = props
 
   const { year, episodeNr, episodesInSeries, title, image, content } = item
-  const img = { backgroundImage: `url('images/${image}')` }
+  const img = { backgroundImage: `url('${image}')` }
   const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
   const background = order % 2 === 1 ? styles.dark : styles.light
   // const link = `/view/${type}/${id}`
