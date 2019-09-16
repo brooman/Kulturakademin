@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Mocker from '../../mock/mocker'
+
 import ErrorPage from '../ErrorPage'
 
 import VideoView from '../../components/VideoView'
@@ -10,29 +12,10 @@ class ContentView extends Component {
     super()
 
     const { type, id } = match.params
-    this.fetchContent(type, id)
 
     this.state = {
-      resource: {},
+      resource: Mocker(type, id),
     }
-  }
-
-  /**
-   * Fetch resource from server
-   *
-   * @param {String} resourceType
-   * @param {Number} resourceId
-   */
-  fetchContent(resourceType, resourceId) {
-    const endpoint = `${process.env.REACT_APP_API_URL}/${resourceType}/${resourceId}`
-
-    fetch(endpoint)
-      .then(res => res.json())
-      .then(json => {
-        this.setState({
-          resource: json,
-        })
-      })
   }
 
   render() {

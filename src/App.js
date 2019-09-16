@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import ContentView from './pages/ContentView'
+import Discover from './pages/Discover'
+
+import Menu from './components/Menu'
 import LogoIcon from './icons/LogoIcon'
 import HamburgerIcon from './icons/HamburgerIcon'
 import SearchIcon from './icons/SearchIcon'
-
-import Menu from './components/Menu'
-import Discover from './pages/Discover'
 
 class App extends Component {
   constructor(props) {
