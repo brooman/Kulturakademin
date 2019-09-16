@@ -7,7 +7,7 @@ const Hero = props => {
   const { image, text } = props
 
   const style = {
-    backgroundImage: `url(images/${image})`,
+    backgroundImage: `url(${image})`,
   }
 
   return (
