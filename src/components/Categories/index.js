@@ -68,7 +68,7 @@ class Categories extends Component {
             const { id, name, link } = category
             return (
               <div key={id} className={styles.category}>
-                <Link to={link}>{name}</Link>
+                <Link to={process.env.PUBLIC_URL + link}>{name}</Link>
               </div>
             )
           })}
