@@ -21,5 +21,9 @@
   flex-direction: row;
   flex-wrap: nowrap;
   overflow-x: scroll;
-  height: 338px;
+  /*height: 338px;*/
+}
+
+.singelCard {
+  display: flex;
 }

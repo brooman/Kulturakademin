@@ -13,7 +13,24 @@ const DiscoverCard = props => {
 
   const { year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${image}')` }
-  const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
+
+  // trying
+  const getViewStyle = displayMode => {
+    switch (displayMode) {
+      case 'list':
+        return styles.listView
+      case 'grid':
+        return styles.gridView
+      case 'singlecard':
+        return styles.singleCard
+      default:
+        console.log('Sorry')
+    }
+  }
+
+  const viewStyle = getViewStyle(displayMode)
+
+  // const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
   const background = order % 2 === 1 ? styles.dark : styles.light
   // const link = `/view/${type}/${id}`
 
