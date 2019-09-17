@@ -68,8 +68,17 @@
 
 .singleCard {
   display: flex;
-}
+  margin-bottom: 5%;
 
+  .readMore {
+    background-color: $defaultHighlight;
+  }
+
+  .arrow {
+    justify-content: flex-end;
+    margin-right: 5%;
+  }
+}
 
 .readMore {
   display: flex;
