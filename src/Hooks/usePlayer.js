@@ -5,13 +5,13 @@ const usePlayer = () => {
   const [state, setState] = useContext(PlayerContext)
 
   const setResource = resource => {
-    setState(state => ({ ...state, resource: resource }))
+    setState(state => ({ ...state, resource }))
   }
 
   const setRef = reference => {
     setState(state => ({
       ...state,
-      reference: reference,
+      reference,
     }))
   }
 
