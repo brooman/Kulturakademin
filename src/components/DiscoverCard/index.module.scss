@@ -68,6 +68,7 @@
 
 .singleCard {
   display: flex;
+  flex-direction: column;
   margin-bottom: 5%;
 
   .readMore {
@@ -77,6 +78,11 @@
   .arrow {
     justify-content: flex-end;
     margin-right: 5%;
+  }
+
+  .image {
+    height: 12rem;
+    width: 100%;
   }
 }
 
