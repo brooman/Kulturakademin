@@ -59,23 +59,6 @@ class Discover extends Component {
             )
           })}
 
-          {/* {data.map(item => {
-            cardCounter += 1
-            {
-              item.items.map(card => {
-                console.log(card)
-                return (
-                  <DiscoverCard
-                    key={cardCounter}
-                    order={cardCounter}
-                    displayMode={singleCard}
-                    item={card}
-                  />
-                )
-              })
-            }
-          })} */}
-
           {data.map(group => {
             const { title, items } = group
             groupCount += 1
