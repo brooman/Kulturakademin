@@ -12,7 +12,7 @@ import Mocker from '../../mock/mocker'
 import usePlayer from '../../Hooks/usePlayer'
 
 const VideoView = props => {
-  const { year, episodeNo, episodeNos, title, content, tags } = props.resource
+  const { year, episodeNo, episodeNos, title, time, content, tags } = props.resource
   let tagCounter = 0
 
   const { resource, setResource } = usePlayer()
