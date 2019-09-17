@@ -33,7 +33,7 @@ class Discover extends Component {
     return (
       <>
         <Hero
-          image="jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg"
+          image="images/jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg"
           text="K-play det självklara valet"
         />
         <div className="container">

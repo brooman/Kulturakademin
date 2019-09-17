@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+
+.button {
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 164px;
+  height: 36px;
+  background-color: $defaultHighlight;
+  cursor: pointer;
+
+  .text {
+    font-family: Muli;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    outline: none;
+    cursor: pointer;
+  }
+}
