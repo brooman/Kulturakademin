@@ -4,7 +4,9 @@ import styles from './index.module.scss'
 
 import Hero from '../Hero'
 import VideoPlaybar from '../VideoPlaybar'
+import VideoIcon from '../../icons/VideoIcon'
 import ShareButton from '../ShareButton'
+import SaveButton from '../SaveButton'
 
 import Mocker from '../../mock/mocker'
 import usePlayer from '../../Hooks/usePlayer'
@@ -19,9 +21,15 @@ const VideoView = props => {
   }
 
   return (
-    <div className="wrapper">
-      <Hero image="images/video.png" text="" />
-      <VideoPlaybar play="play" save="save" />
+    <div>
+      <Hero image="images/Video.png" text="" />
+      <div className={styles.videoOptionsBar}>
+        <VideoPlaybar play="play" save="save" />
+        <div className={styles.videoIconBox}>
+          <VideoIcon />
+          <p className={styles.videoIconBoxText}>{time}</p>
+        </div>
+      </div>
       <div className={styles.infoWrapper}>
         <div className={styles.overviewInfo}>
           <p>
@@ -53,6 +61,7 @@ const VideoView = props => {
       </div>
       <div className={styles.buttonWrapper}>
         <ShareButton />
+        <SaveButton />
       </div>
     </div>
   )
