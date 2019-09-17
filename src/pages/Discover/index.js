@@ -12,7 +12,7 @@ class Discover extends Component {
     super()
 
     this.state = {
-      shownTypes: 'all',
+      // shownTypes: 'all',
       data: [],
       highlighted: [],
     }
@@ -47,13 +47,12 @@ class Discover extends Component {
           <FilterTypes />
 
           {highlighted.map(card => {
-            console.log(card)
             cardCounter += 1
             return (
               <DiscoverCard
                 key={cardCounter}
                 order={cardCounter}
-                displayMode={'singleCard'}
+                displayMode="singleCard"
                 item={card}
               />
             )
