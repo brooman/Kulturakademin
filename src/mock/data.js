@@ -12,7 +12,7 @@ export default {
     {
       id: 129,
       type: 'audio',
-      title: '#129 Eeva Bolin - Ny organisation för kultur i grundskola och förskola',
+      title: 'Eeva Bolin - Ny organisation för kultur i grundskola och förskola',
       image: 'jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
       content:
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
@@ -25,7 +25,7 @@ export default {
     {
       id: 129,
       type: 'audio',
-      title: '#129 Eeva Bolin - Ny organisation för kultur i grundskola och förskola',
+      title: 'Eeva Bolin - Ny organisation för kultur i grundskola och förskola',
       content:
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642376728',
@@ -34,7 +34,7 @@ export default {
     {
       id: 128,
       type: 'audio',
-      title: '#128 Åsa Jansson – Regionala arrangörsstödet för barn & unga - kulturkatalogen väst',
+      title: 'Åsa Jansson – Regionala arrangörsstödet för barn & unga - kulturkatalogen väst',
       content:
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642375006',
@@ -43,7 +43,7 @@ export default {
     {
       id: 127,
       type: 'audio',
-      title: '#127 Ida Kaivola - Kulturstöd och regler för utjämningsbidraget i Göteborg',
+      title: 'Ida Kaivola - Kulturstöd och regler för utjämningsbidraget i Göteborg',
       content:
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642369729',
@@ -52,7 +52,7 @@ export default {
     {
       id: 126,
       type: 'audio',
-      title: '#126 SFI & Film i Väst – filmfinansieringens möjligheter & utmaningar',
+      title: 'SFI & Film i Väst – filmfinansieringens möjligheter & utmaningar',
       content:
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '641768196',
@@ -61,7 +61,7 @@ export default {
     {
       id: 125,
       type: 'audio',
-      title: '#125 Åsa Söderberg – 12 års erfarenhet av publikutveckling på Skånes Dansteater',
+      title: 'Åsa Söderberg – 12 års erfarenhet av publikutveckling på Skånes Dansteater',
       content:
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '639535935',
@@ -70,8 +70,7 @@ export default {
     {
       id: 124,
       type: 'audio',
-      title:
-        '#124 Fading Lights - The Transition From Candle To Led with Chris Van Goethem (LIVE: 2019-05-06)',
+      title: 'Fading Lights - The Transition From Candle To Led with Chris Van Goethem',
       content:
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '639016008',
