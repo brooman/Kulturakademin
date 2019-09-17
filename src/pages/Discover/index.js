@@ -14,11 +14,17 @@ class Discover extends Component {
     this.state = {
       shownTypes: 'all',
       data: [],
+      highlighted: [],
     }
   }
 
   componentDidMount() {
     this.setState({
+      highlighted: [
+        {
+          card: Mocker('highlighted'),
+        },
+      ],
       data: [
         {
           title: 'Latest',
@@ -29,11 +35,9 @@ class Discover extends Component {
   }
 
   render() {
-    const { data } = this.state
+    const { highlighted, data } = this.state
     let groupCount = 0
     let cardCounter = 0
-    const singleCard = ''
-
     return (
       <>
         <Hero
@@ -45,21 +49,20 @@ class Discover extends Component {
           <p>Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till dans.</p>
           <FilterTypes />
 
-          {/* {data.map(item => {
-            console.log(item.items[1])
+          {highlighted.map(card => {
             cardCounter += 1
-
+            console.log(card)
             return (
               <DiscoverCard
                 key={cardCounter}
                 order={cardCounter}
-                displayMode={singleCard}
-                item={item.items[1]}
+                displayMode={'singleCard'}
+                item={card.card[0]}
               />
             )
-          })} */}
+          })}
 
-          {data.map(item => {
+          {/* {data.map(item => {
             cardCounter += 1
             {
               item.items.map(card => {
@@ -74,7 +77,7 @@ class Discover extends Component {
                 )
               })
             }
-          })}
+          })} */}
 
           {data.map(group => {
             const { title, items } = group
