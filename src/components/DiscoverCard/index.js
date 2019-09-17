@@ -8,10 +8,11 @@ import styles from './index.module.scss'
 const DiscoverCard = props => {
   // Data så länge, ska byta ut.
   const length = '34'
+  const year = '2019'
 
   const { order, item, displayMode } = props
 
-  const { year, episodeNr, episodesInSeries, title, image, content } = item
+  const { episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${image}')` }
 
   // trying
@@ -24,7 +25,7 @@ const DiscoverCard = props => {
       case 'singlecard':
         return styles.singleCard
       default:
-        console.log('Sorry')
+        return styles.gridView
     }
   }
 
