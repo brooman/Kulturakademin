@@ -6,13 +6,9 @@ import ReadMoreIcon from '../../icons/ReadMoreIcon'
 import styles from './index.module.scss'
 
 const DiscoverCard = props => {
-  // Data så länge, ska byta ut.
-  const length = '34'
-  const year = '2019'
-
   const { order, item, displayMode } = props
 
-  const { episodeNr, episodesInSeries, title, image, content } = item
+  const { length, year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${image}')` }
 
   // trying
@@ -46,10 +42,9 @@ const DiscoverCard = props => {
               <span> min</span>
               <span> | </span>
               <span>Avsnitt </span>
-              <span>{episodeNr}0</span>
-              <span> / </span>
-
-              <span>{episodesInSeries}0</span>
+              <span>{episodeNr}</span>
+              <span>/</span>
+              <span>{episodesInSeries}</span>
             </p>
             <div className={styles.cardYear}>
               <p>
