@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import YouTube from 'react-youtube'
 import usePlayer from '../../Hooks/usePlayer'
 import styles from './index.module.scss'
 
-import YouTube from 'react-youtube'
 
 const PreviewImage = props => {
   const { image, show } = props
@@ -77,7 +77,7 @@ const ProgressBar = props => {
     backgroundImage: `linear-gradient(to right, #cd7b2a, #cd7b2a ${progress}%, #fff ${progress}%, #fff 100%)`,
   }
 
-  return <div className={styles.progressBar} style={progressBar}></div>
+  return <div className={styles.progressBar} style={progressBar} />
 }
 
 const Player = () => {

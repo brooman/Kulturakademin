@@ -4,7 +4,8 @@ const PlayerContext = React.createContext([{}, () => {}])
 
 const PlayerContextProvider = props => {
   const [state, setState] = useState({})
-  return <PlayerContext.Provider value={[state, setState]}>{props.children}</PlayerContext.Provider>
+  const { children } = props
+  return <PlayerContext.Provider value={[state, setState]}>{children}</PlayerContext.Provider>
 }
 
 export { PlayerContext, PlayerContextProvider }
