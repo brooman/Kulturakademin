@@ -44,16 +44,20 @@ const DiscoverCard = props => {
             <p>
               <span>{length}</span>
               <span> min</span>
-            </p>
-            <p>{year}</p>
-          </div>
-          <div className={styles.episodeInfo}>
-            <p>
+              <span> | </span>
               <span>Avsnitt </span>
-              <span>{episodeNr}</span>
-              <span>{episodesInSeries}</span>
+              <span>{episodeNr}0</span>
+              <span> / </span>
+
+              <span>{episodesInSeries}0</span>
             </p>
+            <div className={styles.cardYear}>
+              <p>
+                <span>{year}</span>
+              </p>
+            </div>
           </div>
+
           <h3>{title}</h3>
           <p className={styles.description}>{content}</p>
         </div>
