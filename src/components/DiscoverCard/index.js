@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import { Link } from 'react-router-dom'
 import ReadMoreIcon from '../../icons/ReadMoreIcon'
+import PodIcon from '../../icons/PodIcon'
 
 import styles from './index.module.scss'
 
@@ -35,6 +36,7 @@ const DiscoverCard = props => {
     <div className={[styles.card, viewStyle, background].join(' ')}>
       <div className={styles.image} style={img} />
       <div className={styles.body}>
+        <PodIcon />
         <div className={styles.content}>
           <div className={styles.cardInfo}>
             <p>
