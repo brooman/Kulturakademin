@@ -22,7 +22,7 @@ const DiscoverCard = props => {
         return styles.listView
       case 'grid':
         return styles.gridView
-      case 'singlecard':
+      case 'singleCard':
         return styles.singleCard
       default:
         return styles.gridView
