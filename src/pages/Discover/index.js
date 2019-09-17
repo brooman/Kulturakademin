@@ -20,11 +20,8 @@ class Discover extends Component {
 
   componentDidMount() {
     this.setState({
-      highlighted: [
-        {
-          card: Mocker('highlighted'),
-        },
-      ],
+      highlighted: Mocker('highlighted'),
+
       data: [
         {
           title: 'Latest',
@@ -50,14 +47,14 @@ class Discover extends Component {
           <FilterTypes />
 
           {highlighted.map(card => {
-            cardCounter += 1
             console.log(card)
+            cardCounter += 1
             return (
               <DiscoverCard
                 key={cardCounter}
                 order={cardCounter}
                 displayMode={'singleCard'}
-                item={card.card[0]}
+                item={card}
               />
             )
           })}
