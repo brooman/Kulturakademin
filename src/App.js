@@ -33,7 +33,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <header>
-            <Link to="/">
+            <Link to={process.env.PUBLIC_URL + '/'}>
               <LogoIcon />
             </Link>
 
@@ -47,22 +47,22 @@ class App extends Component {
           <Menu show={menuShown} />
 
           <div className="content">
-            <Route path="/" exact component={Home} />
-            <Route path="/discover" component={Discover} />
-            <Route path="/view/:type/:id" component={ContentView} />
-            <Route path="/about/" component={About} />
+            <Route path={process.env.PUBLIC_URL + '/'} exact component={Home} />
+            <Route path={process.env.PUBLIC_URL + '/discover'} component={Discover} />
+            <Route path={process.env.PUBLIC_URL + '/view/:type/:id'} component={ContentView} />
+            <Route path={process.env.PUBLIC_URL + '/about'} component={About} />
           </div>
 
           <footer>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to={process.env.PUBLIC_URL + '/'}>Home</Link>
               </li>
               <li>
-                <Link to="/view/video/128">View</Link>
+                <Link to={process.env.PUBLIC_URL + '/view/video/128'}>View</Link>
               </li>
               <li>
-                <Link to="/about/">About</Link>
+                <Link to={process.env.PUBLIC_URL + '/about/'}>About</Link>
               </li>
             </ul>
           </footer>

@@ -1,0 +1,27 @@
+/* eslint-disable max-len */
+
+import React from 'react'
+import PropTypes from 'prop-types'
+
+const VideoIcon = props => {
+  const { color } = props
+
+  return (
+    <svg width="39" height="49" viewBox="0 0 39 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M39 0H29.25V3.26667H9.75V0H0V49H9.75V45.7333H29.25V49H39V0ZM6.5 3.26667V6.53333H3.25V3.26667H6.5ZM35.75 3.26667V6.53333H32.5V3.26667H35.75ZM29.25 6.53333V22.8667H9.75V6.53333H29.25ZM6.5 9.8V13.0667H3.25V9.8H6.5ZM35.75 9.8V13.0667H32.5V9.8H35.75ZM6.5 16.3333V19.6H3.25V16.3333H6.5ZM35.75 16.3333V19.6H32.5V16.3333H35.75ZM6.5 22.8667V26.1333H3.25V22.8667H6.5ZM35.75 22.8667V26.1333H32.5V22.8667H35.75ZM29.25 26.1333V42.4667H9.75V26.1333H29.25ZM6.5 29.4V32.6667H3.25V29.4H6.5ZM35.75 29.4V32.6667H32.5V29.4H35.75ZM6.5 35.9333V39.2H3.25V35.9333H6.5ZM35.75 35.9333V39.2H32.5V35.9333H35.75ZM6.5 42.4667V45.7333H3.25V42.4667H6.5ZM35.75 42.4667V45.7333H32.5V42.4667H35.75Z"
+        fill={color}
+      />
+    </svg>
+  )
+}
+
+VideoIcon.propTypes = {
+  color: PropTypes.string,
+}
+
+VideoIcon.defaultProps = {
+  color: '#fff',
+}
+
+export default VideoIcon
