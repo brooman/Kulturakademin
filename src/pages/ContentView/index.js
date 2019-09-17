@@ -7,6 +7,8 @@ import ErrorPage from '../ErrorPage'
 import VideoView from '../../components/VideoView'
 import AudioView from '../../components/AudioView'
 
+import usePlayer from '../../Hooks/usePlayer'
+
 class ContentView extends Component {
   constructor({ match }) {
     super()
@@ -23,18 +25,7 @@ class ContentView extends Component {
 
     switch (resource.type) {
       case 'video':
-        return (
-          <VideoView
-            title={resource.title}
-            content={resource.content}
-            time="34 min"
-            year={2019}
-            episodeNo={1}
-            episodeNos={8}
-            url={resource.url}
-            tags={resource.tags}
-          />
-        )
+        return <VideoView resource={resource} />
       case 'audio':
         return (
           <AudioView
