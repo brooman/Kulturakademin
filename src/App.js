@@ -10,6 +10,7 @@ import Menu from './components/Menu'
 import LogoIcon from './icons/LogoIcon'
 import HamburgerIcon from './icons/HamburgerIcon'
 import SearchIcon from './icons/SearchIcon'
+import PwaPopUp from './components/PwaPopUp'
 
 class App extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends Component {
 
     this.state = {
       menuShown: false,
+      pwaPopUpShown: true,
     }
   }
 
@@ -45,14 +47,12 @@ class App extends Component {
             </div>
           </header>
           <Menu show={menuShown} />
-
           <div className="content">
             <Route path={process.env.PUBLIC_URL + '/'} exact component={Home} />
             <Route path={process.env.PUBLIC_URL + '/discover'} component={Discover} />
             <Route path={process.env.PUBLIC_URL + '/view/:type/:id'} component={ContentView} />
             <Route path={process.env.PUBLIC_URL + '/about'} component={About} />
           </div>
-
           <footer>
             <ul>
               <li>
@@ -66,6 +66,7 @@ class App extends Component {
               </li>
             </ul>
           </footer>
+          <PwaPopUp />
         </div>
       </Router>
     )
