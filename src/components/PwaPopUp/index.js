@@ -11,7 +11,7 @@ const setCookieLater = () => {
   Cookies.set('downloadedPwa', 'false', { expires: 7 })
 }
 
-let showPwaPopUp = Cookies.get('downloadedPwa')
+const showPwaPopUp = Cookies.get('downloadedPwa')
 
 const PwaPopUp = () => {
   const [clicked, setClicked] = useState(showPwaPopUp)
