@@ -34,8 +34,11 @@
 .wrapper > * {
   position: fixed;
   top: 100vh;
-  transform: translateY(-100%);
   width: 100%;
+  animation-name: slideUp;
+  animation-duration: 1.5s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
 }
 
 .hide * {
@@ -50,6 +53,15 @@
 
 .show * {
   display: flex;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 @keyframes slideDown {
