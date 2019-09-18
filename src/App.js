@@ -11,6 +11,9 @@ import LogoIcon from './icons/LogoIcon'
 import HamburgerIcon from './icons/HamburgerIcon'
 import SearchIcon from './icons/SearchIcon'
 import PwaPopUp from './components/PwaPopUp'
+import Player from './components/Player'
+
+import { PlayerContextProvider } from './Hooks/PlayerContextProvider'
 
 class App extends Component {
   constructor(props) {
@@ -31,43 +34,49 @@ class App extends Component {
     const { menuShown } = this.state
 
     return (
-      <Router>
-        <div className="App">
-          <header>
-            <Link to={`${process.env.PUBLIC_URL}/`}>
-              <LogoIcon />
-            </Link>
+      <PlayerContextProvider>
+        <Router>
+          <div className="App">
+            <header>
+              <Link to={`${process.env.PUBLIC_URL  }/`}>
+                <LogoIcon />
+              </Link>
 
-            <div className="navbar">
-              <SearchIcon />
-              <button className="btn menu-btn" type="button" onClick={this.toggleMenu}>
-                <HamburgerIcon />
-              </button>
+              <div className="navbar">
+                <SearchIcon />
+                <button className="btn menu-btn" type="button" onClick={this.toggleMenu}>
+                  <HamburgerIcon />
+                </button>
+              </div>
+            </header>
+            <Menu show={menuShown} />
+
+            <div className="content">
+              <Route path={`${process.env.PUBLIC_URL  }/`} exact component={Home} />
+              <Route path={`${process.env.PUBLIC_URL  }/discover`} component={Discover} />
+              <Route path={`${process.env.PUBLIC_URL  }/view/:type/:id`} component={ContentView} />
+              <Route path={`${process.env.PUBLIC_URL  }/about`} component={About} />
             </div>
-          </header>
-          <Menu show={menuShown} />
-          <div className="content">
-            <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />
-            <Route path={`${process.env.PUBLIC_URL}/discover`} component={Discover} />
-            <Route path={`${process.env.PUBLIC_URL}/view/:type/:id`} component={ContentView} />
-            <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
+
+            <footer>
+              <ul>
+                <li>
+                  <Link to={`${process.env.PUBLIC_URL  }/`}>Home</Link>
+                </li>
+                <li>
+                  <Link to={`${process.env.PUBLIC_URL  }/view/video/128`}>View</Link>
+                </li>
+                <li>
+                  <Link to={`${process.env.PUBLIC_URL  }/about/`}>About</Link>
+                </li>
+              </ul>
+            </footer>
+            
+            <PwaPopUp />
+            <Player />
           </div>
-          <footer>
-            <ul>
-              <li>
-                <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
-              </li>
-              <li>
-                <Link to={`${process.env.PUBLIC_URL}/view/video/128`}>View</Link>
-              </li>
-              <li>
-                <Link to={`${process.env.PUBLIC_URL}/about/`}>About</Link>
-              </li>
-            </ul>
-          </footer>
-          <PwaPopUp />
-        </div>
-      </Router>
+        </Router>
+      </PlayerContextProvider>
     )
   }
 }
