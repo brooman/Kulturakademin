@@ -1,0 +1,48 @@
+@import '../../variables.scss';
+
+$playerHeight: 70px;
+
+.player {
+  display: flex;
+  flex-direction: column;
+  height: $playerHeight + 5;
+  position: sticky;
+  z-index: 900;
+  bottom: 0;
+  width: 100vw;
+  color: $defaultWhite;
+  background-color: $defaultDark;
+}
+
+.playerBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.progressBar {
+  min-height: 5px;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.previewContainer {
+  vertical-align: center; //this property does nothing, but we need a class for the iframe container
+}
+
+.previewContainer,
+.preview {
+  height: $playerHeight;
+  width: ($playerHeight / 9) * 16;
+  max-width: ($playerHeight / 9) * 16;
+}
+
+.imagePreview {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
