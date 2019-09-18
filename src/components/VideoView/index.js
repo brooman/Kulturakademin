@@ -1,22 +1,35 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import styles from './index.module.scss'
 
 import Hero from '../Hero'
 import VideoPlaybar from '../VideoPlaybar'
+import VideoIcon from '../../icons/VideoIcon'
 import ShareButton from '../ShareButton'
+import SaveButton from '../SaveButton'
+
+import Mocker from '../../mock/mocker'
+import usePlayer from '../../Hooks/usePlayer'
 
 const VideoView = props => {
-  const { year, episodeNo, episodeNos, title, content, tags } = props
+  const { year, episodeNo, episodeNos, title, time, content, tags } = props.resource
   let tagCounter = 0
 
-  // <iframe title={title} width="560" height="315" src={url} />
+  const { resource, setResource } = usePlayer()
+  if (resource !== props.resource) {
+    setResource(props.resource)
+  }
 
   return (
-    <div className="wrapper">
-      <Hero image="video.png" text="" />
-      <VideoPlaybar play="play" save="save" />
+    <div>
+      <Hero image="images/Video.png" text="" />
+      <div className={styles.videoOptionsBar}>
+        <VideoPlaybar play="play" save="save" />
+        <div className={styles.videoIconBox}>
+          <VideoIcon />
+          <p className={styles.videoIconBoxText}>{time}</p>
+        </div>
+      </div>
       <div className={styles.infoWrapper}>
         <div className={styles.overviewInfo}>
           <p>
@@ -48,23 +61,10 @@ const VideoView = props => {
       </div>
       <div className={styles.buttonWrapper}>
         <ShareButton />
+        <SaveButton />
       </div>
     </div>
   )
-}
-
-VideoView.propTypes = {
-  year: PropTypes.number.isRequired,
-  episodeNo: PropTypes.number.isRequired,
-  episodeNos: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  // url: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
-  tags: PropTypes.arrayOf(PropTypes.string),
-}
-
-VideoView.defaultProps = {
-  tags: [],
 }
 
 export default VideoView

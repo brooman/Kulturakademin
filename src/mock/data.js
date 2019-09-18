@@ -114,6 +114,7 @@ export default {
     {
       id: 129,
       type: 'video',
+
       title: 'Masterclass med Pia Olby - Vad är skönsång',
       episodeNr: '3',
       episodesInSeries: '4',
@@ -122,6 +123,7 @@ export default {
       content:
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       url: 'https://www.youtube.com/embed/Nmf2V55mlgw',
+
       tags: ['webcast', 'learning'],
     },
     {
@@ -135,6 +137,7 @@ export default {
       content:
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       url: 'https://www.youtube.com/embed/OO-v7--wOtU',
+
       tags: ['webcast', 'learning'],
     },
     {
@@ -187,6 +190,7 @@ export default {
       content:
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
+
       tags: ['webcast', 'learning'],
     },
   ],

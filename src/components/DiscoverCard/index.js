@@ -9,6 +9,7 @@ import styles from './index.module.scss'
 const DiscoverCard = props => {
   const { order, item, displayMode } = props
 
+
   const { length, year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${image}')` }
 
@@ -29,6 +30,7 @@ const DiscoverCard = props => {
   const viewStyle = getViewStyle(displayMode)
 
   // const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
+
   const background = order % 2 === 1 ? styles.dark : styles.light
   // const link = `/view/${type}/${id}`
 
