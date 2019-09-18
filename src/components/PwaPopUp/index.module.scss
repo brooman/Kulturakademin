@@ -1,0 +1,41 @@
+@import '../../variables.scss';
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $defaultLightDark;
+
+  .buttonWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    button {
+      margin-left: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: Muli;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 12px;
+      text-align: center;
+      color: #ffffff;
+      background-color: $defaultHighlight;
+      width: 164px;
+      height: 36px;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
+.hide * {
+  display: none;
+}
+
+.show * {
+  display: block;
+}
