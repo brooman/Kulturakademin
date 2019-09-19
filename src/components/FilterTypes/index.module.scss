@@ -11,8 +11,13 @@ button {
   color: $defaultLightDark;
   background: none;
   border: none;
+  outline: none;
 }
 
 .active {
+  color: $defaultHighlight;
+}
+
+.notActive {
   color: $defaultWhite;
 }
