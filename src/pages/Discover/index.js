@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 
 import Hero from '../../components/Hero'
+import DiscoverCard from '../../components/DiscoverCard'
+
 import DiscoverGroup from '../../components/DiscoverGroup'
 import FilterTypes from '../../components/FilterTypes'
 import Mocker from '../../mock/mocker'
@@ -10,13 +12,16 @@ class Discover extends Component {
     super()
 
     this.state = {
-      shownTypes: 'all',
+      // shownTypes: 'all',
       data: [],
+      highlighted: [],
     }
   }
 
   componentDidMount() {
     this.setState({
+      highlighted: Mocker('highlighted'),
+
       data: [
         {
           title: 'Latest',
@@ -27,9 +32,9 @@ class Discover extends Component {
   }
 
   render() {
-    const { data } = this.state
+    const { highlighted, data } = this.state
     let groupCount = 0
-
+    let cardCounter = 0
     return (
       <>
         <Hero
@@ -40,6 +45,18 @@ class Discover extends Component {
           <h1>Dans</h1>
           <p>Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till dans.</p>
           <FilterTypes />
+
+          {highlighted.map(card => {
+            cardCounter += 1
+            return (
+              <DiscoverCard
+                key={cardCounter}
+                order={cardCounter}
+                displayMode="singleCard"
+                item={card}
+              />
+            )
+          })}
 
           {data.map(group => {
             const { title, items } = group
