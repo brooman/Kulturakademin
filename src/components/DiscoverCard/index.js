@@ -2,18 +2,35 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import { Link } from 'react-router-dom'
 import ReadMoreIcon from '../../icons/ReadMoreIcon'
+import PodIcon from '../../icons/PodIcon'
 
 import styles from './index.module.scss'
 
 const DiscoverCard = props => {
-  // Data så länge, ska byta ut.
-  const length = '34'
-
   const { order, item, displayMode } = props
 
-  const { year, episodeNr, episodesInSeries, title, image, content } = item
-  const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
-  const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
+
+  const { length, year, episodeNr, episodesInSeries, title, image, content } = item
+  const img = { backgroundImage: `url('${image}')` }
+
+  // trying
+  const getViewStyle = displayMode => {
+    switch (displayMode) {
+      case 'list':
+        return styles.listView
+      case 'grid':
+        return styles.gridView
+      case 'singleCard':
+        return styles.singleCard
+      default:
+        return styles.gridView
+    }
+  }
+
+  const viewStyle = getViewStyle(displayMode)
+
+  // const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
+
   const background = order % 2 === 1 ? styles.dark : styles.light
   // const link = `/view/${type}/${id}`
 
@@ -21,21 +38,25 @@ const DiscoverCard = props => {
     <div className={[styles.card, viewStyle, background].join(' ')}>
       <div className={styles.image} style={img} />
       <div className={styles.body}>
+        <PodIcon />
         <div className={styles.content}>
           <div className={styles.cardInfo}>
             <p>
               <span>{length}</span>
               <span> min</span>
-            </p>
-            <p>{year}</p>
-          </div>
-          <div className={styles.episodeInfo}>
-            <p>
+              <span> | </span>
               <span>Avsnitt </span>
               <span>{episodeNr}</span>
+              <span>/</span>
               <span>{episodesInSeries}</span>
             </p>
+            <div className={styles.cardYear}>
+              <p>
+                <span>{year}</span>
+              </p>
+            </div>
           </div>
+
           <h3>{title}</h3>
           <p className={styles.description}>{content}</p>
         </div>
