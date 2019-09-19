@@ -13,14 +13,13 @@ class FilterTypes extends Component {
   }
 
   render() {
-    const activeStyle = { color: '#ff3333' }
-    const notActiveStyle = { color: '#fff' }
     return (
       <div className={styles.row}>
-        {buttons.map(button => (
+        {buttons.map((button, key) => (
           <button
-            style={this.state.active === button ? activeStyle : notActiveStyle}
+            className={this.state.active === button ? styles.active : styles.notActive}
             onClick={this._handleClick.bind(this, button)}
+            key={key}
           >
             {button}
           </button>
