@@ -14,63 +14,90 @@ import Player from './components/Player'
 
 import { PlayerContextProvider } from './Hooks/PlayerContextProvider'
 
-function App() {
-  //   this.state = {
-  //     menuShown: false,
-  //   }
-  // }
+class App extends Component {
+  constructor(props) {
+    super(props)
 
-  // toggleMenu = () => {
-  //   this.setState(prevState => {
-  //     return { menuShown: !prevState.menuShown }
-  //   })
-  // }
+    this.state = {
+      menuShown: false,
+      up: true,
+      scrollPos: 0,
+    }
+    this.handleScroll = this.handleScroll.bind(this)
+  }
 
-  return (
-    <PlayerContextProvider>
-      <Router>
-        <div className="App">
-          <header>
-            <Link to={`${process.env.PUBLIC_URL}/`}>
-              <LogoIcon />
-            </Link>
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
 
-            <div className="navbar">
-              <SearchIcon />
-              <Menu />
-              {/* <button className="btn menu-btn" type="button" onClick={this.toggleMenu}>
-                  <HamburgerIcon />
-                </button> */}
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll() {
+    const { scrollPos } = this.state
+    this.setState({
+      scrollPos: document.body.getBoundingClientRect().top,
+      up: document.body.getBoundingClientRect().top > scrollPos,
+    })
+  }
+
+  toggleMenu = () => {
+    this.setState(prevState => {
+      return { menuShown: !prevState.menuShown }
+    })
+  }
+
+  render() {
+    const { menuShown } = this.state
+
+    return (
+      <PlayerContextProvider>
+        <Router>
+          <div className="App">
+            <header>
+              <Link to={`${process.env.PUBLIC_URL}/`}>
+                <LogoIcon />
+              </Link>
+
+              <div className={this.state.up ? 'up' : 'down'}>
+                <div className="navbar">
+                  <SearchIcon />
+                  <button className="btn menu-btn" type="button" onClick={this.toggleMenu}>
+                    <HamburgerIcon />
+                  </button>
+                </div>
+              </div>
+            </header>
+            <Menu show={menuShown} />
+
+            <div className="content">
+              <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />
+              <Route path={`${process.env.PUBLIC_URL}/discover`} component={Discover} />
+              <Route path={`${process.env.PUBLIC_URL}/view/:type/:id`} component={ContentView} />
+              <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
             </div>
-          </header>
-          {/* <Menu show={menuShown} /> */}
 
-          <div className="content">
-            <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />
-            <Route path={`${process.env.PUBLIC_URL}/discover`} component={Discover} />
-            <Route path={`${process.env.PUBLIC_URL}/view/:type/:id`} component={ContentView} />
-            <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
+            <footer>
+              <ul>
+                <li>
+                  <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
+                </li>
+                <li>
+                  <Link to={`${process.env.PUBLIC_URL}/view/video/128`}>View</Link>
+                </li>
+                <li>
+                  <Link to={`${process.env.PUBLIC_URL}/about/`}>About</Link>
+                </li>
+              </ul>
+            </footer>
+
+            <Player />
           </div>
-
-          <footer>
-            <ul>
-              <li>
-                <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
-              </li>
-              <li>
-                <Link to={`${process.env.PUBLIC_URL}/view/video/128`}>View</Link>
-              </li>
-              <li>
-                <Link to={`${process.env.PUBLIC_URL}/about/`}>About</Link>
-              </li>
-            </ul>
-          </footer>
-
-          <Player />
-        </div>
-      </Router>
-    </PlayerContextProvider>
-  )
+        </Router>
+      </PlayerContextProvider>
+    )
+  }
 }
 
 export default App
