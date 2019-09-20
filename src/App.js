@@ -14,69 +14,63 @@ import Player from './components/Player'
 
 import { PlayerContextProvider } from './Hooks/PlayerContextProvider'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
+function App() {
+  //   this.state = {
+  //     menuShown: false,
+  //   }
+  // }
 
-    this.state = {
-      menuShown: false,
-    }
-  }
+  // toggleMenu = () => {
+  //   this.setState(prevState => {
+  //     return { menuShown: !prevState.menuShown }
+  //   })
+  // }
 
-  toggleMenu = () => {
-    this.setState(prevState => {
-      return { menuShown: !prevState.menuShown }
-    })
-  }
+  return (
+    <PlayerContextProvider>
+      <Router>
+        <div className="App">
+          <header>
+            <Link to={`${process.env.PUBLIC_URL}/`}>
+              <LogoIcon />
+            </Link>
 
-  render() {
-    const { menuShown } = this.state
-
-    return (
-      <PlayerContextProvider>
-        <Router>
-          <div className="App">
-            <header>
-              <Link to={`${process.env.PUBLIC_URL  }/`}>
-                <LogoIcon />
-              </Link>
-
-              <div className="navbar">
-                <SearchIcon />
-                <button className="btn menu-btn" type="button" onClick={this.toggleMenu}>
+            <div className="navbar">
+              <SearchIcon />
+              <Menu />
+              {/* <button className="btn menu-btn" type="button" onClick={this.toggleMenu}>
                   <HamburgerIcon />
-                </button>
-              </div>
-            </header>
-            <Menu show={menuShown} />
-
-            <div className="content">
-              <Route path={`${process.env.PUBLIC_URL  }/`} exact component={Home} />
-              <Route path={`${process.env.PUBLIC_URL  }/discover`} component={Discover} />
-              <Route path={`${process.env.PUBLIC_URL  }/view/:type/:id`} component={ContentView} />
-              <Route path={`${process.env.PUBLIC_URL  }/about`} component={About} />
+                </button> */}
             </div>
+          </header>
+          {/* <Menu show={menuShown} /> */}
 
-            <footer>
-              <ul>
-                <li>
-                  <Link to={`${process.env.PUBLIC_URL  }/`}>Home</Link>
-                </li>
-                <li>
-                  <Link to={`${process.env.PUBLIC_URL  }/view/video/128`}>View</Link>
-                </li>
-                <li>
-                  <Link to={`${process.env.PUBLIC_URL  }/about/`}>About</Link>
-                </li>
-              </ul>
-            </footer>
-
-            <Player />
+          <div className="content">
+            <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />
+            <Route path={`${process.env.PUBLIC_URL}/discover`} component={Discover} />
+            <Route path={`${process.env.PUBLIC_URL}/view/:type/:id`} component={ContentView} />
+            <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
           </div>
-        </Router>
-      </PlayerContextProvider>
-    )
-  }
+
+          <footer>
+            <ul>
+              <li>
+                <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
+              </li>
+              <li>
+                <Link to={`${process.env.PUBLIC_URL}/view/video/128`}>View</Link>
+              </li>
+              <li>
+                <Link to={`${process.env.PUBLIC_URL}/about/`}>About</Link>
+              </li>
+            </ul>
+          </footer>
+
+          <Player />
+        </div>
+      </Router>
+    </PlayerContextProvider>
+  )
 }
 
 export default App
