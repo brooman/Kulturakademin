@@ -80,6 +80,24 @@ class Menu extends Component {
                   </div>
                 )
               })}
+              <Link to="/">
+                <p>Fortsätt>/Sparade</p>
+              </Link>
+              <Link to="/">
+                <p>Senaste</p>
+              </Link>
+              <Link to="/">
+                <p>Mest visade</p>
+              </Link>
+              <Link to="/">
+                <p>Taggar</p>
+              </Link>
+              <Link to="/">
+                <p>Om</p>
+              </Link>
+              <Link to="/">
+                <p>Mest visade</p>
+              </Link>
             </div>
           ) : null}
         </div>
