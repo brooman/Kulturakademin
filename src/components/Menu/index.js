@@ -16,10 +16,30 @@ const Menu = props => {
         <Link to={`${process.env.PUBLIC_URL}/discover/music`}>Musik</Link>
         <Link to={`${process.env.PUBLIC_URL}/discover/television`}>Tv</Link>
         <Link to={`${process.env.PUBLIC_URL}/discover/dance`}>Tal</Link>
-        <Link to={`${process.env.PUBLIC_URL}/discover/dance`}>Fortsätt/Sparade</Link>
-        <Link to={`${process.env.PUBLIC_URL}/discover/dance`}>Senaste</Link>
-        <Link to={`${process.env.PUBLIC_URL}/discover/dance`}>Mest visade</Link>
-        <Link to={`${process.env.PUBLIC_URL}/discover/dance`}>Taggar</Link>
+        <Link
+          className={styles.hightlightedBackground}
+          to={`${process.env.PUBLIC_URL}/discover/dance`}
+        >
+          Fortsätt/Sparade
+        </Link>
+        <Link
+          className={styles.hightlightedBackground}
+          to={`${process.env.PUBLIC_URL}/discover/dance`}
+        >
+          Senaste
+        </Link>
+        <Link
+          className={styles.hightlightedBackground}
+          to={`${process.env.PUBLIC_URL}/discover/dance`}
+        >
+          Mest visade
+        </Link>
+        <Link
+          className={styles.hightlightedBackground}
+          to={`${process.env.PUBLIC_URL}/discover/dance`}
+        >
+          Taggar
+        </Link>
         <Link to={`${process.env.PUBLIC_URL}/discover/dance`}>Om</Link>
         <Link to={`${process.env.PUBLIC_URL}/discover/dance`}>Inställningar</Link>
       </div>

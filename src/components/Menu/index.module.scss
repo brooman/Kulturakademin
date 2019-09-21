@@ -3,10 +3,9 @@
 .menu {
   display: flex;
   flex-direction: column;
-
   height: 686px;
   width: 195px;
-
+  line-height: 304%;
   position: fixed;
   top: 0;
   right: 0;
@@ -15,4 +14,15 @@
 
   margin-top: $headerHeight;
   background-color: $defaultBackground;
+
+  a {
+    color: $defaultWhite;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    padding-left: 5%;
+  }
+}
+.hightlightedBackground {
+  background-color: #242424;
 }
