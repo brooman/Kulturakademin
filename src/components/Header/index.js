@@ -16,9 +16,11 @@ class Header extends Component {
       up: true,
       scrollPos: 0,
     }
+    this.closeMenu = this.closeMenu.bind(this)
     this.handleScroll = this.handleScroll.bind(this)
   }
 
+  // Get the icons to disappear andshow agian when user scrolls
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
   }
@@ -37,10 +39,18 @@ class Header extends Component {
 
   toggleMenu = () => {
     this.setState(prevState => {
+      document.addEventListener('click', this.closeMenu)
       return { menuShown: !prevState.menuShown }
     })
   }
 
+  // Close dropdown menu on click
+  closeMenu() {
+    this.setState({ menuShown: false }, () => {
+      document.removeEventListener('click', this.closeMenu)
+    })
+  }
+  
   render() {
     const { menuShown } = this.state
 
