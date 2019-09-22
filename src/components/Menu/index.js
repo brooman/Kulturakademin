@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-// import SearchIcon from '../../icons/SearchIcon'
+import CloseIcon from '../../icons/CloseIcon'
 
 import styles from './index.module.scss'
 
@@ -12,9 +12,9 @@ const Menu = props => {
   if (show) {
     return (
       <div>
-        {/* <button className={styles.closeIcon}>
-          <SearchIcon type="button" />
-        </button> */}
+        <button className={styles.closeIcon}>
+          <CloseIcon type="button" />
+        </button>
 
         <div className={styles.menu}>
           <Link to={`${process.env.PUBLIC_URL}/discover/audio`}>Ljud</Link>
