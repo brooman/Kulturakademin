@@ -14,7 +14,9 @@ const About = () => {
           lacus, suspendisse. Id dui magna tincidunt ut nisi justo, felis sed ac.
         </p>
         <p className={styles.content}>
-          Läs mer på <a href="http://kulturakademin.com">Kulturakademin.com</a>
+          Läs mer på 
+          {' '}
+          <a href="http://kulturakademin.com">Kulturakademin.com</a>
         </p>
       </div>
       <div className={styles.contactWrapper}>
