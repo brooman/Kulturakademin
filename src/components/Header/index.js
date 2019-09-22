@@ -25,20 +25,20 @@ class Header extends Component {
     window.addEventListener('scroll', this.handleScroll)
   }
 
-  handleScroll() {
-    const { scrollPos } = this.state
-    this.setState({
-      scrollPos: document.body.getBoundingClientRect().top,
-      up: document.body.getBoundingClientRect().top > scrollPos,
-    })
-  }
-
   // Prevent the icons to disappear when menu is open.
   toggleMenu = () => {
     this.setState(prevState => {
       window.removeEventListener('scroll', this.handleScroll)
       document.addEventListener('click', this.closeMenu)
       return { menuShown: !prevState.menuShown }
+    })
+  }
+
+  handleScroll() {
+    const { scrollPos } = this.state
+    this.setState({
+      scrollPos: document.body.getBoundingClientRect().top,
+      up: document.body.getBoundingClientRect().top > scrollPos,
     })
   }
 

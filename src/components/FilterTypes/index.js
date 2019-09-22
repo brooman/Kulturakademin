@@ -8,6 +8,7 @@ class FilterTypes extends Component {
   state = {
     active: 'Allt',
   }
+
   _handleClick(button) {
     this.setState({ active: button })
   }
