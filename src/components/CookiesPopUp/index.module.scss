@@ -1,0 +1,78 @@
+@import '../../variables.scss';
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $defaultLightDark;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  button {
+    margin-left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+    color: #ffffff;
+    background-color: $defaultHighlight;
+    width: 164px;
+    height: 36px;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.slideUp {
+  position: fixed;
+  top: 100vh;
+  width: 100%;
+  animation-name: slideUp;
+  animation-duration: 1.5s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.slideDown {
+  position: fixed;
+  top: 100vh;
+  width: 100%;
+  animation-name: slideDown;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.hide * {
+  display: none;
+}
+
+.show * {
+  display: flex;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}

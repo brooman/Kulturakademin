@@ -6,6 +6,8 @@ import About from './pages/About'
 import ContentView from './pages/ContentView'
 import Discover from './pages/Discover'
 import Header from './components/Header'
+import PwaPopUp from './components/PwaPopUp'
+import CookiesPopUp from './components/CookiesPopUp'
 import Player from './components/Player'
 import { PlayerContextProvider } from './Hooks/PlayerContextProvider'
 
@@ -15,12 +17,14 @@ function App() {
       <Router>
         <div className="App">
           <Header />
+
           <div className="content">
             <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />
             <Route path={`${process.env.PUBLIC_URL}/discover`} component={Discover} />
             <Route path={`${process.env.PUBLIC_URL}/view/:type/:id`} component={ContentView} />
             <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
           </div>
+
           <footer>
             <ul>
               <li>
@@ -34,6 +38,9 @@ function App() {
               </li>
             </ul>
           </footer>
+
+          <PwaPopUp />
+          <CookiesPopUp />
           <Player />
         </div>
       </Router>
