@@ -10,6 +10,7 @@ import Menu from './components/Menu'
 import LogoIcon from './icons/LogoIcon'
 import HamburgerIcon from './icons/HamburgerIcon'
 import SearchIcon from './icons/SearchIcon'
+import PwaPopUp from './components/PwaPopUp'
 import Player from './components/Player'
 
 import { PlayerContextProvider } from './Hooks/PlayerContextProvider'
@@ -70,7 +71,8 @@ class App extends Component {
                 </li>
               </ul>
             </footer>
-
+            
+            <PwaPopUp />
             <Player />
           </div>
         </Router>
