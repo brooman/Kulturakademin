@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-import SearchIcon from '../../icons/SearchIcon'
+// import SearchIcon from '../../icons/SearchIcon'
 
 import styles from './index.module.scss'
 
