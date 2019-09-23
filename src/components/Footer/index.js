@@ -61,6 +61,10 @@ const Footer = props => {
 
 Footer.propTypes = {
   text: PropTypes.string.isRequired,
+  infoTextLeft: PropTypes.string.isRequired,
+  infoTextRight: PropTypes.string.isRequired,
+  cooperateCompany: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 }
 
 export default Footer
