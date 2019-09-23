@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Discover from '../../pages/Discover'
 
 import styles from './index.module.scss'
 
