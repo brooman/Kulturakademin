@@ -73,7 +73,11 @@ class App extends Component {
                 </li>
               </ul>
             </footer>
-            <Footer text="LADDA NER APPVERSION" />
+            <Footer
+              text="LADDA NER APPVERSION"
+              infoTextLeft="Integritetspolicy"
+              infoTextRight="Inställningar"
+            />
             <PwaPopUp />
             <CookiesPopUp />
             <Player />
