@@ -16,15 +16,20 @@
 
 .expanded {
   display: flex !important;
-  justify-content: space-between;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .category {
-  background-color: $defaultDark;
-  width: 40%;
-  margin: 1rem 0.5rem;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 304%;
+  letter-spacing: 0.02em;
+  color: #ffffff;
 
   a {
     display: flex;

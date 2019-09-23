@@ -8,7 +8,7 @@ class Categories extends Component {
     super()
 
     this.state = {
-      isExpanded: true,
+      isExpanded: false,
       categories: [
         {
           id: 0,
@@ -41,6 +41,29 @@ class Categories extends Component {
           link: '/discover/television',
         },
       ],
+
+      info: [
+        {
+          id: 0,
+          name: 'Populära',
+          link: '/discover/dance',
+        },
+        {
+          id: 1,
+          name: 'Mest Visade',
+          link: '/discover/cinematography',
+        },
+        {
+          id: 2,
+          name: 'Indexering',
+          link: '/discover/music',
+        },
+        {
+          id: 3,
+          name: 'Allt Material',
+          link: '/discover/light',
+        },
+      ],
     }
   }
 
@@ -51,7 +74,7 @@ class Categories extends Component {
   }
 
   render() {
-    const { categories, isExpanded } = this.state
+    const { categories, info, isExpanded } = this.state
 
     const dropdownStyles = isExpanded
       ? [styles.dropdown, styles.expanded].join(' ')
@@ -64,14 +87,26 @@ class Categories extends Component {
           <div>v</div>
         </div>
         <div className={dropdownStyles}>
-          {categories.map(category => {
-            const { id, name, link } = category
-            return (
-              <div key={id} className={styles.category}>
-                <Link to={process.env.PUBLIC_URL + link}>{name}</Link>
-              </div>
-            )
-          })}
+          <div>
+            {categories.map(category => {
+              const { id, name, link } = category
+              return (
+                <div key={id} className={styles.category}>
+                  <Link to={process.env.PUBLIC_URL + link}>{name}</Link>
+                </div>
+              )
+            })}
+          </div>
+          <div>
+            {info.map(infoitem => {
+              const { id, name, link } = infoitem
+              return (
+                <div key={id} className={styles.category}>
+                  <Link to={process.env.PUBLIC_URL + link}>{name}</Link>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     )
