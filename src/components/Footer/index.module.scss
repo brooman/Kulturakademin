@@ -17,3 +17,52 @@
   line-height: 170%;
   letter-spacing: 0.15em;
 }
+
+.socialMedia {
+  background-color: $defaultDark;
+  display: flex;
+  margin: auto;
+
+  ul {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    p {
+      font-weight: 300;
+      font-size: 14px;
+      color: #cbcbcb;
+      margin: 1em;
+      letter-spacing: 0.02em;
+    }
+
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  background-color: $defaultLightDark;
+}
+
+.infoText {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  margin: 2%;
+  letter-spacing: 0.02em;
+}
