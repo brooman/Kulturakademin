@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import ContentView from './pages/ContentView'
 import Discover from './pages/Discover'
-import AreaView from './pages/AreaView'
+import CategoryView from './pages/CategoryView'
 
 import Menu from './components/Menu'
 import LogoIcon from './icons/LogoIcon'
@@ -56,7 +56,7 @@ class App extends Component {
             <div className="content">
               <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />
               <Route path={`${process.env.PUBLIC_URL}/discover`} component={Discover} />
-              <Route path={`${process.env.PUBLIC_URL}/area`} component={AreaView} />
+              <Route path={`${process.env.PUBLIC_URL}/category`} component={CategoryView} />
               <Route path={`${process.env.PUBLIC_URL}/view/:type/:id`} component={ContentView} />
               <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
             </div>
