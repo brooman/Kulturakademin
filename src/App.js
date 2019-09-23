@@ -56,7 +56,10 @@ class App extends Component {
             <div className="content">
               <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />
               <Route path={`${process.env.PUBLIC_URL}/discover`} component={Discover} />
-              <Route path={`${process.env.PUBLIC_URL}/category`} component={CategoryView} />
+              <Route
+                path={`${process.env.PUBLIC_URL}/category/:categoryType`}
+                component={CategoryView}
+              />
               <Route path={`${process.env.PUBLIC_URL}/view/:type/:id`} component={ContentView} />
               <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
             </div>
