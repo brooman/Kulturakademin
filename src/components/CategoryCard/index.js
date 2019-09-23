@@ -5,32 +5,11 @@ import PodIcon from '../../icons/PodIcon'
 
 import styles from './index.module.scss'
 
-const DiscoverCard = props => {
+const CategoryCard = props => {
   const { order, item, displayMode } = props
 
   const { year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${image}')` }
-
-  // trying
-  // const getViewStyle = displayMode => {
-  //   switch (displayMode) {
-  //     case 'list':
-  //       return styles.listView
-  //     case 'grid':
-  //       return styles.gridView
-  //     case 'singleCard':
-  //       return styles.singleCard
-  //     default:
-  //       return styles.gridView
-  //   }
-  // }
-
-  // const viewStyle = getViewStyle(displayMode)
-
-  // const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
-
-  // const background = order % 2 === 1 ? styles.dark : styles.light
-  // const link = `/view/${type}/${id}`
 
   return (
     <div className={[styles.card, styles.listView].join(' ')}>
@@ -69,9 +48,9 @@ const DiscoverCard = props => {
   )
 }
 
-DiscoverCard.propTypes = {
-  displayMode: PropTypes.string.isRequired,
+CategoryCard.propTypes = {
+  // displayMode: PropTypes.string.isRequired,
   item: PropTypes.objectOf(PropTypes.any).isRequired,
 }
 
-export default DiscoverCard
+export default CategoryCard
