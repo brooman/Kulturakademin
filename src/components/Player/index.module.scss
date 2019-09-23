@@ -2,13 +2,21 @@
 
 $playerHeight: 70px;
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 800;
+  bottom: 0;
+}
+
 .player {
   display: flex;
   flex-direction: column;
+  margin-top: auto;
   height: $playerHeight + 5;
-  position: sticky;
   z-index: 900;
-  bottom: 0;
   width: 100vw;
   color: $defaultWhite;
   background-color: $defaultDark;
@@ -34,12 +42,27 @@ $playerHeight: 70px;
   vertical-align: center; //this property does nothing, but we need a class for the iframe container
 }
 
-.previewContainer,
-.preview {
-  height: $playerHeight;
-  width: ($playerHeight / 9) * 16;
-  max-width: ($playerHeight / 9) * 16;
+.smallPreview {
+  position: absolute;
+  bottom: $playerHeight + 10;
+  left: 10px;
+
+  .preview {
+    height: $playerHeight;
+    width: ($playerHeight / 9) * 16;
+    max-width: ($playerHeight / 9) * 16;
+  }
 }
+
+.largePreview {
+
+  >.preview {
+    height: 0 !important;
+    width: 100% !important;
+    padding-top: 56.25% !important;
+  }
+}
+
 
 .imagePreview {
   background-position: center;
