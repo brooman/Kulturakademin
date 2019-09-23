@@ -77,6 +77,8 @@ class App extends Component {
               text="LADDA NER APPVERSION"
               infoTextLeft="Integritetspolicy"
               infoTextRight="Inställningar"
+              cooperateCompany="K-Play finansieras av"
+              image="images/vrgLogo.png"
             />
             <PwaPopUp />
             <CookiesPopUp />

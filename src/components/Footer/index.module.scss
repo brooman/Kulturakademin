@@ -1,10 +1,15 @@
 @import '../../variables.scss';
 
+.footer {
+  color: #cbcbcb;
+}
+
 .getPwa {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $defaultLightDark;
+  padding: 5% 0;
 }
 
 .footerText {
@@ -22,6 +27,7 @@
   background-color: $defaultDark;
   display: flex;
   margin: auto;
+  padding: 5% 0;
 
   ul {
     display: flex;
@@ -65,4 +71,11 @@
   line-height: 150%;
   margin: 2%;
   letter-spacing: 0.02em;
+}
+
+.endFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 0;
 }

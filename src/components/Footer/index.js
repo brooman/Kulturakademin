@@ -11,10 +11,10 @@ import LinkedInIcon from '../../icons/LinkedInIcon'
 import styles from './index.module.scss'
 
 const Footer = props => {
-  const { text, infoTextLeft, infoTextRight } = props
+  const { text, infoTextLeft, infoTextRight, cooperateCompany, image } = props
 
   return (
-    <div>
+    <div className={styles.footer}>
       <div className={styles.getPwa}>
         <MobileIcon />
         <h1 className={styles.footerText}>{text}</h1>
@@ -50,6 +50,10 @@ const Footer = props => {
       <div className={styles.info}>
         <p className={styles.infoText}>{infoTextLeft}</p>
         <p className={styles.infoText}>{infoTextRight}</p>
+      </div>
+      <div className={styles.endFooter}>
+        <p className={styles.cooperateCompany}>{cooperateCompany}</p>
+        <img src={image} className="profileImage" alt="profile_image" />
       </div>
     </div>
   )
