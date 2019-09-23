@@ -13,32 +13,32 @@ class Categories extends Component {
         {
           id: 0,
           name: 'Dans',
-          link: '/discover/dance',
+          link: '/category/dance',
         },
         {
           id: 1,
           name: 'Film',
-          link: '/discover/cinematography',
+          link: '/category/cinematography',
         },
         {
           id: 2,
           name: 'Musik',
-          link: '/discover/music',
+          link: '/category/music',
         },
         {
           id: 3,
           name: 'Ljus',
-          link: '/discover/light',
+          link: '/category/light',
         },
         {
           id: 4,
           name: 'Teater',
-          link: '/discover/drama',
+          link: '/category/drama',
         },
         {
           id: 5,
           name: 'TV',
-          link: '/discover/television',
+          link: '/category/television',
         },
       ],
     }
