@@ -4,7 +4,7 @@ export default {
     {
       id: 129,
       type: 'video',
-      category: ['Musik'],
+      category: 'Musik',
       subcategory: ['Scennärvaro', 'Sång'],
       title: 'Masterclass med Pia Olby - Vad är skönsång',
       episodeNr: '3',
@@ -19,7 +19,7 @@ export default {
     {
       id: 129,
       type: 'audio',
-      category: ['Dans'],
+      category: 'Dans',
       subcategory: ['Scennärvaro', 'Process'],
       title: 'Eeva Bolin - Ny organisation för kultur i grundskola och förskola',
       image: 'jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
@@ -38,8 +38,8 @@ export default {
     {
       id: 129,
       type: 'audio',
-      category: ['Teater'],
-      subcategory: ['Process'],
+      category: 'Dans',
+      subcategory: ['Scennärvaro', 'Process'],
       title: 'Eeva Bolin - Ny organisation för kultur i grundskola och förskola',
       episodeNr: '2',
       episodesInSeries: '4',
@@ -53,7 +53,7 @@ export default {
     {
       id: 128,
       type: 'audio',
-      category: ['Film', 'TV'],
+      category: 'Film',
       subcategory: ['Process'],
       title: 'Åsa Jansson – Regionala arrangörsstödet för barn & unga - kulturkatalogen väst',
       episodeNr: '2',
@@ -68,7 +68,7 @@ export default {
     {
       id: 127,
       type: 'audio',
-      category: ['Dans', 'Musik'],
+      category: 'Dans',
       subcategory: ['Fakturering', 'Process'],
       title: 'Ida Kaivola - Kulturstöd och regler för utjämningsbidraget i Göteborg',
       episodeNr: '2',
@@ -83,7 +83,7 @@ export default {
     {
       id: 126,
       type: 'audio',
-      category: ['Film', 'TV'],
+      category: 'Film',
       subcategory: ['Process'],
       title: 'SFI & Film i Väst – filmfinansieringens möjligheter & utmaningar',
       episodeNr: '2',
@@ -98,7 +98,7 @@ export default {
     {
       id: 125,
       type: 'audio',
-      category: ['Dans', 'Teater'],
+      category: 'Dans',
       subcategory: ['Scennärvaro', 'Uppvisning'],
       title: 'Åsa Söderberg – 12 års erfarenhet av publikutveckling på Skånes Dansteater',
       episodeNr: '2',
@@ -113,7 +113,7 @@ export default {
     {
       id: 124,
       type: 'audio',
-      category: ['Ljus', 'Musik'],
+      category: 'Ljus',
       subcategory: ['Scenkonst'],
       title: 'Fading Lights - The Transition From Candle To Led with Chris Van Goethem',
       episodeNr: '2',
@@ -130,8 +130,8 @@ export default {
     {
       id: 129,
       type: 'video',
-      category: ['Musik'],
-      subcategory: ['Sång', 'Scennärvaro'],
+      category: 'Musik',
+      subcategory: ['Scennärvaro', 'Sång'],
       title: 'Masterclass med Pia Olby - Vad är skönsång',
       episodeNr: '3',
       episodesInSeries: '4',
@@ -146,7 +146,7 @@ export default {
     {
       id: 128,
       type: 'video',
-      category: ['Dans'],
+      category: 'Dans',
       subcategory: ['Scennärvaro'],
       title: 'Masterclass med Pia Olby - Vad är dansgestaltning',
       episodeNr: '1',
@@ -162,7 +162,7 @@ export default {
     {
       id: 127,
       type: 'video',
-      category: ['Musik'],
+      category: 'Musik',
       subcategory: ['Sång'],
       title: 'Masterclass med Pia Olby - Textgestaltning och sånggestaltning',
       episodeNr: '2',
@@ -177,7 +177,7 @@ export default {
     {
       id: 126,
       type: 'video',
-      category: ['Musik'],
+      category: 'Musik',
       subcategory: ['Sång'],
       title: 'Masterclass med Pia Olby - Kroppens betydelse i sång',
       episodeNr: '4',
@@ -192,7 +192,7 @@ export default {
     {
       id: 125,
       type: 'video',
-      category: ['Film'],
+      category: 'Film',
       subcategory: ['Studio'],
       title: 'NEW ON THE MAP: REInvent Studios',
       episodeNr: '2',
@@ -207,7 +207,7 @@ export default {
     {
       id: 124,
       type: 'video',
-      category: ['Dans'],
+      category: 'Dans',
       subcategory: ['Jazz', 'Uppvisning'],
       title: 'Jazzens historia',
       episodeNr: '2',
