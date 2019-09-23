@@ -1,6 +1,4 @@
 import React from 'react'
-import { BrowserRouter as Link } from 'react-router-dom'
-
 import PropTypes from 'prop-types'
 import MobileIcon from '../../icons/MobileIcon'
 import FacebookIcon from '../../icons/FacebookIcon'
