@@ -1,7 +1,10 @@
-.footer {
+@import '../../variables.scss';
+
+.getPwa {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $defaultLightDark;
 }
 
 .footerText {

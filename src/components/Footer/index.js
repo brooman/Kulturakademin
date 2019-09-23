@@ -8,7 +8,7 @@ const Footer = props => {
   const { text } = props
 
   return (
-    <div className={styles.footer}>
+    <div className={styles.getPwa}>
       <MobileIcon />
       <h1 className={styles.footerText}>{text}</h1>
     </div>
