@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import YouTube from 'react-youtube'
 import usePlayer from '../../Hooks/usePlayer'
 import styles from './index.module.scss'
-
+import VideoView from '../VideoView'
 
 const PreviewImage = props => {
   const { image, show } = props
@@ -18,13 +18,13 @@ const PreviewImage = props => {
   )
 }
 
-const internalPlayer = (resource, playing, setRef) => {
+const internalPlayer = (resource, playing, setRef, minimized) => {
   switch (resource.type) {
     case 'video':
       const containerClassName = playing ? null : styles.hidden
 
       return (
-        <div className={styles.videoPreview}>
+        <div className={minimized ? styles.smallPreview : styles.largePreview}>
           <PreviewImage className={styles.preview} show={playing} image={resource.image} />
           <YouTube
             videoId={resource.trackingId}
@@ -82,16 +82,32 @@ const ProgressBar = props => {
 
 const Player = () => {
   const { resource, reference, playing, togglePlaying, setRef } = usePlayer()
+  const [minimized, setMinimized] = useState(false)
 
   if (resource) {
     return (
-      <div className={styles.player}>
-        {reference ? <ProgressBar reference={reference} /> : <div className={styles.progressBar} />}
-        <div className={styles.playerBody}>
-          {internalPlayer(resource, playing, setRef)}
-          <button className={styles.playbutton} onClick={togglePlaying}>
-            {playing ? 'Pause' : 'Play'}
-          </button>
+      <div className={styles.container}>
+        {internalPlayer(resource, playing, setRef, minimized)}
+        {!minimized && <VideoView resource={resource} />}
+        <div className={styles.player}>
+          {reference ? (
+            <ProgressBar reference={reference} />
+          ) : (
+            <div className={styles.progressBar} />
+          )}
+          <div className={styles.playerBody}>
+            <button className={styles.playbutton} onClick={togglePlaying}>
+              {playing ? 'Pause' : 'Play'}
+            </button>
+            <button
+              className={styles.playbutton}
+              onClick={() => {
+                setMinimized(!minimized)
+              }}
+            >
+              Minimize
+            </button>
+          </div>
         </div>
       </div>
     )
