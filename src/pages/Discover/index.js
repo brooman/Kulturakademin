@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 import Hero from '../../components/Hero'
 import DiscoverCard from '../../components/DiscoverCard'
-
 import DiscoverGroup from '../../components/DiscoverGroup'
 import FilterTypes from '../../components/FilterTypes'
 import Mocker from '../../mock/mocker'
@@ -38,7 +37,7 @@ class Discover extends Component {
   }
 
   render() {
-    const { highlighted, data, shownTypes } = this.state
+    const { highlighted, data } = this.state
     const applyFilter = array => {
       return array.filter(item => {
         if (this.state.shownTypes === 'allt') {
@@ -59,8 +58,6 @@ class Discover extends Component {
           text="K-play det självklara valet"
         />
         <div className="container">
-          <h1>Dans</h1>
-          <p>Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till dans.</p>
           <FilterTypes setShownTypes={this.setShownTypes} />
           {applyFilter(highlighted).map(card => {
             cardCounter += 1
@@ -77,7 +74,6 @@ class Discover extends Component {
             const { title, items } = group
             groupCount += 1
             return <DiscoverGroup key={groupCount} title={title} items={items} />
-          })}
           })}
         </div>
       </>
