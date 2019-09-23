@@ -2,6 +2,7 @@
 
 .categories {
   display: flex;
+  text-transform: uppercase;
   align-content: center;
   justify-content: space-between;
   width: 100%;
@@ -41,4 +42,20 @@
     color: $defaultWhite;
     text-decoration: none;
   }
+}
+
+.leftMenu {
+  background-color: $defaultDark;
+}
+
+.rightMenu {
+  background-color: $defaultLightDark;
+}
+
+.rightMenu,
+.leftMenu {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

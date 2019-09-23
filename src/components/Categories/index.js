@@ -9,6 +9,7 @@ class Categories extends Component {
 
     this.state = {
       isExpanded: false,
+      color: '',
       categories: [
         {
           id: 0,
@@ -69,7 +70,7 @@ class Categories extends Component {
 
   toggleExpanded = () => {
     this.setState(prevState => {
-      return { isExpanded: !prevState.isExpanded }
+      return { isExpanded: !prevState.isExpanded, color: '#242424' }
     })
   }
 
@@ -82,12 +83,18 @@ class Categories extends Component {
 
     return (
       <div>
-        <div className={styles.categories} onClick={this.toggleExpanded}>
+        <div
+          className={styles.categories}
+          style={{
+            backgroundColor: this.state.color,
+          }}
+          onClick={this.toggleExpanded}
+        >
           <div>Kategorier</div>
           <div>v</div>
         </div>
         <div className={dropdownStyles}>
-          <div>
+          <div className={styles.leftMenu}>
             {categories.map(category => {
               const { id, name, link } = category
               return (
@@ -97,7 +104,7 @@ class Categories extends Component {
               )
             })}
           </div>
-          <div>
+          <div className={styles.rightMenu}>
             {info.map(infoitem => {
               const { id, name, link } = infoitem
               return (
