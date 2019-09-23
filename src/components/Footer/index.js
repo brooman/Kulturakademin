@@ -28,22 +28,22 @@ const Footer = props => {
             </a>
           </li>
           <li>
-            <Link to={`${process.env.PUBLIC_URL}/view/video/128`}>
+            <a href="https://www.instagram.com/kulturakademin/">
               <InstagramIcon />
               <p>Instagram</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to={`${process.env.PUBLIC_URL}/about/`}>
+            <a href="https://twitter.com/kulturakademin">
               <TwitterIcon />
               <p>Twitter</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to={`${process.env.PUBLIC_URL}/about/`}>
+            <a href="https://www.linkedin.com/company/kulturakademin/?originalSubdomain=se">
               <LinkedInIcon />
               <p>LinkedIn</p>
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
