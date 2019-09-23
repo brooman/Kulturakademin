@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerText {
+  text-transform: uppercase;
+  font-style: normal;
+  width: 22%;
+  margin: 0 0 0 1em;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 170%;
+  letter-spacing: 0.15em;
+}
