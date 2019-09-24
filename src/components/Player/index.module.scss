@@ -45,7 +45,7 @@ $playerHeight: 70px;
 }
 
 .previewContainer {
-  vertical-align: center; //this property does nothing, but we need a class for the iframe container
+  max-width: 100vw;
 }
 
 .smallPreview {

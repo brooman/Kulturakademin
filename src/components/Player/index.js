@@ -32,6 +32,7 @@ const internalPlayer = (resource, playing, setRef, minimized) => {
             videoId={resource.trackingId}
             opts={{
               height: '100%',
+              width: '100%',
               playerVars: { autoplay: 1, controls: 0, fs: 0, modestbranding: 1, disablekb: 1 },
             }}
             onReady={e => {
