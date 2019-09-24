@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 
 import styles from './index.module.scss'
 
-const buttons = ['Allt', 'Video', 'Pod']
+const buttons = ['Allt', 'Video', 'Audio']
 
 class FilterTypes extends Component {
   state = {
     active: 'Allt',
   }
 
-  _handleClick(button) {
+  handleClick(button) {
     this.setState({ active: button })
   }
 
@@ -19,7 +19,11 @@ class FilterTypes extends Component {
         {buttons.map((button, key) => (
           <button
             className={this.state.active === button ? styles.active : styles.notActive}
-            onClick={this._handleClick.bind(this, button)}
+            value={button}
+            onClick={() => {
+              this.props.setShownTypes(button)
+              this.handleClick(button)
+            }}
             key={key}
           >
             {button}
