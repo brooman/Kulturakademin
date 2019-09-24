@@ -16,35 +16,28 @@ const CategoryCard = props => {
     <div className={[styles.card, styles.listView].join(' ')}>
       <div className={styles.imageWrapper}>
         <div className={styles.image} style={img} />
-        <div className={styles.iconWrapper}>{type === 'audio' ? <PodIcon /> : <VideoIcon />}</div>
       </div>
       <div className={styles.body}>
         <div className={styles.content}>
           <div className={styles.cardInfo}>
-            <p>
-              <span>34</span>
-              <span> min</span>
-              <span> | </span>
-              <span>Avsnitt </span>
-              <span>{episodeNr}</span>
-              <span>/</span>
-              <span>{episodesInSeries}</span>
-            </p>
-            <div className={styles.cardYear}>
+            <div className={styles.infoWrapper}>
               <p>
-                <span>{year}</span>
+                <span>Avsnitt </span>
+                <span>{episodeNr}</span>
+                <span>/</span>
+                <span>{episodesInSeries}</span>
               </p>
+              <p>
+                <span>34</span>
+                <span> min</span>
+              </p>
+            </div>
+            <div className={styles.iconWrapper}>
+              {type === 'audio' ? <PodIcon /> : <VideoIcon />}
             </div>
           </div>
 
           <h3>{title}</h3>
-          <p className={styles.description}>{content}</p>
-        </div>
-        <div className={styles.readMore}>
-          <p>Läs mer</p>
-          <div className={styles.arrow}>
-            <ReadMoreIcon />
-          </div>
         </div>
       </div>
     </div>
