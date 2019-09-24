@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import ExpandIcon from '../../icons/ExpandIcon'
 
 import styles from './index.module.scss'
 
@@ -91,7 +92,9 @@ class Categories extends Component {
           onClick={this.toggleExpanded}
         >
           <div>Kategorier</div>
-          <div>v</div>
+          <div>
+            <ExpandIcon />
+          </div>
         </div>
         <div className={dropdownStyles}>
           <div className={styles.leftMenu}>
