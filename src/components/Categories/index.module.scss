@@ -2,6 +2,7 @@
 
 .categories {
   display: flex;
+  text-transform: uppercase;
   align-content: center;
   justify-content: space-between;
   width: 100%;
@@ -10,21 +11,33 @@
   background-color: $defaultHighlight;
 }
 
+.active {
+  background: $defaultHighlight;
+}
+
+.notActive {
+  color: $defaultWhite;
+}
+
 .dropdown {
   display: none;
 }
 
 .expanded {
   display: flex !important;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+
+  flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .category {
-  background-color: $defaultDark;
-  width: 40%;
-  margin: 1rem 0.5rem;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 304%;
+  letter-spacing: 0.02em;
+  color: #ffffff;
 
   a {
     display: flex;
@@ -38,4 +51,20 @@
     color: $defaultWhite;
     text-decoration: none;
   }
+}
+
+.leftMenu {
+  background-color: $defaultDark;
+}
+
+.rightMenu {
+  background-color: $defaultLightDark;
+}
+
+.rightMenu,
+.leftMenu {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
