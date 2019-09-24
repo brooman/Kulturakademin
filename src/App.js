@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import ContentView from './pages/ContentView'
 import Discover from './pages/Discover'
+import Footer from './components/Footer'
 
 import Menu from './components/Menu'
 import LogoIcon from './icons/LogoIcon'
@@ -72,7 +73,13 @@ class App extends Component {
                 </li>
               </ul>
             </footer>
-
+            <Footer
+              text="LADDA NER APPVERSION"
+              infoTextLeft="Integritetspolicy"
+              infoTextRight="Inställningar"
+              cooperateCompany="K-Play finansieras av"
+              image="images/vrgLogo.png"
+            />
             <PwaPopUp />
             <CookiesPopUp />
             <Player />
