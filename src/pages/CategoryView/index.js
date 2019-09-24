@@ -20,6 +20,7 @@ class CategoryView extends Component {
     }
     this.setShownTypes = this.setShownTypes.bind(this)
   }
+
   componentDidMount() {
     this.setState({
       highlighted: Mocker('highlighted'),
@@ -57,7 +58,7 @@ class CategoryView extends Component {
         return false
       })
     }
-    let groupCount = 0
+    const groupCount = 0
     let cardCounter = 0
     return (
       <>
@@ -68,8 +69,10 @@ class CategoryView extends Component {
         <div className="container">
           <h1>{this.state.category}</h1>
           <p>
-            Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till{' '}
-            {this.state.category.toLowerCase()}.
+            Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till
+            {' '}
+            {this.state.category.toLowerCase()}
+.
           </p>
           <FilterTypes setShownTypes={this.setShownTypes} />
 

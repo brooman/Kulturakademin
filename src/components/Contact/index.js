@@ -19,8 +19,8 @@ class Contact extends Component {
   }
 
   scrollToTop() {
-    let start = setInterval(this.scroll.bind(this))
-    this.setState({ start: start })
+    const start = setInterval(this.scroll.bind(this))
+    this.setState({ start })
   }
 
   render() {
