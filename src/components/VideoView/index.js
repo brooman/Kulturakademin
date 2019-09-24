@@ -12,19 +12,21 @@ import Mocker from '../../mock/mocker'
 import usePlayer from '../../Hooks/usePlayer'
 
 const VideoView = props => {
-  const { year, episodeNo, episodeNos, title, time, content, tags } = props.resource
+  const { togglePlaying } = usePlayer()
+  const { year, episodeNo, episodeNos, title, time, content, tags, image } = props.resource
   let tagCounter = 0
 
-  const { resource, setResource } = usePlayer()
-  if (resource !== props.resource) {
-    setResource(props.resource)
-  }
-
   return (
-    <div>
-      <Hero image="images/Video.png" text="" />
+    <div className={styles.container}>
+      {props.children}
       <div className={styles.videoOptionsBar}>
-        <VideoPlaybar play="play" save="save" />
+        <VideoPlaybar
+          onClick={() => {
+            togglePlaying()
+          }}
+          play="play"
+          save="save"
+        />
         <div className={styles.videoIconBox}>
           <VideoIcon />
           <p className={styles.videoIconBoxText}>{time}</p>

@@ -1,5 +1,9 @@
 @import '../../variables.scss';
 
+.container {
+  background-color: $defaultDark;
+}
+
 .videoOptionsBar {
   display: flex;
   align-items: flex-end;
