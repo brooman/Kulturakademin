@@ -11,7 +11,7 @@ const PreviewImage = props => {
     <div
       className={[styles.preview, styles.imagePreview].join(' ')}
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/images/${image})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/${image})`,
         display: show ? 'none' : 'block',
       }}
     />
