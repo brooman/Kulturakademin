@@ -33,6 +33,7 @@
 }
 
 .category {
+  width: 100%;
   font-weight: 600;
   font-size: 16px;
   line-height: 304%;
@@ -53,11 +54,13 @@
   }
 }
 
-.leftMenu {
+.leftMenu>.category:nth-child(odd),
+.rightMenu>.category:nth-child(even) {
   background-color: $defaultDark;
 }
 
-.rightMenu {
+.rightMenu>.category:nth-child(odd),
+.leftMenu>.category:nth-child(even) {
   background-color: $defaultLightDark;
 }
 
