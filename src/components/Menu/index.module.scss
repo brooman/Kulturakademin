@@ -3,15 +3,62 @@
 .menu {
   display: flex;
   flex-direction: column;
-
-  height: 100%;
-  width: 100%;
-
-  position: absolute;
+  height: 410px;
+  width: 50%;
+  font-weight: 600;
+  overflow-y: scroll;
+  line-height: 304%;
+  position: fixed;
   top: 0;
-
   z-index: 9999;
-
+  animation-fill-mode: forwards;
   margin-top: $headerHeight;
   background-color: $defaultBackground;
+  right: -50%;
+  -webkit-animation: slide 0.7s forwards;
+  -webkit-animation-delay: 0.3s;
+  animation: slide 0.7s forwards;
+  animation-delay: 0.3s;
+
+  a {
+    color: $defaultWhite;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    padding-left: 5%;
+  }
+}
+
+@-webkit-keyframes slide {
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide {
+  100% {
+    right: 0;
+  }
+}
+
+.hightlightedBackground {
+  background-color: #242424;
+}
+
+// Denna ska ev tas bort
+.closeIcon {
+  position: fixed;
+  background-color: $defaultBackground;
+  top: 9%;
+  width: 20%;
+  height: 50px;
+  border: none;
+  z-index: 1000;
+  right: -20%;
+  animation-fill-mode: forwards;
+
+  -webkit-animation: slide 0.7s forwards;
+  -webkit-animation-delay: 0.3s;
+  animation: slide 0.7s forwards;
+  animation-delay: 0.2s;
 }
