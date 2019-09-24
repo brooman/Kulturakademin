@@ -1,0 +1,70 @@
+@import '../../variables.scss';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+
+  padding: 0 1rem;
+
+  width: 100%;
+  height: $headerHeight;
+
+  color: $defaultWhite;
+
+  .up {
+    visibility: visible;
+    transition: all 200ms ease-in;
+  }
+  .down {
+    visibility: hidden;
+    transition: all 200ms ease-out;
+    // transform: translate(0, -100%);
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  width: 10%;
+  margin: 0 auto;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menuBtn {
+  color: $defaultWhite;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.wrapper {
+  margin-top: $headerHeight;
+}
+
+.container {
+  margin: 1rem;
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
