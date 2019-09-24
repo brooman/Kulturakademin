@@ -4,6 +4,8 @@ export default {
     {
       id: 129,
       type: 'video',
+      category: 'Musik',
+      subcategory: ['Scennärvaro', 'Sång'],
       title: 'Masterclass med Pia Olby - Vad är skönsång',
       episodeNr: '3',
       episodesInSeries: '4',
@@ -17,6 +19,8 @@ export default {
     {
       id: 129,
       type: 'audio',
+      category: 'Dans',
+      subcategory: ['Scennärvaro', 'Process'],
       title: 'Eeva Bolin - Ny organisation för kultur i grundskola och förskola',
       image: 'jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
       episodeNr: '2',
@@ -34,6 +38,8 @@ export default {
     {
       id: 129,
       type: 'audio',
+      category: 'Dans',
+      subcategory: ['Scennärvaro', 'Process'],
       title: 'Eeva Bolin - Ny organisation för kultur i grundskola och förskola',
       episodeNr: '2',
       episodesInSeries: '4',
@@ -47,6 +53,8 @@ export default {
     {
       id: 128,
       type: 'audio',
+      category: 'Film',
+      subcategory: ['Process'],
       title: 'Åsa Jansson – Regionala arrangörsstödet för barn & unga - kulturkatalogen väst',
       episodeNr: '2',
       episodesInSeries: '4',
@@ -60,6 +68,8 @@ export default {
     {
       id: 127,
       type: 'audio',
+      category: 'Dans',
+      subcategory: ['Fakturering', 'Process'],
       title: 'Ida Kaivola - Kulturstöd och regler för utjämningsbidraget i Göteborg',
       episodeNr: '2',
       episodesInSeries: '4',
@@ -73,6 +83,8 @@ export default {
     {
       id: 126,
       type: 'audio',
+      category: 'Film',
+      subcategory: ['Process'],
       title: 'SFI & Film i Väst – filmfinansieringens möjligheter & utmaningar',
       episodeNr: '2',
       episodesInSeries: '4',
@@ -86,6 +98,8 @@ export default {
     {
       id: 125,
       type: 'audio',
+      category: 'Dans',
+      subcategory: ['Scennärvaro', 'Uppvisning'],
       title: 'Åsa Söderberg – 12 års erfarenhet av publikutveckling på Skånes Dansteater',
       episodeNr: '2',
       episodesInSeries: '4',
@@ -99,6 +113,8 @@ export default {
     {
       id: 124,
       type: 'audio',
+      category: 'Ljus',
+      subcategory: ['Scenkonst'],
       title: 'Fading Lights - The Transition From Candle To Led with Chris Van Goethem',
       episodeNr: '2',
       episodesInSeries: '4',
@@ -114,7 +130,8 @@ export default {
     {
       id: 129,
       type: 'video',
-
+      category: 'Musik',
+      subcategory: ['Scennärvaro', 'Sång'],
       title: 'Masterclass med Pia Olby - Vad är skönsång',
       episodeNr: '3',
       episodesInSeries: '4',
@@ -129,7 +146,9 @@ export default {
     {
       id: 128,
       type: 'video',
-      title: 'Masterclass med Pia Olby - Vad är sånggestaltning',
+      category: 'Dans',
+      subcategory: ['Scennärvaro'],
+      title: 'Masterclass med Pia Olby - Vad är dansgestaltning',
       episodeNr: '1',
       episodesInSeries: '4',
       year: '2019',
@@ -143,6 +162,8 @@ export default {
     {
       id: 127,
       type: 'video',
+      category: 'Musik',
+      subcategory: ['Sång'],
       title: 'Masterclass med Pia Olby - Textgestaltning och sånggestaltning',
       episodeNr: '2',
       episodesInSeries: '4',
@@ -156,6 +177,8 @@ export default {
     {
       id: 126,
       type: 'video',
+      category: 'Musik',
+      subcategory: ['Sång'],
       title: 'Masterclass med Pia Olby - Kroppens betydelse i sång',
       episodeNr: '4',
       episodesInSeries: '4',
@@ -169,6 +192,8 @@ export default {
     {
       id: 125,
       type: 'video',
+      category: 'Film',
+      subcategory: ['Studio'],
       title: 'NEW ON THE MAP: REInvent Studios',
       episodeNr: '2',
       episodesInSeries: '4',
@@ -182,7 +207,9 @@ export default {
     {
       id: 124,
       type: 'video',
-      title: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
+      category: 'Dans',
+      subcategory: ['Jazz', 'Uppvisning'],
+      title: 'Jazzens historia',
       episodeNr: '2',
       episodesInSeries: '4',
       year: '2019',
@@ -190,7 +217,6 @@ export default {
       content:
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
-
       tags: ['webcast', 'learning'],
     },
   ],
