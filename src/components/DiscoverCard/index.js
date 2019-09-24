@@ -9,9 +9,8 @@ import styles from './index.module.scss'
 const DiscoverCard = props => {
   const { order, item, displayMode } = props
 
-
   const { length, year, episodeNr, episodesInSeries, title, image, content } = item
-  const img = { backgroundImage: `url('${image}')` }
+  const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
   // trying
   const getViewStyle = displayMode => {
