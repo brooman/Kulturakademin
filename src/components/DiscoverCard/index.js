@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import ReadMoreIcon from '../../icons/ReadMoreIcon'
 import PodIcon from '../../icons/PodIcon'
+import VideoIcon from '../../icons/VideoIcon'
 
 import styles from './index.module.scss'
 
 const DiscoverCard = props => {
   const { order, item, displayMode } = props
 
-  const { length, year, episodeNr, episodesInSeries, title, image, content } = item
+  const { type, length, year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
   // trying
@@ -34,9 +35,7 @@ const DiscoverCard = props => {
     <div className={[styles.card, viewStyle, background].join(' ')}>
       <div className={styles.imageWrapper}>
         <div className={styles.image} style={img} />
-        <div className={styles.iconWrapper}>
-          <PodIcon />
-        </div>
+        <div className={styles.iconWrapper}>{type === 'audio' ? <PodIcon /> : <VideoIcon />}</div>
       </div>
       <div className={styles.body}>
         <div className={styles.content}>
