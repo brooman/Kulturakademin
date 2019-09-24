@@ -8,6 +8,8 @@ header {
   position: absolute;
   top: 0;
 
+  z-index: 999;
+
   padding: 0 1rem;
 
   width: 100%;
@@ -19,6 +21,7 @@ header {
     visibility: visible;
     transition: all 200ms ease-in;
   }
+
   .down {
     visibility: hidden;
     transition: all 200ms ease-out;
