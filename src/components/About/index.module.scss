@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+.wrapper {
+  margin: 36px 60px 16px 36px;
+
+  font-family: Muli;
+  font-style: normal;
+  letter-spacing: 0.02em;
+
+  .title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 122.5%;
+  }
+
+  .content {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+
+    a {
+      text-decoration: none;
+      color: $defaultWhite;
+    }
+  }
+}
