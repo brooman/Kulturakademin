@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import ExpandIcon from '../../icons/ExpandIcon'
 
 import styles from './index.module.scss'
 
@@ -8,7 +9,8 @@ class Categories extends Component {
     super()
 
     this.state = {
-      isExpanded: true,
+      isExpanded: false,
+      color: '',
       categories: [
         {
           id: 0,
@@ -41,17 +43,40 @@ class Categories extends Component {
           link: '/category/Tv',
         },
       ],
+
+      info: [
+        {
+          id: 0,
+          name: 'Populära',
+          link: '/discover/dance',
+        },
+        {
+          id: 1,
+          name: 'Mest Visade',
+          link: '/discover/cinematography',
+        },
+        {
+          id: 2,
+          name: 'Indexering',
+          link: '/discover/music',
+        },
+        {
+          id: 3,
+          name: 'Allt Material',
+          link: '/discover/light',
+        },
+      ],
     }
   }
 
   toggleExpanded = () => {
     this.setState(prevState => {
-      return { isExpanded: !prevState.isExpanded }
+      return { isExpanded: !prevState.isExpanded, color: '#242424' }
     })
   }
 
   render() {
-    const { categories, isExpanded } = this.state
+    const { categories, info, isExpanded } = this.state
 
     const dropdownStyles = isExpanded
       ? [styles.dropdown, styles.expanded].join(' ')
@@ -59,19 +84,39 @@ class Categories extends Component {
 
     return (
       <div>
-        <div className={styles.categories} onClick={this.toggleExpanded}>
+        <div
+          className={styles.categories}
+          style={{
+            backgroundColor: this.state.color,
+          }}
+          onClick={this.toggleExpanded}
+        >
           <div>Kategorier</div>
-          <div>v</div>
+          <div>
+            <ExpandIcon />
+          </div>
         </div>
         <div className={dropdownStyles}>
-          {categories.map(category => {
-            const { id, name, link } = category
-            return (
-              <div key={id} className={styles.category}>
-                <Link to={process.env.PUBLIC_URL + link}>{name}</Link>
-              </div>
-            )
-          })}
+          <div className={styles.leftMenu}>
+            {categories.map(category => {
+              const { id, name, link } = category
+              return (
+                <div key={id} className={styles.category}>
+                  <Link to={process.env.PUBLIC_URL + link}>{name}</Link>
+                </div>
+              )
+            })}
+          </div>
+          <div className={styles.rightMenu}>
+            {info.map(infoitem => {
+              const { id, name, link } = infoitem
+              return (
+                <div key={id} className={styles.category}>
+                  <Link to={process.env.PUBLIC_URL + link}>{name}</Link>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     )

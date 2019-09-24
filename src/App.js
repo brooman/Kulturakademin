@@ -49,9 +49,10 @@ function App() {
               image="images/vrgLogo.png"
             />
 
-          <PwaPopUp />
-          <CookiesPopUp />
-          <Player />
+            <PwaPopUp />
+            <CookiesPopUp />
+            <Player />
+          </div>
         </div>
       </Router>
     </PlayerContextProvider>
