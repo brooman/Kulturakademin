@@ -1,0 +1,81 @@
+@import '../../variables.scss';
+
+.footer {
+  color: #cbcbcb;
+}
+
+.getPwa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $defaultLightDark;
+  padding: 5% 0;
+}
+
+.footerText {
+  text-transform: uppercase;
+  font-style: normal;
+  width: 22%;
+  margin: 0 0 0 1em;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 170%;
+  letter-spacing: 0.15em;
+}
+
+.socialMedia {
+  background-color: $defaultDark;
+  display: flex;
+  margin: auto;
+  padding: 5% 0;
+
+  ul {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    p {
+      font-weight: 300;
+      font-size: 14px;
+      color: #cbcbcb;
+      margin: 1em;
+      letter-spacing: 0.02em;
+    }
+
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  background-color: $defaultLightDark;
+}
+
+.infoText {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  margin: 2%;
+  letter-spacing: 0.02em;
+}
+
+.endFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 0;
+}
