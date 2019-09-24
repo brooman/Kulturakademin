@@ -72,13 +72,10 @@ class CategoryView extends Component {
             {this.state.category.toLowerCase()}.
           </p>
           <FilterTypes setShownTypes={this.setShownTypes} />
-
-          {data.map(items => {
-            applyCategoryFilter(items).map(card => {
-              console.log(card)
-              cardCounter += 1
-              return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
-            })
+          {applyTypeFilter(highlighted).map(card => {
+            console.log(card)
+            cardCounter += 1
+            return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
           })}
         </div>
       </>
@@ -86,17 +83,11 @@ class CategoryView extends Component {
   }
 }
 
-// {applyTypeFilter(highlighted).map(card => {
-//   console.log(card)
-//   cardCounter += 1
-//   return (
-//     <CategoryCard
-//       key={cardCounter}
-//       order={cardCounter}
-//       // displayMode="singleCard"
-//       item={card}
-//     />
-//   )
+// {data.map(items => {
+//   applyCategoryFilter(items).map(card => {
+//     console.log(card)
+//     cardCounter += 1
+//     return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
+//   })
 // })}
-
 export default CategoryView
