@@ -38,11 +38,11 @@ class Contact extends Component {
               Till toppen
             </button>
           </div>
-          <p className={styles.content}>
+          <div className={styles.content}>
             <p>Kulturakademin</p>
             <p>Järntorget 7</p>
             <p>413 04 Göteborg</p>
-          </p>
+          </div>
           <p className={styles.linksContainer}>
             <a href="http://kulturakademin.com">http://kulturakademin.com</a>
             <a href="info@kulturakademin.com">info@kulturakademin.com</a>
