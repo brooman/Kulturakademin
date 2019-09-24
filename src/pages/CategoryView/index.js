@@ -47,6 +47,10 @@ class CategoryView extends Component {
     }
     const applyCategoryFilter = array => {
       return array.filter(card => {
+        if (this.state.category === null) {
+          console.log('null')
+          return false
+        }
         if (card.category === this.state.category) {
           return true
         }
