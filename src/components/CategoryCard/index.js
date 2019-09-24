@@ -9,7 +9,7 @@ const CategoryCard = props => {
   const { order, item, displayMode } = props
 
   const { year, episodeNr, episodesInSeries, title, image, content } = item
-  const img = { backgroundImage: `url('${image}')` }
+  const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
   return (
     <div className={[styles.card, styles.listView].join(' ')}>
