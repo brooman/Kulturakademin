@@ -21,9 +21,27 @@
   }
 }
 
+.imageWrapper {
+  position: relative;
+}
+
 .image {
   background-size: cover;
   background-position: center;
+}
+
+.iconWrapper {
+  background-color: $defaultLightDark;
+  padding: 1rem 1.2rem 0.6rem 1.2rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+
+  >svg {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .content {
