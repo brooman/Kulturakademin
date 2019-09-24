@@ -32,15 +32,19 @@ const DiscoverCard = props => {
 
   return (
     <div className={[styles.card, viewStyle, background].join(' ')}>
-      <div className={styles.image} style={img} />
+      <div className={styles.imageWrapper}>
+        <div className={styles.image} style={img} />
+        <div className={styles.iconWrapper}>
+          <PodIcon />
+        </div>
+      </div>
       <div className={styles.body}>
-        <PodIcon />
         <div className={styles.content}>
           <div className={styles.cardInfo}>
             <p>
               <span>{length}</span>
               <span> min</span>
-              <span> | </span>
+              <span className={styles.infoSeparator}>|</span>
               <span>Avsnitt </span>
               <span>{episodeNr}</span>
               <span>/</span>
