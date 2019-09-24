@@ -1,6 +1,8 @@
 import React from 'react'
 
 import Hero from '../../components/Hero'
+import About from '../../components/About'
+
 import Categories from '../../components/Categories'
 
 const Home = () => {
@@ -13,6 +15,7 @@ const Home = () => {
         intro="Här kan du lyssna och se på utbildande poddar och videoklipp. Nunc consectetur vel sed turpis sed aliquet lacus, suspendisse. Id dui magna tincidunt ut."
       />
       <Categories />
+      <About />
     </>
   )
 }
