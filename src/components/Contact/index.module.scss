@@ -8,6 +8,7 @@
   letter-spacing: 0.02em;
 
   .title {
+    color: $defaultTitleText;
     font-weight: 800;
     font-size: 24px;
     line-height: 122.5%;
@@ -17,6 +18,9 @@
 
     button {
       background-color: transparent;
+      border: none;
+      color: $defaultSmallText;
+      outline: none;
       font-size: 14px;
       line-height: 150%;
       letter-spacing: 0.02em;
