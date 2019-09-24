@@ -2,20 +2,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ReadMoreIcon from '../../icons/ReadMoreIcon'
 import PodIcon from '../../icons/PodIcon'
+import VideoIcon from '../../icons/VideoIcon'
 
 import styles from './index.module.scss'
 
 const CategoryCard = props => {
   const { order, item, displayMode } = props
 
-  const { year, episodeNr, episodesInSeries, title, image, content } = item
+  const { type, year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
   return (
     <div className={[styles.card, styles.listView].join(' ')}>
-      <div className={styles.image} style={img} />
+      <div className={styles.imageWrapper}>
+        <div className={styles.image} style={img} />
+        <div className={styles.iconWrapper}>{type === 'audio' ? <PodIcon /> : <VideoIcon />}</div>
+      </div>
       <div className={styles.body}>
-        <PodIcon />
         <div className={styles.content}>
           <div className={styles.cardInfo}>
             <p>
