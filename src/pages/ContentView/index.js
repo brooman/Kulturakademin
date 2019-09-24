@@ -9,36 +9,16 @@ import AudioView from '../../components/AudioView'
 
 import usePlayer from '../../Hooks/usePlayer'
 
-class ContentView extends Component {
-  constructor({ match }) {
-    super()
+const ContentView = ({ match }) => {
+  const { type, id } = match.params
+  const res = Mocker(type, id)
+  const { resource, setResource } = usePlayer()
 
-    const { type, id } = match.params
-
-    this.state = {
-      resource: Mocker(type, id),
-    }
+  if (resource !== res) {
+    setResource(res)
   }
 
-  render() {
-    const { resource } = this.state
-
-    switch (resource.type) {
-      case 'video':
-        return <VideoView resource={resource} />
-      case 'audio':
-        return (
-          <AudioView
-            title={resource.title}
-            content={resource.content}
-            trackingId={resource.trackingId}
-            tags={resource.tags}
-          />
-        )
-      default:
-        return <ErrorPage statusCode="404" />
-    }
-  }
+  return null
 }
 
 export default ContentView
