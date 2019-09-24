@@ -2,17 +2,26 @@
 
 .row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-button {
+.active,
+.notActive {
   font-size: 16px;
-  color: $defaultLightDark;
-  background: none;
+  margin-right: 7%;
+  text-transform: uppercase;
+  height: 33px;
+  width: 83px;
+  color: $defaultWhite;
+  background: $defaultLightDark;
   border: none;
+  outline: none;
 }
 
 .active {
+  background: $defaultHighlight;
+}
+
+.notActive {
   color: $defaultWhite;
 }
