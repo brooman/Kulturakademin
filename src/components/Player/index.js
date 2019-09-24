@@ -3,6 +3,8 @@ import YouTube from 'react-youtube'
 import usePlayer from '../../Hooks/usePlayer'
 import styles from './index.module.scss'
 import VideoView from '../VideoView'
+import PlayIcon from '../../icons/PlayIcon'
+import PauseIcon from '../../icons/PauseIcon'
 
 const PreviewImage = props => {
   const { image, show } = props
@@ -97,7 +99,7 @@ const Player = () => {
           )}
           <div className={styles.playerBody}>
             <button className={styles.playbutton} onClick={togglePlaying}>
-              {playing ? 'Pause' : 'Play'}
+              {playing ? <PauseIcon /> : <PlayIcon />}
             </button>
             <button
               className={styles.playbutton}
