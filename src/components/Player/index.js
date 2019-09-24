@@ -3,6 +3,8 @@ import YouTube from 'react-youtube'
 import usePlayer from '../../Hooks/usePlayer'
 import styles from './index.module.scss'
 import VideoView from '../VideoView'
+import PlayIcon from '../../icons/PlayIcon'
+import PauseIcon from '../../icons/PauseIcon'
 
 const PreviewImage = props => {
   const { image, show } = props
@@ -30,6 +32,7 @@ const internalPlayer = (resource, playing, setRef, minimized) => {
             videoId={resource.trackingId}
             opts={{
               height: '100%',
+              width: '100%',
               playerVars: { autoplay: 1, controls: 0, fs: 0, modestbranding: 1, disablekb: 1 },
             }}
             onReady={e => {
@@ -97,7 +100,7 @@ const Player = () => {
           )}
           <div className={styles.playerBody}>
             <button className={styles.playbutton} onClick={togglePlaying}>
-              {playing ? 'Pause' : 'Play'}
+              {playing ? <PauseIcon /> : <PlayIcon />}
             </button>
             <button
               className={styles.playbutton}
