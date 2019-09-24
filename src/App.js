@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import ContentView from './pages/ContentView'
 import Discover from './pages/Discover'
+import CategoryView from './pages/CategoryView'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -47,10 +48,6 @@ function App() {
               cooperateCompany="K-Play finansieras av"
               image="images/vrgLogo.png"
             />
-            <PwaPopUp />
-            <CookiesPopUp />
-            <Player />
-          </div>
 
           <PwaPopUp />
           <CookiesPopUp />
