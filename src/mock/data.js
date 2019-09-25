@@ -18,7 +18,7 @@ export default {
       tags: ['webcast', 'learning'],
     },
     {
-      id: 129,
+      id: 128,
       type: 'pod',
       category: 'Dans',
       subcategory: ['Scennärvaro', 'Process'],
@@ -37,7 +37,7 @@ export default {
 
   audio: [
     {
-      id: 129,
+      id: 128,
       type: 'pod',
       category: 'Dans',
       subcategory: ['Scennärvaro', 'Process'],
@@ -53,7 +53,7 @@ export default {
       tags: ['podcast', 'learning'],
     },
     {
-      id: 128,
+      id: 127,
       type: 'pod',
       category: 'Film',
       subcategory: ['Process'],
@@ -69,7 +69,7 @@ export default {
       tags: ['podcast', 'learning'],
     },
     {
-      id: 127,
+      id: 126,
       type: 'pod',
       category: 'Dans',
       subcategory: ['Fakturering', 'Process'],
@@ -85,7 +85,7 @@ export default {
       tags: ['podcast', 'learning'],
     },
     {
-      id: 126,
+      id: 125,
       type: 'pod',
       category: 'Film',
       subcategory: ['Process'],
@@ -101,7 +101,7 @@ export default {
       tags: ['podcast', 'learning'],
     },
     {
-      id: 125,
+      id: 124,
       type: 'pod',
       category: 'Dans',
       subcategory: ['Scennärvaro', 'Uppvisning'],
@@ -117,7 +117,7 @@ export default {
       tags: ['podcast', 'learning'],
     },
     {
-      id: 124,
+      id: 123,
       type: 'pod',
       category: 'Ljus',
       subcategory: ['Scenkonst'],
@@ -152,7 +152,7 @@ export default {
       tags: ['webcast', 'learning'],
     },
     {
-      id: 128,
+      id: 122,
       type: 'video',
       category: 'Dans',
       subcategory: ['Scennärvaro'],
@@ -169,7 +169,7 @@ export default {
       tags: ['webcast', 'learning'],
     },
     {
-      id: 127,
+      id: 121,
       type: 'video',
       category: 'Musik',
       subcategory: ['Sång'],
@@ -185,7 +185,7 @@ export default {
       tags: ['webcast', 'learning'],
     },
     {
-      id: 126,
+      id: 120,
       type: 'video',
       category: 'Musik',
       subcategory: ['Sång'],
@@ -201,7 +201,7 @@ export default {
       tags: ['webcast', 'learning'],
     },
     {
-      id: 125,
+      id: 119,
       type: 'video',
       category: 'Film',
       subcategory: ['Studio'],
@@ -217,7 +217,7 @@ export default {
       tags: ['webcast', 'learning'],
     },
     {
-      id: 124,
+      id: 118,
       type: 'video',
       category: 'Dans',
       subcategory: ['Jazz', 'Uppvisning'],
@@ -235,7 +235,7 @@ export default {
   ],
   continue: [
     {
-      id: 128,
+      id: 122,
       type: 'video',
       category: 'Dans',
       subcategory: ['Scennärvaro'],
@@ -253,7 +253,7 @@ export default {
     },
 
     {
-      id: 125,
+      id: 119,
       type: 'video',
       category: 'Film',
       subcategory: ['Studio'],
@@ -269,7 +269,7 @@ export default {
       tags: ['webcast', 'learning'],
     },
     {
-      id: 124,
+      id: 118,
       type: 'video',
       category: 'Dans',
       subcategory: ['Jazz', 'Uppvisning'],
