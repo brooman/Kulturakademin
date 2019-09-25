@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import CategoryCard from '../../components/CategoryCard'
 import FilterTypes from '../../components/FilterTypes'
-import Categories from '../../components/Categories'
+import SubCategories from '../../components/SubCategories'
 import Mocker from '../../mock/mocker'
 
 import styles from './index.module.scss'
@@ -71,6 +71,7 @@ class CategoryView extends Component {
               {this.state.category.toLowerCase()}.
             </p>
           </div>
+          <SubCategories />
           <FilterTypes setShownTypes={this.setShownTypes} />
           {applyTypeFilter(data).map(card => {
             console.log(card)
