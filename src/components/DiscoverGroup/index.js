@@ -13,6 +13,10 @@ class DiscoverGroup extends Component {
     }
   }
 
+  componentDidMount() {
+    this.setState({ displayMode: this.props.displayMode })
+  }
+
   render() {
     const { title, items } = this.props
     const { displayMode } = this.state
