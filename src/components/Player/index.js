@@ -49,7 +49,18 @@ const internalPlayer = (resource, playing, setRef, minimized) => {
     case 'pod':
       return (
         <>
-          <PreviewImage className={styles.preview} image={resource.image} />
+          <iframe
+            id="soundcloudPlayer"
+            width="1"
+            height="1"
+            scrolling="no"
+            onLoad={e => {
+              setRef(window.SC.Widget(e.target))
+            }}
+            frameBorder="no"
+            allow="autoplay"
+            src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${resource.trackingId}`}
+          ></iframe>
         </>
       )
   }
@@ -66,7 +77,7 @@ const Player = () => {
         {!minimized && <VideoView resource={resource} />}
         <div className={styles.player}>
           {reference ? (
-            <ProgressBar reference={reference} />
+            <ProgressBar reference={reference} type={resource.type} />
           ) : (
             <div className={styles.progressBar} />
           )}

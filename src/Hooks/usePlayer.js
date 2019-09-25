@@ -1,3 +1,19 @@
+/*
+
+NEJ LOVISA
+
+INTE DENNA FILEN
+
+PLEASE
+
+NO
+
+GET OUT
+
+😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰
+
+*/
+
 import { useContext } from 'react'
 import { PlayerContext } from './PlayerContextProvider'
 import Mocker from '../mock/mocker'
@@ -14,7 +30,7 @@ const usePlayer = () => {
   }
 
   const setResource = resource => {
-    setState(state => ({ ...state, resource }))
+    setState(state => ({ ...state, resource, playing: false }))
   }
 
   const setRef = reference => {
@@ -25,26 +41,26 @@ const usePlayer = () => {
   }
 
   const rollback = () => {
-    const { reference, playing } = state
+    const { resource, reference, playing } = state
+    const targetTime =
+      resource.type === 'video' ? reference.getCurrentTime() - 15 : reference.getPosition() - 15
 
-    const targetTime = reference.getCurrentTime() - 15
-
-    reference.seekTo(targetTime > 0 ? targetTime : 0, false)
+    reference.seekTo(targetTime > 0 ? targetTime : 0)
 
     if (playing) {
-      reference.pauseVideo()
+      resource.type === 'video' ? reference.pauseVideo() : reference.pause()
     }
 
-    reference.playVideo()
+    resource.type === 'video' ? reference.playVideo() : reference.play()
   }
 
   const togglePlaying = () => {
-    const { reference, playing } = state
+    const { resource, reference, playing } = state
 
     if (playing) {
-      reference.pauseVideo()
+      resource.type === 'video' ? reference.pauseVideo() : reference.pause()
     } else {
-      reference.playVideo()
+      resource.type === 'video' ? reference.playVideo() : reference.play()
     }
 
     setState(state => ({
