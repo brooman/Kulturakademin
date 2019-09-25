@@ -48,22 +48,27 @@ class Categories extends Component {
         {
           id: 0,
           name: 'Populära',
-          link: '/discover/dance',
+          link: '/',
         },
         {
           id: 1,
           name: 'Mest Visade',
-          link: '/discover/cinematography',
+          link: '/',
         },
         {
           id: 2,
-          name: 'Indexering',
-          link: '/discover/music',
+          name: 'Event',
+          link: '/',
         },
         {
           id: 3,
+          name: 'Taggar',
+          link: '/',
+        },
+        {
+          id: 4,
           name: 'Allt Material',
-          link: '/discover/light',
+          link: '/',
         },
       ],
     }
