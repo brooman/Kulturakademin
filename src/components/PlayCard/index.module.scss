@@ -52,33 +52,6 @@
   overflow: hidden;
 }
 
-.cardInfo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  p {
-    font-weight: 900;
-    font-size: 10px;
-    line-height: 13px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: $defaultDarkGrey;
-  }
-}
-
-.infoSeparator {
-  padding: 0 0.5rem;
-}
-
-.description {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
-  color: $defaultWhite;
-}
-
 .readMore {
   display: flex;
   justify-content: space-between;
@@ -97,37 +70,12 @@
   }
 }
 
-.arrow {
+.playIcon {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  width: 40%;
+  width: 100%;
   color: $defaultWhite;
-  background-color: $defaultLightDark;
-}
-
-.dark {
-  background-color: $defaultDark;
-}
-
-.light {
-  background-color: $defaultLightDark;
-}
-
-.listView {
-  flex-direction: row;
-
-  .image {
-    min-width: 8rem;
-  }
-
-  .description {
-    display: none;
-  }
-
-  .readMore {
-    position: relative;
-  }
 }
 
 .gridView {
@@ -151,31 +99,8 @@
   }
 }
 
-.singleCard {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5%;
-
-  .description {
-    padding-right: 26.24%;
-  }
-
-  .readMore {
-    background-color: $defaultHighlight;
-  }
-
-  .arrow {
-    justify-content: flex-end;
-    margin-right: 5%;
-    background-color: $defaultHighlight;
-  }
-
-  .image {
-    height: 12rem;
-    width: 100%;
-  }
-
-  h3 {
-    padding-right: 26.24%;
-  }
+.progressBar {
+  min-height: 5px;
+  width: 100%;
+  background-color: $defaultWhite;
 }
