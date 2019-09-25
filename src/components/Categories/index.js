@@ -91,7 +91,7 @@ class Categories extends Component {
           }}
           onClick={this.toggleExpanded}
         >
-          <div>Kategorier</div>
+          <div className={styles.categoryTitle}>Kategorier</div>
           <div>
             <ExpandIcon />
           </div>

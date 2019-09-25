@@ -1,5 +1,9 @@
 @import '../../variables.scss';
 
+.wrapper {
+  margin-bottom: 1.5em;
+}
+
 .categories {
   display: flex;
   align-content: center;
@@ -60,20 +64,4 @@
     color: $defaultWhite;
     text-decoration: none;
   }
-}
-
-.leftMenu {
-  background-color: $defaultDark;
-}
-
-.rightMenu {
-  background-color: $defaultLightDark;
-}
-
-.rightMenu,
-.leftMenu {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
