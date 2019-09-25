@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ReadMoreIcon from '../../icons/ReadMoreIcon'
 import PodIcon from '../../icons/PodIcon'
 import VideoIcon from '../../icons/VideoIcon'
 
@@ -9,7 +8,7 @@ import styles from './index.module.scss'
 const CategoryCard = props => {
   const { order, item, displayMode } = props
 
-  const { type, year, episodeNr, episodesInSeries, title, image, content } = item
+  const { type, episodeNr, episodesInSeries, title, image } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
   return (
@@ -33,7 +32,7 @@ const CategoryCard = props => {
               </p>
             </div>
             <div className={styles.iconWrapper}>
-              {type === 'audio' ? <PodIcon color="#cbcbcb" /> : <VideoIcon color="#cbcbcb" />}
+              {type === 'pod' ? <PodIcon color="#cbcbcb" /> : <VideoIcon color="#cbcbcb" />}
             </div>
           </div>
 
