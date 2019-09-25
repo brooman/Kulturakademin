@@ -2,11 +2,12 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import Home from './pages/Home'
-import About from './pages/About'
 import ContentView from './pages/ContentView'
 import Discover from './pages/Discover'
+
 import CategoryView from './pages/CategoryView'
 
+import Contact from './components/Contact'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -30,21 +31,7 @@ function App() {
               component={CategoryView}
             />
             <Route path={`${process.env.PUBLIC_URL}/view/:type/:id`} component={ContentView} />
-            <Route path={`${process.env.PUBLIC_URL}/about`} component={About} />
-
-            <footer>
-              <ul>
-                <li>
-                  <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
-                </li>
-                <li>
-                  <Link to={`${process.env.PUBLIC_URL}/view/video/128`}>View</Link>
-                </li>
-                <li>
-                  <Link to={`${process.env.PUBLIC_URL}/about/`}>About</Link>
-                </li>
-              </ul>
-            </footer>
+            <Contact />
             <Footer
               text="LADDA NER APPVERSION"
               infoTextLeft="Integritetspolicy"
@@ -58,6 +45,17 @@ function App() {
             <Player />
           </div>
         </div>
+
+        <footer>
+          <ul>
+            <li>
+              <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
+            </li>
+            <li>
+              <Link to={`${process.env.PUBLIC_URL}/view/video/128`}>View</Link>
+            </li>
+          </ul>
+        </footer>
       </Router>
     </PlayerContextProvider>
   )

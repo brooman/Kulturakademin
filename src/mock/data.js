@@ -233,4 +233,56 @@ export default {
       tags: ['webcast', 'learning'],
     },
   ],
+  continue: [
+    {
+      id: 128,
+      type: 'video',
+      category: 'Dans',
+      subcategory: ['Scennärvaro'],
+      title: 'Masterclass med Pia Olby - Vad är dansgestaltning',
+      image: 'images/jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
+      episodeNr: '1',
+      episodesInSeries: '4',
+      year: '2019',
+      length: '34',
+      content:
+        'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
+      trackingId: 'OO-v7--wOtU',
+
+      tags: ['webcast', 'learning'],
+    },
+
+    {
+      id: 125,
+      type: 'video',
+      category: 'Film',
+      subcategory: ['Studio'],
+      title: 'NEW ON THE MAP: REInvent Studios',
+      image: 'images/jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
+      episodeNr: '2',
+      episodesInSeries: '4',
+      year: '2019',
+      length: '34',
+      content:
+        'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
+      trackingId: 'yGkn5KYk6sg',
+      tags: ['webcast', 'learning'],
+    },
+    {
+      id: 124,
+      type: 'video',
+      category: 'Dans',
+      subcategory: ['Jazz', 'Uppvisning'],
+      title: 'Jazzens historia',
+      image: 'images/jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
+      episodeNr: '2',
+      episodesInSeries: '4',
+      year: '2019',
+      length: '34',
+      content:
+        'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
+      url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
+      tags: ['webcast', 'learning'],
+    },
+  ],
 }
