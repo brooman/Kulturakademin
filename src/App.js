@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 import Home from './pages/Home'
-import ContentView from './pages/ContentView'
 import Discover from './pages/Discover'
 
 import CategoryView from './pages/CategoryView'
@@ -30,7 +29,7 @@ function App() {
               path={`${process.env.PUBLIC_URL}/category/:categoryType`}
               component={CategoryView}
             />
-            <Route path={`${process.env.PUBLIC_URL}/view/:type/:id`} component={ContentView} />
+
             <Contact />
             <Footer
               text="LADDA NER APPVERSION"
