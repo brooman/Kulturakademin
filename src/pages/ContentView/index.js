@@ -9,7 +9,7 @@ import AudioView from '../../components/AudioView'
 
 import usePlayer from '../../Hooks/usePlayer'
 
-const ContentView = ({ match }) => {
+const ContentView = ({ match, history }) => {
   const { type, id } = match.params
   const res = Mocker(type, id)
   const { resource, setResource } = usePlayer()
@@ -18,6 +18,7 @@ const ContentView = ({ match }) => {
     setResource(res)
   }
 
+  history.goBack()
   return null
 }
 

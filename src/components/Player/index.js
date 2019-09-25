@@ -85,7 +85,7 @@ const ProgressBar = props => {
 
 const Player = () => {
   const { resource, reference, playing, togglePlaying, setRef } = usePlayer()
-  const [minimized, setMinimized] = useState(false)
+  const [minimized, setMinimized] = useState(true)
 
   if (resource) {
     return (

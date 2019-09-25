@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ReadMoreIcon from '../../icons/ReadMoreIcon'
 import PodIcon from '../../icons/PodIcon'
+import VideoIcon from '../../icons/VideoIcon'
 
 import styles from './index.module.scss'
 
 const DiscoverCard = props => {
   const { order, item, displayMode } = props
 
-  const { length, year, episodeNr, episodesInSeries, title, image, content } = item
+  const { type, length, year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
   // trying
@@ -27,19 +28,14 @@ const DiscoverCard = props => {
   }
 
   const viewStyle = getViewStyle(displayMode)
-
-  // const viewStyle = displayMode === 'list' ? styles.listView : styles.gridView
-
   const background = order % 2 === 1 ? styles.dark : styles.light
-  // const link = `/view/${type}/${id}`
+  const link = `/view/${item.type}/${item.id}`
 
   return (
     <div className={[styles.card, viewStyle, background].join(' ')}>
       <div className={styles.imageWrapper}>
         <div className={styles.image} style={img} />
-        <div className={styles.iconWrapper}>
-          <PodIcon />
-        </div>
+        <div className={styles.iconWrapper}>{type === 'audio' ? <PodIcon /> : <VideoIcon />}</div>
       </div>
       <div className={styles.body}>
         <div className={styles.content}>
@@ -63,12 +59,14 @@ const DiscoverCard = props => {
           <h3>{title}</h3>
           <p className={styles.description}>{content}</p>
         </div>
-        <div className={styles.readMore}>
-          <p>Läs mer</p>
-          <div className={styles.arrow}>
-            <ReadMoreIcon />
+        <Link to={link}>
+          <div className={styles.readMore}>
+            <p>Läs mer</p>
+            <div className={styles.arrow}>
+              <ReadMoreIcon />
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   )
