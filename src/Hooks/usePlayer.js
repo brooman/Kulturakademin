@@ -1,19 +1,3 @@
-/*
-
-NEJ LOVISA
-
-INTE DENNA FILEN
-
-PLEASE
-
-NO
-
-GET OUT
-
-😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰
-
-*/
-
 import { useContext } from 'react'
 import { PlayerContext } from './PlayerContextProvider'
 import Mocker from '../mock/mocker'
