@@ -17,8 +17,6 @@ const ContentView = ({ match, history }) => {
   if (resource !== res) {
     setResource(res)
   }
-
-  history.goBack()
   return null
 }
 
