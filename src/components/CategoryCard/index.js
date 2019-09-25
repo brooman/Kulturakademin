@@ -2,46 +2,42 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ReadMoreIcon from '../../icons/ReadMoreIcon'
 import PodIcon from '../../icons/PodIcon'
+import VideoIcon from '../../icons/VideoIcon'
 
 import styles from './index.module.scss'
 
 const CategoryCard = props => {
   const { order, item, displayMode } = props
 
-  const { year, episodeNr, episodesInSeries, title, image, content } = item
+  const { type, year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
   return (
     <div className={[styles.card, styles.listView].join(' ')}>
-      <div className={styles.image} style={img} />
+      <div className={styles.imageWrapper}>
+        <div className={styles.image} style={img} />
+      </div>
       <div className={styles.body}>
-        <PodIcon />
         <div className={styles.content}>
           <div className={styles.cardInfo}>
-            <p>
-              <span>34</span>
-              <span> min</span>
-              <span> | </span>
-              <span>Avsnitt </span>
-              <span>{episodeNr}</span>
-              <span>/</span>
-              <span>{episodesInSeries}</span>
-            </p>
-            <div className={styles.cardYear}>
+            <div className={styles.infoWrapper}>
               <p>
-                <span>{year}</span>
+                <span>Avsnitt </span>
+                <span>{episodeNr}</span>
+                <span>/</span>
+                <span>{episodesInSeries}</span>
               </p>
+              <p>
+                <span>34</span>
+                <span> min</span>
+              </p>
+            </div>
+            <div className={styles.iconWrapper}>
+              {type === 'audio' ? <PodIcon /> : <VideoIcon />}
             </div>
           </div>
 
           <h3>{title}</h3>
-          <p className={styles.description}>{content}</p>
-        </div>
-        <div className={styles.readMore}>
-          <p>Läs mer</p>
-          <div className={styles.arrow}>
-            <ReadMoreIcon />
-          </div>
         </div>
       </div>
     </div>

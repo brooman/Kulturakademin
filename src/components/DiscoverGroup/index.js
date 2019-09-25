@@ -13,12 +13,6 @@ class DiscoverGroup extends Component {
     }
   }
 
-  toggleDisplayMode = () => {
-    this.setState(prevState => {
-      return { displayMode: prevState.displayMode === 'list' ? 'grid' : 'list' }
-    })
-  }
-
   render() {
     const { title, items } = this.props
     const { displayMode } = this.state
@@ -29,10 +23,6 @@ class DiscoverGroup extends Component {
       <div className={styles.group}>
         <div className={styles.header}>
           <h2>{title}</h2>
-          <button type="button" onClick={this.toggleDisplayMode}>
-            {displayMode.text}
-            <GridViewIcon />
-          </button>
         </div>
         <div className={[styles.body, viewStyle].join(' ')}>
           {items.map(item => {
