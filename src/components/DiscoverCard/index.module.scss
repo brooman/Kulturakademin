@@ -41,7 +41,7 @@
   bottom: 0;
   right: 0;
 
-  >svg {
+  > svg {
     height: 32px;
     width: 32px;
   }
@@ -50,6 +50,7 @@
 .content {
   padding: 1rem;
   overflow: hidden;
+  background-color: $defaultDark;
 }
 
 .cardInfo {
@@ -103,14 +104,6 @@
   align-items: center;
   width: 40%;
   color: $defaultWhite;
-  background-color: $defaultLightDark;
-}
-
-.dark {
-  background-color: $defaultDark;
-}
-
-.light {
   background-color: $defaultLightDark;
 }
 
