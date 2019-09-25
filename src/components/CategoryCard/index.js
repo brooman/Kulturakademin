@@ -13,7 +13,7 @@ const CategoryCard = props => {
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
   return (
-    <div className={[styles.card, styles.listView].join(' ')}>
+    <div className={styles.card}>
       <div className={styles.imageWrapper}>
         <div className={styles.image} style={img} />
       </div>
@@ -33,7 +33,7 @@ const CategoryCard = props => {
               </p>
             </div>
             <div className={styles.iconWrapper}>
-              {type === 'audio' ? <PodIcon /> : <VideoIcon />}
+              {type === 'audio' ? <PodIcon color="#cbcbcb" /> : <VideoIcon color="#cbcbcb" />}
             </div>
           </div>
 

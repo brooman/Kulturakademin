@@ -4,6 +4,8 @@
   display: flex;
   position: relative;
   overflow: hidden;
+  margin: 1em 0;
+  background-color: $defaultDark;
 
   h3,
   p,
@@ -13,11 +15,22 @@
   }
 
   h3 {
-    font-size: 19px;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    color: $defaultLightGrey;
   }
 
   p {
-    font-size: 14px;
+    margin-block-start: -0em;
+    margin-block-end: -0em;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 150%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $defaultMiddleGrey;
   }
 }
 
@@ -28,62 +41,7 @@
 .image {
   background-size: cover;
   background-position: center;
-}
-
-.iconWrapper {
-  background-color: $defaultLightDark;
-  padding: 1rem 1.2rem 0.6rem 1.2rem;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 2rem;
-
-  > svg {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-.content {
-  padding: 1rem;
-  overflow: hidden;
-}
-
-.listView {
-  flex-direction: row;
-
-  .image {
-    min-width: 8rem;
-  }
-
-  .description {
-    display: none;
-  }
-
-  .readMore {
-    position: relative;
-  }
-}
-
-.readMore {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  bottom: 0;
-  width: 100%;
-
-  p {
-    padding: 0 1rem;
-    text-transform: uppercase;
-  }
-}
-
-.dark {
-  background-color: $defaultDark;
-}
-
-.light {
-  background-color: $defaultLightDark;
+  min-width: 8rem;
 }
 
 .cardInfo {
@@ -91,8 +49,17 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  p {
-    font-size: 10px;
-    text-transform: uppercase;
+  margin-top: 0.5em;
+}
+
+.iconWrapper {
+  > svg {
+    width: 17px;
+    height: 21px;
   }
+}
+
+.content {
+  padding: 1rem;
+  overflow: hidden;
 }
