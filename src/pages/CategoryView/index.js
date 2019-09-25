@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import Hero from '../../components/Hero'
 import CategoryCard from '../../components/CategoryCard'
 import FilterTypes from '../../components/FilterTypes'
+import Categories from '../../components/Categories'
 import Mocker from '../../mock/mocker'
 
 import styles from './index.module.scss'
@@ -63,10 +63,6 @@ class CategoryView extends Component {
     let cardCounter = 0
     return (
       <>
-        <Hero
-          image="images/jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg"
-          text="K-play det självklara valet"
-        />
         <div>
           <div className={styles.categoryInfo}>
             <h1>{this.state.category}</h1>

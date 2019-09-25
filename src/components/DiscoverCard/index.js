@@ -35,7 +35,7 @@ const DiscoverCard = props => {
     <div className={[styles.card, viewStyle, background].join(' ')}>
       <div className={styles.imageWrapper}>
         <div className={styles.image} style={img} />
-        <div className={styles.iconWrapper}>{type === 'audio' ? <PodIcon /> : <VideoIcon />}</div>
+        <div className={styles.iconWrapper}>{type === 'pod' ? <PodIcon /> : <VideoIcon />}</div>
       </div>
       <div className={styles.body}>
         <div className={styles.content}>
