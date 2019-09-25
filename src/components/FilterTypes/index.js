@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import styles from './index.module.scss'
 
-const buttons = ['Allt', 'Video', 'Audio']
+const buttons = ['Allt', 'Video', 'Pod']
 
 class FilterTypes extends Component {
   state = {

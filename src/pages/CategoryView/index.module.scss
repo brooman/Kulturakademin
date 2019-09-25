@@ -1,0 +1,27 @@
+@import '../../variables.scss';
+
+.categoryInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 60vh;
+  margin: 0% 5% 7% 5%;
+  width: 75%;
+
+  h1 {
+    margin-bottom: -0em;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 125%;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $defaultLightGrey;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+  }
+}

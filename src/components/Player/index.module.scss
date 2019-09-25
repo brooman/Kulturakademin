@@ -108,14 +108,12 @@ $playerHeight: 70px;
 }
 
 .largePreview {
-
-  >.preview {
+  > .preview {
     height: 0 !important;
     width: 100% !important;
     padding-top: 56.25% !important;
   }
 }
-
 
 .imagePreview {
   background-position: center;
