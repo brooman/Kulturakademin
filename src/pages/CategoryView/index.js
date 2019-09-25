@@ -5,6 +5,8 @@ import CategoryCard from '../../components/CategoryCard'
 import FilterTypes from '../../components/FilterTypes'
 import Mocker from '../../mock/mocker'
 
+import styles from './index.module.scss'
+
 class CategoryView extends Component {
   constructor({ match }) {
     super()
@@ -65,12 +67,14 @@ class CategoryView extends Component {
           image="images/jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg"
           text="K-play det självklara valet"
         />
-        <div className="container">
-          <h1>{this.state.category}</h1>
-          <p>
-            Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till{' '}
-            {this.state.category.toLowerCase()}.
-          </p>
+        <div>
+          <div className={styles.categoryInfo}>
+            <h1>{this.state.category}</h1>
+            <p>
+              Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till{' '}
+              {this.state.category.toLowerCase()}.
+            </p>
+          </div>
           <FilterTypes setShownTypes={this.setShownTypes} />
           {applyTypeFilter(highlighted).map(card => {
             console.log(card)
