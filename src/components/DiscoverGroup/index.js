@@ -14,7 +14,9 @@ class DiscoverGroup extends Component {
   }
 
   componentDidMount() {
-    this.setState({ displayMode: this.props.displayMode })
+    if (this.props.displayMode) {
+      this.setState({ displayMode: this.props.displayMode })
+    }
   }
 
   render() {
