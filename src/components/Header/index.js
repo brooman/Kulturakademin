@@ -6,6 +6,7 @@ import Menu from '../Menu'
 import LogoIcon from '../../icons/LogoIcon'
 import HamburgerIcon from '../../icons/HamburgerIcon'
 import SearchIcon from '../../icons/SearchIcon'
+import SearchBar from '../SearchBar'
 
 class Header extends Component {
   constructor(props) {
@@ -15,9 +16,8 @@ class Header extends Component {
       menuShown: false,
       up: true,
       scrollPos: 0,
+      SearchBarOpen: false,
     }
-    this.closeMenu = this.closeMenu.bind(this)
-    this.handleScroll = this.handleScroll.bind(this)
   }
 
   // Get the icons to disappear and show again when user scrolls
@@ -34,7 +34,7 @@ class Header extends Component {
     })
   }
 
-  handleScroll() {
+  handleScroll = () => {
     const { scrollPos } = this.state
     this.setState({
       scrollPos: document.body.getBoundingClientRect().top,
@@ -43,15 +43,21 @@ class Header extends Component {
   }
 
   // Close dropdown menu on click
-  closeMenu() {
+  closeMenu = () => {
     this.setState({ menuShown: false }, () => {
       window.addEventListener('scroll', this.handleScroll)
       document.removeEventListener('click', this.closeMenu)
     })
   }
 
+  toggleSearch = () => {
+    this.setState(prevState => {
+      return { SearchBarOpen: !prevState.SearchBarOpen }
+    })
+  }
+
   render() {
-    const { menuShown } = this.state
+    const { menuShown, SearchBarOpen } = this.state
 
     return (
       <div className={styles.top}>
@@ -62,7 +68,9 @@ class Header extends Component {
 
           <div className={this.state.up ? styles.up : styles.down}>
             <div className={styles.navbar}>
-              <SearchIcon />
+              <button className={styles.menuBtn} type="button" onClick={this.toggleSearch}>
+                <SearchIcon />
+              </button>
               <button className={styles.menuBtn} type="button" onClick={this.toggleMenu}>
                 <HamburgerIcon />
               </button>
@@ -70,6 +78,7 @@ class Header extends Component {
           </div>
         </header>
         <Menu show={menuShown} />
+        <SearchBar show={SearchBarOpen} toggle={this.toggleSearch} />
       </div>
     )
   }

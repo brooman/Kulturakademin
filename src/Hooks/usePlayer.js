@@ -1,8 +1,17 @@
 import { useContext } from 'react'
 import { PlayerContext } from './PlayerContextProvider'
+import Mocker from '../mock/mocker'
 
 const usePlayer = () => {
   const [state, setState] = useContext(PlayerContext)
+
+  const initPlayer = (type, id) => {
+    const res = Mocker(type, id)
+
+    if (state.resource !== res) {
+      setResource(res)
+    }
+  }
 
   const setResource = resource => {
     setState(state => ({ ...state, resource }))
@@ -45,6 +54,7 @@ const usePlayer = () => {
   }
 
   return {
+    initPlayer,
     setRef,
     reference: state.reference,
     resource: state.resource,
