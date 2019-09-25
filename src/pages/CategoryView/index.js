@@ -26,7 +26,7 @@ class CategoryView extends Component {
     this.setState({
       highlighted: Mocker('highlighted'),
 
-      data: [Mocker('video'), Mocker('audio')],
+      data: Mocker('all'),
     })
   }
 
@@ -72,7 +72,7 @@ class CategoryView extends Component {
             </p>
           </div>
           <FilterTypes setShownTypes={this.setShownTypes} />
-          {applyTypeFilter(highlighted).map(card => {
+          {applyTypeFilter(data).map(card => {
             console.log(card)
             cardCounter += 1
             return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
