@@ -19,7 +19,7 @@ export default {
     },
     {
       id: 129,
-      type: 'audio',
+      type: 'pod',
       category: 'Dans',
       subcategory: ['Scennärvaro', 'Process'],
       title: 'Eeva Bolin - Ny organisation för kultur i grundskola och förskola',
@@ -38,7 +38,7 @@ export default {
   audio: [
     {
       id: 129,
-      type: 'audio',
+      type: 'pod',
       category: 'Dans',
       subcategory: ['Scennärvaro', 'Process'],
       title: 'Eeva Bolin - Ny organisation för kultur i grundskola och förskola',
@@ -54,7 +54,7 @@ export default {
     },
     {
       id: 128,
-      type: 'audio',
+      type: 'pod',
       category: 'Film',
       subcategory: ['Process'],
       title: 'Åsa Jansson – Regionala arrangörsstödet för barn & unga - kulturkatalogen väst',
@@ -70,7 +70,7 @@ export default {
     },
     {
       id: 127,
-      type: 'audio',
+      type: 'pod',
       category: 'Dans',
       subcategory: ['Fakturering', 'Process'],
       title: 'Ida Kaivola - Kulturstöd och regler för utjämningsbidraget i Göteborg',
@@ -86,7 +86,7 @@ export default {
     },
     {
       id: 126,
-      type: 'audio',
+      type: 'pod',
       category: 'Film',
       subcategory: ['Process'],
       title: 'SFI & Film i Väst – filmfinansieringens möjligheter & utmaningar',
@@ -102,7 +102,7 @@ export default {
     },
     {
       id: 125,
-      type: 'audio',
+      type: 'pod',
       category: 'Dans',
       subcategory: ['Scennärvaro', 'Uppvisning'],
       title: 'Åsa Söderberg – 12 års erfarenhet av publikutveckling på Skånes Dansteater',
@@ -118,7 +118,7 @@ export default {
     },
     {
       id: 124,
-      type: 'audio',
+      type: 'pod',
       category: 'Ljus',
       subcategory: ['Scenkonst'],
       title: 'Fading Lights - The Transition From Candle To Led with Chris Van Goethem',
@@ -200,6 +200,58 @@ export default {
       trackingId: 'l2vcqaClw-A',
       tags: ['webcast', 'learning'],
     },
+    {
+      id: 125,
+      type: 'video',
+      category: 'Film',
+      subcategory: ['Studio'],
+      title: 'NEW ON THE MAP: REInvent Studios',
+      image: 'images/jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
+      episodeNr: '2',
+      episodesInSeries: '4',
+      year: '2019',
+      length: '34',
+      content:
+        'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
+      trackingId: 'yGkn5KYk6sg',
+      tags: ['webcast', 'learning'],
+    },
+    {
+      id: 124,
+      type: 'video',
+      category: 'Dans',
+      subcategory: ['Jazz', 'Uppvisning'],
+      title: 'Jazzens historia',
+      image: 'images/jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
+      episodeNr: '2',
+      episodesInSeries: '4',
+      year: '2019',
+      length: '34',
+      content:
+        'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
+      url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
+      tags: ['webcast', 'learning'],
+    },
+  ],
+  continue: [
+    {
+      id: 128,
+      type: 'video',
+      category: 'Dans',
+      subcategory: ['Scennärvaro'],
+      title: 'Masterclass med Pia Olby - Vad är dansgestaltning',
+      image: 'images/jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
+      episodeNr: '1',
+      episodesInSeries: '4',
+      year: '2019',
+      length: '34',
+      content:
+        'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
+      trackingId: 'OO-v7--wOtU',
+
+      tags: ['webcast', 'learning'],
+    },
+
     {
       id: 125,
       type: 'video',

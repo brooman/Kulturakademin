@@ -19,18 +19,6 @@ const About = () => {
           <a href="http://kulturakademin.com">Kulturakademin.com</a>
         </p>
       </div>
-      <div className={styles.contactWrapper}>
-        <p className={styles.title}>Kontakt</p>
-        <p className={styles.content}>
-          <p>Kulturakademin</p>
-          <p>Järntorget 7</p>
-          <p>413 04 Göteborg</p>
-        </p>
-        <p className={styles.linksContainer}>
-          <a href="http://kulturakademin.com">http://kulturakademin.com</a>
-          <a href="info@kulturakademin.com">info@kulturakademin.com</a>
-        </p>
-      </div>
     </div>
   )
 }

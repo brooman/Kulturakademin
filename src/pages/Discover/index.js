@@ -73,7 +73,15 @@ class Discover extends Component {
           {data.map(group => {
             const { title, items } = group
             groupCount += 1
-            return <DiscoverGroup key={groupCount} title={title} items={items} />
+            return (
+              <DiscoverGroup
+                key={groupCount}
+                title={title}
+                items={applyFilter(items).map(card => {
+                  return card
+                })}
+              />
+            )
           })}
         </div>
       </>

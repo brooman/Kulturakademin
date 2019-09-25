@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
-import Hero from '../../components/Hero'
 import CategoryCard from '../../components/CategoryCard'
 import FilterTypes from '../../components/FilterTypes'
+import Categories from '../../components/Categories'
 import Mocker from '../../mock/mocker'
+
+import styles from './index.module.scss'
 
 class CategoryView extends Component {
   constructor({ match }) {
@@ -61,24 +63,19 @@ class CategoryView extends Component {
     let cardCounter = 0
     return (
       <>
-        <Hero
-          image="images/jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg"
-          text="K-play det självklara valet"
-        />
-        <div className="container">
-          <h1>{this.state.category}</h1>
-          <p>
-            Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till{' '}
-            {this.state.category.toLowerCase()}.
-          </p>
+        <div>
+          <div className={styles.categoryInfo}>
+            <h1>{this.state.category}</h1>
+            <p>
+              Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till{' '}
+              {this.state.category.toLowerCase()}.
+            </p>
+          </div>
           <FilterTypes setShownTypes={this.setShownTypes} />
-
-          {data.map(items => {
-            applyCategoryFilter(items).map(card => {
-              console.log(card)
-              cardCounter += 1
-              return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
-            })
+          {applyTypeFilter(highlighted).map(card => {
+            console.log(card)
+            cardCounter += 1
+            return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
           })}
         </div>
       </>
@@ -86,17 +83,11 @@ class CategoryView extends Component {
   }
 }
 
-// {applyTypeFilter(highlighted).map(card => {
-//   console.log(card)
-//   cardCounter += 1
-//   return (
-//     <CategoryCard
-//       key={cardCounter}
-//       order={cardCounter}
-//       // displayMode="singleCard"
-//       item={card}
-//     />
-//   )
+// {data.map(items => {
+//   applyCategoryFilter(items).map(card => {
+//     console.log(card)
+//     cardCounter += 1
+//     return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
+//   })
 // })}
-
 export default CategoryView
