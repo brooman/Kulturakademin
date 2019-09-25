@@ -5,6 +5,8 @@ import FilterTypes from '../../components/FilterTypes'
 import SubCategories from '../../components/SubCategories'
 import Mocker from '../../mock/mocker'
 
+import ExpandIcon from '../../icons/ExpandIcon'
+
 import styles from './index.module.scss'
 
 class CategoryView extends Component {
@@ -16,11 +18,13 @@ class CategoryView extends Component {
     this.state = {
       shownTypes: 'allt',
       category: categoryType,
+      subCategory: 'Underkategori',
       data: [],
       highlighted: [],
       dataItems: [],
     }
     this.setShownTypes = this.setShownTypes.bind(this)
+    this.setShownSubCategories = this.setShownSubCategories.bind(this)
   }
 
   componentDidMount() {
@@ -29,6 +33,8 @@ class CategoryView extends Component {
 
       data: Mocker('all'),
     })
+
+    window.scrollTo(0, 0)
   }
 
   setShownTypes(button) {
@@ -36,11 +42,13 @@ class CategoryView extends Component {
   }
 
   setShownSubCategories(button) {
-    this.setState({ shownTypes: button.toLowerCase() })
+    this.setState({ subCategory: button })
   }
 
   render() {
-    const { highlighted, data } = this.state
+    const { data } = this.state
+
+    //Filter method for type (all, video, pod)
     const applyTypeFilter = array => {
       return array.filter(item => {
         if (this.state.shownTypes === 'allt') {
@@ -52,19 +60,30 @@ class CategoryView extends Component {
         return false
       })
     }
+
+    // Filter method for category
     const applyCategoryFilter = array => {
       return array.filter(card => {
-        if (this.state.category === null) {
-          console.log('null')
-          return false
-        }
         if (card.category === this.state.category) {
           return true
         }
         return false
       })
     }
-    const groupCount = 0
+
+    // Filter method for subcategory
+    const applySubCategoryFilter = array => {
+      return array.filter(card => {
+        if (this.state.subCategory === 'Underkategori') {
+          return true
+        }
+        if (card.subcategory === this.state.subCategory) {
+          return true
+        }
+        return false
+      })
+    }
+
     let cardCounter = 0
     return (
       <>
@@ -72,15 +91,25 @@ class CategoryView extends Component {
           <div className={styles.categoryInfo}>
             <h1>{this.state.category}</h1>
             <p>
-              Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till
-              {' '}
-              {this.state.category.toLowerCase()}
-.
+              Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till{' '}
+              {this.state.category.toLowerCase()}.
             </p>
           </div>
           <SubCategories setShownSubCategories={this.setShownSubCategories} />
+          <p className={styles.subTitle}>Filtrera innehåll</p>
           <FilterTypes setShownTypes={this.setShownTypes} />
-          {applyTypeFilter(data).map(card => {
+          <div className={styles.titleWrapper}>
+            <p className={styles.subTitle}>{this.state.subCategory}</p>
+            <div className={styles.sortDropDown}>
+              <p>Senaste</p>
+              <ExpandIcon color="#CBCBCB" />
+            </div>
+          </div>
+          {applyCategoryFilter(data).map(card => {
+            cardCounter += 1
+            return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
+          })}
+          {applySubCategoryFilter(data).map(card => {
             cardCounter += 1
             return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
           })}
@@ -89,6 +118,11 @@ class CategoryView extends Component {
     )
   }
 }
+
+// {applySubCategoryFilter(data).map(card => {
+//   cardCounter += 1
+//   return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
+// })}
 
 // {data.map(items => {
 //   applyCategoryFilter(items).map(card => {
