@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import YouTube from 'react-youtube'
 import usePlayer from '../../Hooks/usePlayer'
 import styles from './index.module.scss'
 import VideoView from '../VideoView'
@@ -7,7 +8,6 @@ import PauseIcon from '../../icons/PauseIcon'
 import RollbackIcon from '../../icons/RollbackIcon'
 import OptionsMenuIcon from '../../icons/OptionsMenuIcon'
 import ProgressBar from './ProgressBar'
-import YouTube from 'react-youtube'
 
 const PreviewImage = props => {
   const { image, show } = props
