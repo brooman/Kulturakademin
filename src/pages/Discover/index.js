@@ -26,7 +26,7 @@ class Discover extends Component {
       data: [
         {
           title: 'Latest',
-          items: Mocker('video'),
+          items: Mocker('all'),
         },
       ],
     })
