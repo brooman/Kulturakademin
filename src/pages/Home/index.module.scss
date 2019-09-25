@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+
+.titleFilter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  font-weight: 800;
+  line-height: 122.5%;
+  letter-spacing: 0.02em;
+  color: $defaultWhite;
+}
+
+.filterTypes {
+  margin: 1em 0;
+}

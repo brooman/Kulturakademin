@@ -10,6 +10,8 @@ import PlayGroup from '../../components/PlayGroup'
 import FilterTypes from '../../components/FilterTypes'
 import Mocker from '../../mock/mocker'
 
+import styles from './index.module.scss'
+
 class Home extends Component {
   constructor({ match }) {
     super()
@@ -19,7 +21,7 @@ class Home extends Component {
       data: [],
       highlighted: [],
       dataItems: [],
-      trying: [],
+      keepWatch: [],
     }
     this.setShownTypes = this.setShownTypes.bind(this)
   }
@@ -27,7 +29,7 @@ class Home extends Component {
   componentDidMount() {
     this.setState({
       highlighted: Mocker('highlighted'),
-      trying: [
+      keepWatch: [
         {
           title: 'Fortsätt',
           items: Mocker('continue'),
@@ -35,7 +37,7 @@ class Home extends Component {
       ],
       data: [
         {
-          title: 'Senaste',
+          title: 'Sparad lista',
           items: Mocker('all'),
         },
       ],
@@ -47,7 +49,7 @@ class Home extends Component {
   }
 
   render() {
-    const { highlighted, data, trying } = this.state
+    const { highlighted, data, keepWatch } = this.state
     const applyFilter = array => {
       return array.filter(item => {
         if (this.state.shownTypes === 'allt') {
@@ -61,7 +63,7 @@ class Home extends Component {
     }
     let groupCount = 0
     let cardCounter = 0
-    let cardCounterTrying = 0
+    let cardCounterKeepWatch = 0
 
     return (
       <>
@@ -72,11 +74,12 @@ class Home extends Component {
           intro="Här kan du lyssna och se på utbildande poddar och videoklipp. Nunc consectetur vel sed turpis sed aliquet lacus, suspendisse. Id dui magna tincidunt ut."
         />
         <div className="container">
-          <FilterTypes setShownTypes={this.setShownTypes} />
-          {trying.map(group => {
-            const { items, title } = group
-            cardCounterTrying += 1
-            return <PlayGroup key={cardCounterTrying} title={title} items={items} />
+          <Categories />
+          {keepWatch.map(group => {
+            const { title, items } = group
+            cardCounterKeepWatch += 1
+
+            return <PlayGroup key={cardCounterKeepWatch} title={title} items={items} />
           })}
 
           {data.map(group => {
@@ -84,7 +87,14 @@ class Home extends Component {
             groupCount += 1
             return <DiscoverGroup key={groupCount} title={title} items={items} />
           })}
+          <div className={styles.filterTypes}>
+            <h2 className={styles.titleFilter}>Filtera innehåll</h2>
+            <FilterTypes setShownTypes={this.setShownTypes} />
+          </div>
 
+          <div className={styles.filterTypes}>
+            <h2 className={styles.titleFilter}>Nyheter</h2>
+          </div>
           {applyFilter(highlighted).map(card => {
             cardCounter += 1
             return (
@@ -111,7 +121,6 @@ class Home extends Component {
             return <DiscoverGroup key={groupCount} title={title} items={items} />
           })}
         </div>
-        <Categories />
         <About />
       </>
     )
