@@ -17,38 +17,25 @@ const Menu = props => {
         </button>
 
         <div className={styles.menu}>
-          <Link to={`${process.env.PUBLIC_URL}/discover/audio`}>Ljud</Link>
-          <Link to={`${process.env.PUBLIC_URL}/discover/light`}>Ljus</Link>
-          <Link to={`${process.env.PUBLIC_URL}/discover/dance`}>Dans</Link>
-          <Link to={`${process.env.PUBLIC_URL}/discover/music`}>Musik</Link>
-          <Link to={`${process.env.PUBLIC_URL}/discover/television`}>Tv</Link>
-          <Link to={`${process.env.PUBLIC_URL}/discover/dance`}>Tal</Link>
-          <Link
-            className={styles.hightlightedBackground}
-            to={`${process.env.PUBLIC_URL}/discover/dance`}
-          >
+          <Link to={`${process.env.PUBLIC_URL}/category/Dans`}>Dans</Link>
+          <Link to={`${process.env.PUBLIC_URL}/category/Film`}>Film</Link>
+          <Link to={`${process.env.PUBLIC_URL}/category/Musik`}>Musik</Link>
+          <Link to={`${process.env.PUBLIC_URL}/category/Radio`}>Radio</Link>
+          <Link to={`${process.env.PUBLIC_URL}/category/TV`}>Tv</Link>
+          <Link className={styles.hightlightedBackground} to={`${process.env.PUBLIC_URL}/`}>
             Fortsätt/Sparade
           </Link>
-          <Link
-            className={styles.hightlightedBackground}
-            to={`${process.env.PUBLIC_URL}/discover/dance`}
-          >
+          <Link className={styles.hightlightedBackground} to={`${process.env.PUBLIC_URL}/`}>
             Senaste
           </Link>
-          <Link
-            className={styles.hightlightedBackground}
-            to={`${process.env.PUBLIC_URL}/discover/dance`}
-          >
+          <Link className={styles.hightlightedBackground} to={`${process.env.PUBLIC_URL}/`}>
             Mest visade
           </Link>
-          <Link
-            className={styles.hightlightedBackground}
-            to={`${process.env.PUBLIC_URL}/discover/dance`}
-          >
+          <Link className={styles.hightlightedBackground} to={`${process.env.PUBLIC_URL}/`}>
             Taggar
           </Link>
-          <Link to={`${process.env.PUBLIC_URL}/discover/dance`}>Om</Link>
-          <Link to={`${process.env.PUBLIC_URL}/discover/dance`}>Inställningar</Link>
+          <Link to={`${process.env.PUBLIC_URL}/`}>Om</Link>
+          <Link to={`${process.env.PUBLIC_URL}/`}>Inställningar</Link>
         </div>
       </div>
     )

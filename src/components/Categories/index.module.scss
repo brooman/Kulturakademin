@@ -43,10 +43,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 304%;
+    letter-spacing: 0.02em;
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: 0.5em 1em;
 
     color: $defaultWhite;
     text-decoration: none;
