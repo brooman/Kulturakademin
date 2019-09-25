@@ -36,7 +36,7 @@ class Home extends Component {
       data: [
         {
           title: 'Senaste',
-          items: Mocker('video'),
+          items: Mocker('all'),
         },
       ],
     })
