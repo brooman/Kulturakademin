@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styles from './index.module.scss'
 
 const ProgressBar = props => {
-  const { reference } = props
+  const { type, reference } = props
 
   const [state, setState] = useState({
     currentTime: 0,
@@ -12,11 +12,13 @@ const ProgressBar = props => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (reference) {
-        setState(state => ({
-          ...state,
-          duration: reference.getDuration(),
-          currentTime: reference.getCurrentTime(),
-        }))
+        if (type === 'video') {
+          setState(state => ({
+            ...state,
+            duration: reference.getDuration(),
+            currentTime: reference.getCurrentTime(),
+          }))
+        }
       }
     }, 200)
 
