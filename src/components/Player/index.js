@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react'
-import YouTube from 'react-youtube'
+import React, { useState } from 'react'
 import usePlayer from '../../Hooks/usePlayer'
 import styles from './index.module.scss'
 import VideoView from '../VideoView'
 import PlayIcon from '../../icons/PlayIcon'
 import PauseIcon from '../../icons/PauseIcon'
+import RollbackIcon from '../../icons/RollbackIcon'
+import OptionsMenuIcon from '../../icons/OptionsMenuIcon'
+import ProgressBar from './ProgressBar'
+import YouTube from 'react-youtube'
 
 const PreviewImage = props => {
   const { image, show } = props
@@ -52,39 +55,8 @@ const internalPlayer = (resource, playing, setRef, minimized) => {
   }
 }
 
-const ProgressBar = props => {
-  const { reference } = props
-
-  const [state, setState] = useState({
-    currentTime: 0,
-    duration: 1,
-  })
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (reference) {
-        setState(state => ({
-          ...state,
-          duration: reference.getDuration(),
-          currentTime: reference.getCurrentTime(),
-        }))
-      }
-    }, 200)
-
-    return () => clearInterval(interval)
-  }, [])
-
-  const progress = (state.currentTime / state.duration) * 100
-
-  const progressBar = {
-    backgroundImage: `linear-gradient(to right, #cd7b2a, #cd7b2a ${progress}%, #fff ${progress}%, #fff 100%)`,
-  }
-
-  return <div className={styles.progressBar} style={progressBar} />
-}
-
 const Player = () => {
-  const { resource, reference, playing, togglePlaying, setRef } = usePlayer()
+  const { resource, reference, playing, togglePlaying, rollback, setRef } = usePlayer()
   const [minimized, setMinimized] = useState(true)
 
   if (resource) {
@@ -99,17 +71,29 @@ const Player = () => {
             <div className={styles.progressBar} />
           )}
           <div className={styles.playerBody}>
-            <button className={styles.playbutton} onClick={togglePlaying}>
-              {playing ? <PauseIcon /> : <PlayIcon />}
-            </button>
-            <button
-              className={styles.playbutton}
+            <div
+              className={styles.dragableArea}
               onClick={() => {
                 setMinimized(!minimized)
               }}
             >
-              Minimize
-            </button>
+              <div className={styles.marquee}>
+                <span>{resource.title}</span>
+              </div>
+            </div>
+            <div className={styles.buttonContainer}>
+              <button className={styles.button} onClick={togglePlaying}>
+                {playing ? <PauseIcon /> : <PlayIcon />}
+              </button>
+
+              <button className={styles.button} onClick={rollback}>
+                <RollbackIcon />
+              </button>
+
+              <button className={styles.button}>
+                <OptionsMenuIcon />
+              </button>
+            </div>
           </div>
         </div>
       </div>
