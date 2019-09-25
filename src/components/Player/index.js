@@ -43,7 +43,7 @@ const internalPlayer = (resource, playing, setRef, minimized) => {
           />
         </div>
       )
-    case 'audio':
+    case 'pod':
       return (
         <>
           <PreviewImage className={styles.preview} image={resource.image} />

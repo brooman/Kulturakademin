@@ -1,0 +1,17 @@
+@import '../../variables.scss';
+
+.body {
+  display: flex;
+}
+
+.listView {
+  flex-direction: column;
+}
+
+.gridView {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  /*height: 338px;*/
+  -ms-overflow-style: none;
+}

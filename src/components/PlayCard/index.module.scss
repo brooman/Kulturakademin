@@ -1,0 +1,106 @@
+@import '../../variables.scss';
+
+.card {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  h3,
+  p,
+  a {
+    color: $defaultWhite;
+    text-decoration: none;
+  }
+
+  h3 {
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 122.5%;
+    color: $defaultLightGrey;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.iconWrapper {
+  background-color: $defaultLightDark;
+  padding: 1rem 1.2rem 0.6rem 1.2rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  > svg {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+.content {
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.readMore {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-block-start: -0.5rem;
+  bottom: 0;
+  width: 100%;
+
+  p {
+    padding: 0 1rem;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+}
+
+.playIcon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  color: $defaultWhite;
+}
+
+.gridView {
+  flex-direction: column;
+  min-width: 18.5rem;
+  margin: 0 0.5rem;
+
+  .image {
+    height: 8rem;
+    width: 100%;
+  }
+
+  .description {
+    max-height: 10rem;
+    overflow: hidden;
+  }
+
+  .readMore {
+    position: absolute;
+    background-color: $defaultLightDark;
+  }
+}
+
+.progressBar {
+  min-height: 5px;
+  width: 100%;
+  background-color: $defaultWhite;
+}
