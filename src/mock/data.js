@@ -55,7 +55,7 @@ export default {
       category: 'Film',
       subcategory: ['Process'],
       title: 'SFI & Film i Väst – filmfinansieringens möjligheter & utmaningar',
-      image: '/images/jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
+      image: 'images/jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
       episodeNr: '2',
       episodesInSeries: '4',
       year: '2019',
