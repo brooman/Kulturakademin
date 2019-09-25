@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import ReadMoreIcon from '../../icons/ReadMoreIcon'
 import PlayIcon from '../../icons/PlayIcon'
 
 import styles from './index.module.scss'
@@ -42,24 +41,6 @@ const PlayCard = props => {
 
   const link = `/view/${item.type}/${item.id}`
 
-  // return (
-  //   <div className={[styles.card, viewStyle].join(' ')}>
-  //     <div className={styles.imageWrapper}>
-  //       <div className={styles.image} style={img} />
-  //     </div>
-  //     <div className={styles.body}>
-  //       <ProgressBar />
-  //       <Link to={link}>
-  //         <div className={styles.readMore}>
-  //           <p>{content}</p>
-  //           <div className={styles.arrow}>
-  //             <PlayIcon />
-  //           </div>
-  //         </div>
-  //       </Link>
-  //     </div>
-  //   </div>
-  // )
   return (
     <div className={[styles.card, viewStyle].join(' ')}>
       <div className={styles.imageWrapper}>
