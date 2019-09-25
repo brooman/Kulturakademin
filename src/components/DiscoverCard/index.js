@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 import ReadMoreIcon from '../../icons/ReadMoreIcon'
 import PodIcon from '../../icons/PodIcon'
 import VideoIcon from '../../icons/VideoIcon'
-
+import usePlayer from '../../Hooks/usePlayer'
 import styles from './index.module.scss'
 
 const DiscoverCard = props => {
   const { order, item, displayMode } = props
-
+  const { initPlayer } = usePlayer()
   const { type, length, year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
@@ -59,14 +59,18 @@ const DiscoverCard = props => {
           <h3>{title}</h3>
           <p className={styles.description}>{content}</p>
         </div>
-        <Link to={link}>
+        <div
+          onClick={() => {
+            initPlayer(item.type, item.id)
+          }}
+        >
           <div className={styles.readMore}>
             <p>Läs mer</p>
             <div className={styles.arrow}>
               <ReadMoreIcon />
             </div>
           </div>
-        </Link>
+        </div>
       </div>
     </div>
   )
