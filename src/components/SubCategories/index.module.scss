@@ -37,12 +37,13 @@
 }
 
 .expanded {
+  height: 35vh;
+  padding-left: 5%;
   display: flex !important;
   flex-direction: column;
-
-  flex-direction: row;
-  justify-content: space-around;
+  align-items: flex-start;
   flex-wrap: wrap;
+  background-color: $defaultDark;
 }
 
 .category {
@@ -64,4 +65,20 @@
     color: $defaultWhite;
     text-decoration: none;
   }
+}
+
+button {
+  background-color: $defaultDark;
+  color: $defaultWhite;
+  display: inline-block;
+  border: none;
+  outline: none;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 304%;
+  letter-spacing: 0.02em;
 }

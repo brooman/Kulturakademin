@@ -34,6 +34,10 @@ class CategoryView extends Component {
     this.setState({ shownTypes: button.toLowerCase() })
   }
 
+  setShownSubCategories(button) {
+    this.setState({ shownTypes: button.toLowerCase() })
+  }
+
   render() {
     const { highlighted, data } = this.state
     const applyTypeFilter = array => {
@@ -71,10 +75,9 @@ class CategoryView extends Component {
               {this.state.category.toLowerCase()}.
             </p>
           </div>
-          <SubCategories />
+          <SubCategories setShownSubCategories={this.setShownSubCategories} />
           <FilterTypes setShownTypes={this.setShownTypes} />
           {applyTypeFilter(data).map(card => {
-            console.log(card)
             cardCounter += 1
             return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
           })}
