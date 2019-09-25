@@ -1,0 +1,181 @@
+@import '../../variables.scss';
+
+.card {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  h3,
+  p,
+  a {
+    color: $defaultWhite;
+    text-decoration: none;
+  }
+
+  h3 {
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 122.5%;
+    color: $defaultLightGrey;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.iconWrapper {
+  background-color: $defaultLightDark;
+  padding: 1rem 1.2rem 0.6rem 1.2rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  > svg {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+.content {
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  p {
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $defaultDarkGrey;
+  }
+}
+
+.infoSeparator {
+  padding: 0 0.5rem;
+}
+
+.description {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: $defaultWhite;
+}
+
+.readMore {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-block-start: -0.5rem;
+  bottom: 0;
+  width: 100%;
+
+  p {
+    padding: 0 1rem;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  color: $defaultWhite;
+  background-color: $defaultLightDark;
+}
+
+.dark {
+  background-color: $defaultDark;
+}
+
+.light {
+  background-color: $defaultLightDark;
+}
+
+.listView {
+  flex-direction: row;
+
+  .image {
+    min-width: 8rem;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .readMore {
+    position: relative;
+  }
+}
+
+.gridView {
+  flex-direction: column;
+  min-width: 18.5rem;
+  margin: 0 0.5rem;
+
+  .image {
+    height: 8rem;
+    width: 100%;
+  }
+
+  .description {
+    max-height: 10rem;
+    overflow: hidden;
+  }
+
+  .readMore {
+    position: absolute;
+    background-color: $defaultLightDark;
+  }
+}
+
+.singleCard {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+
+  .description {
+    padding-right: 26.24%;
+  }
+
+  .readMore {
+    background-color: $defaultHighlight;
+  }
+
+  .arrow {
+    justify-content: flex-end;
+    margin-right: 5%;
+    background-color: $defaultHighlight;
+  }
+
+  .image {
+    height: 12rem;
+    width: 100%;
+  }
+
+  h3 {
+    padding-right: 26.24%;
+  }
+}

@@ -6,6 +6,7 @@ import About from '../../components/About'
 import Categories from '../../components/Categories'
 import DiscoverCard from '../../components/DiscoverCard'
 import DiscoverGroup from '../../components/DiscoverGroup'
+import PlayGroup from '../../components/PlayGroup'
 import FilterTypes from '../../components/FilterTypes'
 import Mocker from '../../mock/mocker'
 
@@ -75,7 +76,7 @@ class Home extends Component {
           {trying.map(group => {
             const { items, title } = group
             cardCounterTrying += 1
-            return <DiscoverGroup key={cardCounterTrying} title={title} items={items} />
+            return <PlayGroup key={cardCounterTrying} title={title} items={items} />
           })}
 
           {data.map(group => {
@@ -110,7 +111,6 @@ class Home extends Component {
             return <DiscoverGroup key={groupCount} title={title} items={items} />
           })}
         </div>
-        }
         <Categories />
         <About />
       </>
