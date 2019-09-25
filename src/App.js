@@ -50,9 +50,6 @@ function App() {
             <li>
               <Link to={`${process.env.PUBLIC_URL}/view/video/128`}>View</Link>
             </li>
-            <li>
-              <Link to={`${process.env.PUBLIC_URL}/about/`}>About</Link>
-            </li>
           </ul>
         </footer>
       </Router>

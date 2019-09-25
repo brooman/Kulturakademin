@@ -18,6 +18,7 @@ class Home extends Component {
       data: [],
       highlighted: [],
       dataItems: [],
+      trying: [],
     }
     this.setShownTypes = this.setShownTypes.bind(this)
   }
@@ -25,10 +26,15 @@ class Home extends Component {
   componentDidMount() {
     this.setState({
       highlighted: Mocker('highlighted'),
-
+      trying: [
+        {
+          title: 'Fortsätt',
+          items: Mocker('continue'),
+        },
+      ],
       data: [
         {
-          title: 'Latest',
+          title: 'Senaste',
           items: Mocker('video'),
         },
       ],
@@ -40,7 +46,7 @@ class Home extends Component {
   }
 
   render() {
-    const { highlighted, data } = this.state
+    const { highlighted, data, trying } = this.state
     const applyFilter = array => {
       return array.filter(item => {
         if (this.state.shownTypes === 'allt') {
@@ -54,6 +60,8 @@ class Home extends Component {
     }
     let groupCount = 0
     let cardCounter = 0
+    let cardCounterTrying = 0
+
     return (
       <>
         <Hero
@@ -64,6 +72,18 @@ class Home extends Component {
         />
         <div className="container">
           <FilterTypes setShownTypes={this.setShownTypes} />
+          {trying.map(group => {
+            const { items, title } = group
+            cardCounterTrying += 1
+            return <DiscoverGroup key={cardCounterTrying} title={title} items={items} />
+          })}
+
+          {data.map(group => {
+            const { title, items } = group
+            groupCount += 1
+            return <DiscoverGroup key={groupCount} title={title} items={items} />
+          })}
+
           {applyFilter(highlighted).map(card => {
             cardCounter += 1
             return (
@@ -75,6 +95,15 @@ class Home extends Component {
               />
             )
           })}
+
+          {/* populära */}
+          {data.map(group => {
+            const { title, items } = group
+            groupCount += 1
+            return <DiscoverGroup key={groupCount} title={title} items={items} />
+          })}
+
+          {/* mest visade */}
           {data.map(group => {
             const { title, items } = group
             groupCount += 1
