@@ -1,45 +1,6 @@
 /* eslint-disable max-len */
 export default {
-<<<<<<< HEAD
-  highlighted: [
-    {
-      id: 129,
-      type: 'video',
-      category: 'Musik',
-      subcategory: ['Scennärvaro', 'Sång'],
-      title: 'Masterclass med Pia Olby - Vad är skönsång',
-      image: 'images/jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
-      episodeNr: '3',
-      episodesInSeries: '4',
-      year: '2019',
-      length: '34',
-      content:
-        'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
-      trackingId: 'Nmf2V55mlgw',
-      tags: ['webcast', 'learning'],
-    },
-    {
-      id: 128,
-      type: 'pod',
-      category: 'Dans',
-      subcategory: ['Scennärvaro', 'Process'],
-      title: 'Eeva Bolin - Ny organisation för kultur i grundskola och förskola',
-      image: 'images/jeremy-yap-J39X2xX_8CQ-unsplash.jpg',
-      episodeNr: '2',
-      episodesInSeries: '4',
-      year: '2019',
-      length: '34',
-      content:
-        'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
-      trackingId: '642376728',
-      tags: ['podcast', 'learning'],
-    },
-  ],
-
-  audio: [
-=======
   all: [
->>>>>>> 82f058b06648f5cea4b54155ce25c669899be36c
     {
       id: 128,
       type: 'pod',
@@ -254,7 +215,7 @@ export default {
       tags: ['webcast', 'learning'],
     },
     {
-      id: 129,
+      id: 128,
       type: 'pod',
       category: 'Dans',
       subcategory: ['Scennärvaro', 'Process'],
