@@ -15,6 +15,20 @@ const usePlayer = () => {
     }))
   }
 
+  const rollback = () => {
+    const { reference, playing } = state
+
+    const targetTime = reference.getCurrentTime() - 15
+
+    reference.seekTo(targetTime > 0 ? targetTime : 0, false)
+
+    if (playing) {
+      reference.pauseVideo()
+    }
+
+    reference.playVideo()
+  }
+
   const togglePlaying = () => {
     const { reference, playing } = state
 
@@ -37,6 +51,7 @@ const usePlayer = () => {
     setResource,
     playing: state.playing,
     togglePlaying,
+    rollback,
   }
 }
 
