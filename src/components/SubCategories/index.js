@@ -34,7 +34,7 @@ class SubCategories extends Component {
   }
 
   render() {
-    const { items, isExpanded } = this.state
+    const { isExpanded } = this.state
 
     const dropdownStyles = isExpanded
       ? [styles.dropdown, styles.expanded].join(' ')
@@ -49,35 +49,27 @@ class SubCategories extends Component {
           }}
           onClick={this.toggleExpanded}
         >
-          <div className={styles.categoryTitle}>Kategorier</div>
+          <div className={styles.categoryTitle}>Underkategorier</div>
           <div>
             <ExpandIcon />
           </div>
         </div>
         <div className={dropdownStyles}>
-          <button onClick={() => {}}></button>
+          {buttons.map((button, key) => (
+            <button
+              value={button}
+              key={key}
+              onClick={() => {
+                this.props.setShownSubCategories(button)
+              }}
+            >
+              {button}
+            </button>
+          ))}
         </div>
       </div>
     )
   }
 }
-
-// <div>
-// {items.map(item => {
-//   console.log(item)
-//   return <button className={styles.category}>{item.category}</button>
-// })}
-// </div>
-
-// <div className={styles.rightMenu}>
-//   {info.map(infoitem => {
-//     const { id, name, link } = infoitem
-//     return (
-//       <div key={id} className={styles.category}>
-//         <Link to={process.env.PUBLIC_URL + link}>{name}</Link>
-//       </div>
-//     )
-//   })}
-// </div>
 
 export default SubCategories
