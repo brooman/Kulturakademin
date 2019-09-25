@@ -10,9 +10,9 @@ export default (type = null, id = null) => {
       // eslint-disable-next-line
       return obj.id == id
     })
-  } else {
+  } 
     let uniqueData = []
-    let savedIds = []
+    const savedIds = []
 
     Object.values(data).map(type => {
       uniqueData = uniqueData.concat(
@@ -25,5 +25,5 @@ export default (type = null, id = null) => {
     })
 
     return uniqueData
-  }
+  
 }
