@@ -22,6 +22,8 @@ class Home extends Component {
       highlighted: [],
       dataItems: [],
       keepWatch: [],
+      popular: [],
+      mustShown: [],
     }
     this.setShownTypes = this.setShownTypes.bind(this)
   }
@@ -35,10 +37,22 @@ class Home extends Component {
           items: Mocker('continue'),
         },
       ],
+      popular: [
+        {
+          title: 'Populära',
+          items: Mocker('popular'),
+        },
+      ],
       data: [
         {
           title: 'Sparad lista',
           items: Mocker('all'),
+        },
+      ],
+      mustShown: [
+        {
+          title: 'Mest visade',
+          items: Mocker('mustShown'),
         },
       ],
     })
@@ -49,7 +63,7 @@ class Home extends Component {
   }
 
   render() {
-    const { highlighted, data, keepWatch } = this.state
+    const { highlighted, data, keepWatch, popular, mustShown } = this.state
     const applyFilter = array => {
       return array.filter(item => {
         if (this.state.shownTypes === 'allt') {
@@ -63,7 +77,6 @@ class Home extends Component {
     }
     let groupCount = 0
     let cardCounter = 0
-    let cardCounterKeepWatch = 0
 
     return (
       <>
@@ -75,18 +88,22 @@ class Home extends Component {
         />
         <div className="container">
           <Categories />
+
+          {/* continue */}
           {keepWatch.map(group => {
             const { title, items } = group
-            cardCounterKeepWatch += 1
+            cardCounter += 1
 
-            return <PlayGroup key={cardCounterKeepWatch} title={title} items={items} />
+            return <PlayGroup key={cardCounter} title={title} items={items} />
           })}
 
+          {/* saved items */}
           {data.map(group => {
             const { title, items } = group
             groupCount += 1
             return <DiscoverGroup key={groupCount} title={title} items={items} />
           })}
+
           <div className={styles.filterTypes}>
             <h2 className={styles.titleFilter}>Filtera innehåll</h2>
             <FilterTypes setShownTypes={this.setShownTypes} />
@@ -95,6 +112,8 @@ class Home extends Component {
           <div className={styles.filterTypes}>
             <h2 className={styles.titleFilter}>Nyheter</h2>
           </div>
+
+          {/* news */}
           {applyFilter(highlighted).map(card => {
             cardCounter += 1
             return (
@@ -107,15 +126,15 @@ class Home extends Component {
             )
           })}
 
-          {/* populära */}
-          {data.map(group => {
+          {/* popular */}
+          {popular.map(group => {
             const { title, items } = group
             groupCount += 1
             return <DiscoverGroup key={groupCount} title={title} items={items} />
           })}
 
-          {/* mest visade */}
-          {data.map(group => {
+          {/* must shown */}
+          {mustShown.map(group => {
             const { title, items } = group
             groupCount += 1
             return <DiscoverGroup key={groupCount} title={title} items={items} />
