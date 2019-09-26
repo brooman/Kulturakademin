@@ -1,9 +1,20 @@
 @import '../../variables.scss';
 
+<<<<<<< HEAD
+=======
+.searchCards {
+  margin: 6em 0 0 0;
+}
+
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
 .searchBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
+=======
+  height: $buttonHeight;
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
   z-index: 9998;
   position: fixed;
   top: 0;
@@ -18,6 +29,10 @@
     border: none;
     height: 100%;
     width: 100%;
+<<<<<<< HEAD
+=======
+    outline: none;
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
     background-color: $defaultHighlight;
     color: $defaultWhite;
     font-size: 16px;
@@ -37,7 +52,12 @@
   }
 
   .searchBtn {
+<<<<<<< HEAD
     background-color: transparent;
+=======
+    background-color: $defaultHighlight;
+    height: $buttonHeight;
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
     border: none;
     outline: none;
   }
@@ -59,7 +79,11 @@
   width: 100%;
 
   .topView {
+<<<<<<< HEAD
     margin: 6em 1em 1em 1em;
+=======
+    margin: 6em 1em 0em 1em;
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
     padding: 3em 0;
 
     h1 {
@@ -80,8 +104,11 @@
     }
   }
 
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
   @media screen and (min-width: $desktopBreakpoint) {
     width: 40vw !important;
   }
@@ -89,9 +116,15 @@
   overflow-y: scroll;
   z-index: 9997;
 
+<<<<<<< HEAD
   // > div {
   //   margin-top: 5rem;
   // }
+=======
+  > div {
+    margin-top: 5rem;
+  }
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
 }
 
 .searchResult.hide {
