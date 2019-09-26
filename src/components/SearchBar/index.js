@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import styles from './index.module.scss'
-import SearchIcon from '../../icons/SearchIcon'
+import CloseIcon from '../../icons/CloseIcon'
+// import ExpandIcon from '../../icons/ExpandIcon'
 import Mocker from '../../mock/mocker'
-import DiscoverGroup from '../DiscoverGroup'
+import CategoryGroup from '../CategoryGroup'
+import Categories from '../../components/Categories'
+import FilterTypes from '../../components/FilterTypes'
 
 const SearchBar = props => {
   const [search, setSearch] = useState('')
@@ -29,13 +32,29 @@ const SearchBar = props => {
   return (
     <>
       <div className={[styles.searchBar, show ? styles.show : styles.hide].join(' ')}>
-        <input className={styles.field} type="text" value={search} onChange={handleSearch} />
-        <button className={styles.menuBtn} type="button" onClick={toggle}>
-          <SearchIcon />
+        <input
+          className={styles.field}
+          type="text"
+          placeholder="SÖK"
+          value={search}
+          onChange={handleSearch}
+        />
+        <button className={styles.searchBtn} type="button" onClick={toggle}>
+          <CloseIcon />
         </button>
       </div>
       <div className={[styles.searchResult, show ? styles.show : styles.hide].join(' ')}>
-        <DiscoverGroup title="Sök resultat" displayMode="list" items={searchResult} />
+        <div className={styles.topView}>
+          <h1>Allt matrial</h1>
+
+          <Categories />
+          <div className={styles.filterTypes}>
+            <h2 className={styles.titleFilter}>Filtera innehåll</h2>
+            <FilterTypes />
+          </div>
+        </div>
+
+        <CategoryGroup title="Sökresultat" displayMode="list" items={searchResult} />
       </div>
     </>
   )
