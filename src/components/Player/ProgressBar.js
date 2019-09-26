@@ -13,8 +13,8 @@ const ProgressBar = props => {
     const interval = setInterval(() => {
       if (reference) {
         if (type === 'video') {
-          setState(state => ({
-            ...state,
+          setState(prevState => ({
+            ...prevState,
             duration: reference.getDuration(),
             currentTime: reference.getCurrentTime(),
           }))

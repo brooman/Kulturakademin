@@ -4,8 +4,8 @@ import CloseIcon from '../../icons/CloseIcon'
 // import ExpandIcon from '../../icons/ExpandIcon'
 import Mocker from '../../mock/mocker'
 import CategoryGroup from '../CategoryGroup'
-import Categories from '../../components/Categories'
-import FilterTypes from '../../components/FilterTypes'
+import Categories from "../Categories"
+import FilterTypes from "../FilterTypes"
 
 const SearchBar = props => {
   const [search, setSearch] = useState('')

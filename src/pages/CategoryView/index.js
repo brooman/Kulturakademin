@@ -22,32 +22,28 @@ class CategoryView extends Component {
       subCategory: 'Media',
       data: [],
     }
-    this.setShownTypes = this.setShownTypes.bind(this)
-    this.setShownSubCategories = this.setShownSubCategories.bind(this)
   }
 
   componentDidMount() {
     this.setState({
-      highlighted: Mocker('highlighted'),
-
       data: Mocker('all'),
     })
 
     window.scrollTo(0, 0)
   }
 
-  setShownTypes(button) {
+  setShownTypes = button => {
     this.setState({ shownTypes: button.toLowerCase() })
   }
 
-  setShownSubCategories(button) {
+  setShownSubCategories = button => {
     this.setState({ subCategory: button })
   }
 
   render() {
     const { data, category, subCategory, shownTypes } = this.state
 
-    //Filter method for type (all, video, pod)
+    // Filter method for type (all, video, pod)
     const applyTypeFilter = array => {
       return array.filter(item => {
         if (shownTypes === 'allt') {
@@ -90,8 +86,10 @@ class CategoryView extends Component {
           <div className={styles.categoryInfo}>
             <h1>{category}</h1>
             <p>
-              Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till{' '}
-              {category.toLowerCase()}.
+              Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till
+              {' '}
+              {category.toLowerCase()}
+.
             </p>
           </div>
           <SubCategories setShownSubCategories={this.setShownSubCategories} />

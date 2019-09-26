@@ -26,7 +26,7 @@ const PreviewImage = props => {
 const internalPlayer = (resource, playing, setRef, minimized) => {
   switch (resource.type) {
     case 'video':
-      const containerClassName = playing ? null : styles.hidden
+      const containerClassName = !playing ? styles.hidden : null
 
       return (
         <div className={minimized ? styles.smallPreview : styles.largePreview}>
@@ -50,6 +50,7 @@ const internalPlayer = (resource, playing, setRef, minimized) => {
       return (
         <>
           <iframe
+            title="soundcloudPlayer"
             id="soundcloudPlayer"
             width="1"
             height="1"
@@ -60,9 +61,11 @@ const internalPlayer = (resource, playing, setRef, minimized) => {
             frameBorder="no"
             allow="autoplay"
             src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${resource.trackingId}`}
-          ></iframe>
+          />
         </>
       )
+    default:
+      return null
   }
 }
 
@@ -87,21 +90,26 @@ const Player = () => {
               onClick={() => {
                 setMinimized(!minimized)
               }}
+              onKeyUp={() => {
+                setMinimized(!minimized)
+              }}
+              role="link"
+              tabIndex={0}
             >
               <div className={styles.marquee}>
                 <span>{resource.title}</span>
               </div>
             </div>
             <div className={styles.buttonContainer}>
-              <button className={styles.button} onClick={togglePlaying}>
+              <button className={styles.button} onClick={togglePlaying} type="button">
                 {playing ? <PauseIcon /> : <PlayIcon />}
               </button>
 
-              <button className={styles.button} onClick={rollback}>
+              <button className={styles.button} onClick={rollback} type="button">
                 <RollbackIcon />
               </button>
 
-              <button className={styles.button}>
+              <button className={styles.button} type="button">
                 <OptionsMenuIcon />
               </button>
             </div>
