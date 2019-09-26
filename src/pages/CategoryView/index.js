@@ -45,15 +45,15 @@ class CategoryView extends Component {
   }
 
   render() {
-    const { data } = this.state
+    const { data, category, subCategory, shownTypes } = this.state
 
     //Filter method for type (all, video, pod)
     const applyTypeFilter = array => {
       return array.filter(item => {
-        if (this.state.shownTypes === 'allt') {
+        if (shownTypes === 'allt') {
           return true
         }
-        if (item.type === this.state.shownTypes) {
+        if (item.type === shownTypes) {
           return true
         }
         return false
@@ -63,7 +63,7 @@ class CategoryView extends Component {
     // Filter method for category
     const applyCategoryFilter = array => {
       return array.filter(card => {
-        if (card.category === this.state.category) {
+        if (card.category === category) {
           return true
         }
         return false
@@ -73,10 +73,10 @@ class CategoryView extends Component {
     // Filter method for subcategory
     const applySubCategoryFilter = array => {
       return array.filter(card => {
-        if (this.state.subCategory === 'Media') {
+        if (subCategory === 'Media') {
           return true
         }
-        if (card.subcategory === this.state.subCategory) {
+        if (card.subcategory === subCategory) {
           return true
         }
         return false
@@ -88,10 +88,10 @@ class CategoryView extends Component {
       <>
         <div>
           <div className={styles.categoryInfo}>
-            <h1>{this.state.category}</h1>
+            <h1>{category}</h1>
             <p>
               Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till{' '}
-              {this.state.category.toLowerCase()}.
+              {category.toLowerCase()}.
             </p>
           </div>
           <SubCategories setShownSubCategories={this.setShownSubCategories} />
@@ -104,7 +104,7 @@ class CategoryView extends Component {
           <p className={styles.filterTitle}>Filtrera innehåll</p>
           <FilterTypes setShownTypes={this.setShownTypes} />
           <div className={styles.titleWrapper}>
-            <p className={styles.subTitle}>{this.state.subCategory}</p>
+            <p className={styles.subTitle}>{subCategory}</p>
             <div className={styles.sortDropDown}>
               <p>Senaste</p>
               <ExpandIcon color="#CBCBCB" />
