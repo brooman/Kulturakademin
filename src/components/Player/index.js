@@ -10,14 +10,14 @@ import OptionsMenuIcon from '../../icons/OptionsMenuIcon'
 import ProgressBar from './ProgressBar'
 
 const PreviewImage = props => {
-  const { image, show } = props
+  const { image, hide } = props
 
   return (
     <div
       className={[styles.preview, styles.imagePreview].join(' ')}
       style={{
         backgroundImage: `url(${process.env.PUBLIC_URL}/${image})`,
-        display: show ? 'none' : 'block',
+        display: hide ? 'none' : 'block',
       }}
     />
   )
@@ -30,7 +30,7 @@ const internalPlayer = (resource, playing, setRef, minimized) => {
 
       return (
         <div className={minimized ? styles.smallPreview : styles.largePreview}>
-          <PreviewImage className={styles.preview} show={playing} image={resource.image} />
+          <PreviewImage className={styles.preview} hide={playing} image={resource.image} />
           <YouTube
             videoId={resource.trackingId}
             opts={{
@@ -48,7 +48,8 @@ const internalPlayer = (resource, playing, setRef, minimized) => {
       )
     case 'pod':
       return (
-        <>
+        <div className={minimized ? styles.smallPreview : styles.largePreview}>
+          <PreviewImage className={styles.preview} hide={minimized} image={resource.image} />
           <iframe
             title="soundcloudPlayer"
             id="soundcloudPlayer"
@@ -62,7 +63,7 @@ const internalPlayer = (resource, playing, setRef, minimized) => {
             allow="autoplay"
             src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${resource.trackingId}`}
           />
-        </>
+        </div>
       )
     default:
       return null
@@ -71,7 +72,7 @@ const internalPlayer = (resource, playing, setRef, minimized) => {
 
 const Player = () => {
   const { resource, reference, playing, togglePlaying, rollback, setRef } = usePlayer()
-  const [minimized, setMinimized] = useState(true)
+  const [minimized, setMinimized] = useState(false)
 
   if (resource) {
     return (
