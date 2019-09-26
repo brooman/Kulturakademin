@@ -26,12 +26,12 @@ class SubCategories extends Component {
 
   toggleExpanded = () => {
     this.setState(prevState => {
-      return { isExpanded: !prevState.isExpanded, color: '#242424' }
+      return { isExpanded: !prevState.isExpanded }
     })
   }
 
   render() {
-    const { isExpanded, color } = this.state
+    const { isExpanded } = this.state
     const { setShownSubCategories } = this.props
 
     let buttonCounter = 0
@@ -40,13 +40,17 @@ class SubCategories extends Component {
       ? [styles.dropdown, styles.expanded].join(' ')
       : styles.dropdown
 
+    const headerStyle = isExpanded
+      ? {
+          backgroundColor: '#242424',
+        }
+      : {}
+
     return (
       <div className={styles.wrapper}>
         <div
           className={styles.categories}
-          style={{
-            backgroundColor: color,
-          }}
+          style={headerStyle}
           onClick={this.toggleExpanded}
           onKeyUp={this.toggleExpanded}
           role="link"

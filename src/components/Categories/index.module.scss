@@ -7,7 +7,7 @@
   width: 100%;
   height: 2rem;
   padding: 0.5rem 1rem;
-  background-color: $defaultHighlight !important;
+  background-color: $defaultHighlight;
 
   font-weight: 800;
   font-size: 12px;
@@ -66,11 +66,18 @@
   }
 }
 
+.leftMenu {
+  background-color: $defaultDark;
+}
+
+.rightMenu {
+  background-color: $defaultLightDark;
+}
+
 .rightMenu,
 .leftMenu {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: $defaultDark;
 }
