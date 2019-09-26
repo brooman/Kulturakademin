@@ -54,7 +54,7 @@ class SubCategories extends Component {
         >
           <div className={styles.categoryTitle}>Underkategorier</div>
           <div>
-            <ExpandIcon />
+            <ExpandIcon expanded={isExpanded} />
           </div>
         </div>
         <div className={dropdownStyles}>
