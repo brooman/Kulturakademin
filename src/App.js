@@ -39,7 +39,6 @@ function App() {
             />
           </div>
           <PwaPopUp />
-          <CookiesPopUp />
           <Player />
         </div>
       </Router>
