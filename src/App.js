@@ -9,7 +9,6 @@ import CategoryView from './pages/CategoryView'
 import Contact from './components/Contact'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import CookiesPopUp from './components/CookiesPopUp'
 import Player from './components/Player'
 import { PlayerContextProvider } from './Hooks/PlayerContextProvider'
 
@@ -36,7 +35,6 @@ function App() {
               image="images/vrgLogo.png"
             />
           </div>
-          <CookiesPopUp />
           <Player />
         </div>
       </Router>
