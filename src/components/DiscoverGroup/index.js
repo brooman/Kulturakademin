@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import styles from './index.module.scss'
 import DiscoverCard from '../DiscoverCard'
-import GridViewIcon from '../../icons/GridViewIcon'
+import ShowMoreCard from '../DiscoverCard/ShowMoreCard'
 
 class DiscoverGroup extends Component {
   constructor(props) {
@@ -42,6 +42,7 @@ class DiscoverGroup extends Component {
               />
             )
           })}
+          <ShowMoreCard title={`Visa alla 109st, sorterat på ${title}`} displayMode={displayMode} />
         </div>
       </div>
     )
