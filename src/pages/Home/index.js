@@ -13,19 +13,17 @@ import Mocker from '../../mock/mocker'
 import styles from './index.module.scss'
 
 class Home extends Component {
-  constructor({ match }) {
+  constructor() {
     super()
 
     this.state = {
       shownTypes: 'allt',
       data: [],
       highlighted: [],
-      dataItems: [],
       keepWatch: [],
       popular: [],
       mustShown: [],
     }
-    this.setShownTypes = this.setShownTypes.bind(this)
   }
 
   componentDidMount() {
@@ -58,18 +56,18 @@ class Home extends Component {
     })
   }
 
-  setShownTypes(button) {
+  setShownTypes = button => {
     this.setState({ shownTypes: button.toLowerCase() })
   }
 
   render() {
-    const { highlighted, data, keepWatch, popular, mustShown } = this.state
+    const { highlighted, data, keepWatch, popular, mustShown, shownTypes } = this.state
     const applyFilter = array => {
       return array.filter(item => {
-        if (this.state.shownTypes === 'allt') {
+        if (shownTypes === 'allt') {
           return true
         }
-        if (item.type === this.state.shownTypes) {
+        if (item.type === shownTypes) {
           return true
         }
         return false
@@ -84,7 +82,8 @@ class Home extends Component {
           image="images/jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg"
           title="K-Play"
           text="– Det självklara valet för vetgiriga"
-          intro="K-play är Kulturakademins samlade plattform för podcast & webcast. Här kan du lyssna och se på utbildande poddar och videoklipp från kulturbranschen."
+          intro="K-play är Kulturakademins samlade plattform för podcast & webcast.
+            Här kan du lyssna och se på utbildande poddar och videoklipp från kulturbranschen."
         />
         <div className="container">
           <Categories />

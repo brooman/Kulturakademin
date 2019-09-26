@@ -7,14 +7,13 @@ import FilterTypes from '../../components/FilterTypes'
 import Mocker from '../../mock/mocker'
 
 class Discover extends Component {
-  constructor({ match }) {
+  constructor() {
     super()
 
     this.state = {
       shownTypes: 'allt',
       data: [],
       highlighted: [],
-      dataItems: [],
     }
     this.setShownTypes = this.setShownTypes.bind(this)
   }
@@ -37,13 +36,13 @@ class Discover extends Component {
   }
 
   render() {
-    const { highlighted, data } = this.state
+    const { highlighted, data, shownTypes } = this.state
     const applyFilter = array => {
       return array.filter(item => {
-        if (this.state.shownTypes === 'allt') {
+        if (shownTypes === 'allt') {
           return true
         }
-        if (item.type === this.state.shownTypes) {
+        if (item.type === shownTypes) {
           return true
         }
         return false
