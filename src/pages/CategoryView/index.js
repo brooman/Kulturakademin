@@ -6,6 +6,7 @@ import SubCategories from '../../components/SubCategories'
 import Mocker from '../../mock/mocker'
 
 import ExpandIcon from '../../icons/ExpandIcon'
+import SearchIcon from '../../icons/SearchIcon'
 
 import styles from './index.module.scss'
 
@@ -20,8 +21,6 @@ class CategoryView extends Component {
       category: categoryType,
       subCategory: 'Underkategori',
       data: [],
-      highlighted: [],
-      dataItems: [],
     }
     this.setShownTypes = this.setShownTypes.bind(this)
     this.setShownSubCategories = this.setShownSubCategories.bind(this)
@@ -96,7 +95,13 @@ class CategoryView extends Component {
             </p>
           </div>
           <SubCategories setShownSubCategories={this.setShownSubCategories} />
-          <p className={styles.subTitle}>Filtrera innehåll</p>
+          <div className={[styles.searchBar, styles.show].join(' ')}>
+            <input className={styles.field} type="text" placeholder="Sök i dans" />
+            <button className={styles.menuBtn} type="button">
+              <SearchIcon />
+            </button>
+          </div>
+          <p className={styles.filterTitle}>Filtrera innehåll</p>
           <FilterTypes setShownTypes={this.setShownTypes} />
           <div className={styles.titleWrapper}>
             <p className={styles.subTitle}>{this.state.subCategory}</p>
