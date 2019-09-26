@@ -32,7 +32,11 @@ class DiscoverGroup extends Component {
         </div>
         <div className={[styles.body, viewStyle].join(' ')}>
           {items.map(item => {
+            if (cardCounter > 4) {
+              return false
+            }
             cardCounter += 1
+
             return (
               <DiscoverCard
                 key={cardCounter}
@@ -42,7 +46,10 @@ class DiscoverGroup extends Component {
               />
             )
           })}
-          <ShowMoreCard title={`Visa alla 109st, sorterat på ${title}`} displayMode={displayMode} />
+          <ShowMoreCard
+            title={`Visa alla ${Math.floor(Math.random() * 500)}st, sorterat på ${title}`}
+            displayMode={displayMode}
+          />
         </div>
       </div>
     )

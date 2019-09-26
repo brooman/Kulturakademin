@@ -37,20 +37,11 @@ function App() {
               cooperateCompany="K-Play finansieras av"
               image="images/vrgLogo.png"
             />
-
-            <PwaPopUp />
-            <CookiesPopUp />
-            <Player />
           </div>
+          <PwaPopUp />
+          <CookiesPopUp />
+          <Player />
         </div>
-
-        <footer>
-          <ul>
-            <li>
-              <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
-            </li>
-          </ul>
-        </footer>
       </Router>
     </PlayerContextProvider>
   )
