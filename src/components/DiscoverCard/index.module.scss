@@ -46,8 +46,8 @@
     background-color: $defaultHighlight !important;
   }
 
-  min-width: 12rem !important;
-  max-width: 12rem !important;
+  min-width: 14rem !important;
+  max-width: 14rem !important;
   border-right: 1rem solid $defaultBackground;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .content {
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 0.5rem 1rem 2rem 1rem;
   overflow: hidden;
   background-color: $defaultDark;
 }
@@ -111,6 +111,7 @@
 }
 
 .title {
+  margin-top: 2.25rem;
   margin-bottom: 1rem;
   line-height: 1.5em !important;
 }
@@ -205,7 +206,6 @@
 
   .arrow {
     justify-content: flex-end;
-    margin-right: 5%;
     background-color: $defaultHighlight;
   }
 
