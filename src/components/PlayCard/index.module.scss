@@ -4,6 +4,7 @@
   display: flex;
   position: relative;
   overflow: hidden;
+  margin: 0 0.5rem 1rem 0.5rem;
 
   h3,
   p,
@@ -48,8 +49,10 @@
 }
 
 .content {
-  padding: 0.5rem;
   overflow: hidden;
+  justify-content: space-between;
+  display: flex;
+  padding: 1rem;
   background-color: $defaultLightDark;
 }
 
@@ -75,7 +78,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
   color: $defaultWhite;
 }
 
@@ -92,6 +94,7 @@
   .description {
     max-height: 10rem;
     overflow: hidden;
+    width: 60%;
   }
 
   .readMore {

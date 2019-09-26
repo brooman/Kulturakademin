@@ -25,6 +25,10 @@
       line-height: 150%;
       letter-spacing: 0.02em;
     }
+
+    .content {
+      padding: 1rem 0;
+    }
   }
 
   .linksContainer {
@@ -35,7 +39,7 @@
     a {
       text-decoration: none;
       color: $defaultWhite;
-      font-weight: 300;
+      font-weight: 700;
       font-size: 14px;
       line-height: 195%;
     }
