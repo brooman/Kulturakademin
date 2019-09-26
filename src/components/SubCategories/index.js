@@ -66,6 +66,11 @@ class SubCategories extends Component {
                 key={buttonCounter}
                 onClick={() => {
                   setShownSubCategories(button)
+                  window.scrollTo({
+                    top: 750,
+                    left: 0,
+                    behavior: 'smooth',
+                  })
                 }}
                 type="button"
               >
