@@ -31,7 +31,7 @@ const ShowMoreCard = props => {
         </div>
       </div>
       <div className={styles.readMore}>
-        <p>Läs mer</p>
+        <p>&nbsp;</p>
         <div className={styles.arrow}>
           <ReadMoreIcon />
         </div>
