@@ -110,11 +110,11 @@ class CategoryView extends Component {
               <ExpandIcon color="#CBCBCB" />
             </div>
           </div>
-          {applyCategoryFilter(data).map(card => {
+          {applyTypeFilter(applyCategoryFilter(data)).map(card => {
             cardCounter += 1
             return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
           })}
-          {applySubCategoryFilter(data).map(card => {
+          {applyTypeFilter(applySubCategoryFilter(data)).map(card => {
             cardCounter += 1
             return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
           })}
