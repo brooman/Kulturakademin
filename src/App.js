@@ -29,7 +29,6 @@ function App() {
               path={`${process.env.PUBLIC_URL}/category/:categoryType`}
               component={CategoryView}
             />
-
             <Contact />
             <Footer
               text="LADDA NER APPVERSION"
