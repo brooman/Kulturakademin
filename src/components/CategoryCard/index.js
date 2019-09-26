@@ -6,7 +6,7 @@ import VideoIcon from '../../icons/VideoIcon'
 import styles from './index.module.scss'
 
 const CategoryCard = props => {
-  const { item } = props
+  const { order, item } = props
 
   const { type, episodeNr, episodesInSeries, title, image } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
@@ -44,7 +44,6 @@ const CategoryCard = props => {
 }
 
 CategoryCard.propTypes = {
-  // displayMode: PropTypes.string.isRequired,
   item: PropTypes.objectOf(PropTypes.any).isRequired,
 }
 
