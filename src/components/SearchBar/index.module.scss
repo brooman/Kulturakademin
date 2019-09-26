@@ -37,7 +37,7 @@
   }
 
   .searchBtn {
-    background-color: transparent;
+    background-color: $defaultHighlight;
     border: none;
     outline: none;
   }
@@ -59,7 +59,7 @@
   width: 100%;
 
   .topView {
-    margin: 6em 1em 1em 1em;
+    margin: 6em 1em 0em 1em;
     padding: 3em 0;
 
     h1 {
@@ -80,7 +80,21 @@
     }
   }
 
-  
+  .sortDropDown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5%;
+    p {
+      padding-right: 1rem;
+      font-weight: 800;
+      font-size: 12px;
+      line-height: 170%;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: $defaultSmallText;
+    }
+  }
 
   @media screen and (min-width: $desktopBreakpoint) {
     width: 40vw !important;
