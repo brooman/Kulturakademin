@@ -1,21 +1,13 @@
 @import '../../variables.scss';
 
-<<<<<<< HEAD
-=======
 .body {
   width: 100%;
 }
 
->>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
 .card {
   display: flex;
   position: relative;
   overflow: hidden;
-<<<<<<< HEAD
-  margin: 0 0 1em 0;
-  background-color: $defaultDark;
-
-=======
   margin: 1rem 1rem;
   background-color: $defaultDark;
 
@@ -25,7 +17,6 @@
     transform: scale(0.9)
   }
 
->>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
   h3,
   p,
   a {
@@ -55,10 +46,6 @@
 
 .imageWrapper {
   position: relative;
-<<<<<<< HEAD
-  margin-left: 5%;
-=======
->>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
 }
 
 .image {
@@ -77,11 +64,7 @@
 }
 
 .iconWrapper {
-<<<<<<< HEAD
-  > svg {
-=======
   >svg {
->>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
     width: 17px;
     height: 21px;
   }

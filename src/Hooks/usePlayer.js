@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-/*
-
-NEJ LOVISA
-
-INTE DENNA FILEN
-
-PLEASE
-
-NO
-
-GET OUT
-
-😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰😰
-
-*/
-
-=======
->>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
 import { useContext } from 'react'
 import { PlayerContext } from './PlayerContextProvider'
 import Mocker from '../mock/mocker'
