@@ -11,10 +11,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 
   button {
-    margin-left: 16px;
+    margin-left: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,7 @@
   width: 100%;
   animation-name: slideUp;
   animation-duration: 1.5s;
-  animation-delay: 10s;
+  animation-delay: 600s;
   animation-fill-mode: forwards;
 }
 

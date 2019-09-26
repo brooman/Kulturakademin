@@ -16,6 +16,7 @@ export default {
       trackingId: 'Nmf2V55mlgw',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 122,
@@ -32,6 +33,7 @@ export default {
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 121,
@@ -48,6 +50,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'qgjKQrgL0o0',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 120,
@@ -64,6 +67,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'l2vcqaClw-A',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 119,
@@ -80,6 +84,7 @@ export default {
         'Det är alltid speciellt att se en filmatisering av en bok. Vilka val har gjorts i filmen och varför? ',
       trackingId: 'yGkn5KYk6sg',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 118,
@@ -96,6 +101,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
   ],
   pod: [
@@ -114,6 +120,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642376728',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 127,
@@ -130,6 +137,7 @@ export default {
         'Arrangeras av: Kulturförvaltningen, Kultur i Väst, Musikcentrum Väst, Danscentrum Väst, Teatercentrum Väst. ',
       trackingId: '642375006',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 126,
@@ -146,6 +154,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642369729',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 125,
@@ -162,6 +171,7 @@ export default {
         'Om filmfinansieringens möjligheter och utmaningar. Lyssna på landets viktigaste aktörer i filmfinansieringen. ',
       trackingId: '641768196',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 124,
@@ -178,6 +188,7 @@ export default {
         'Hör henne dela med sig av erfarenheter av att arbeta med publikutveckling, organisation och ledarskap. ',
       trackingId: '639535935',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 123,
@@ -194,6 +205,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '639016008',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
   ],
   all: [
@@ -211,6 +223,7 @@ export default {
       content: 'Meet Netflix´s Lina Bronéus, Drirector of Co-Productions & Acquisitions. ',
       trackingId: '642376728',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 127,
@@ -227,6 +240,7 @@ export default {
         'Arrangeras av: Kulturförvaltningen, Kultur i Väst, Musikcentrum Väst, Danscentrum Väst, Teatercentrum Väst. ',
       trackingId: '642375006',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 126,
@@ -242,6 +256,7 @@ export default {
       content: 'Hur påverkar rådande villkor verksamma aktörer? Hur ser vardagen ut? ',
       trackingId: '642369729',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 125,
@@ -258,6 +273,7 @@ export default {
         'Om filmfinansieringens möjligheter och utmaningar. Lyssna på landets viktigaste aktörer i filmfinansieringen. ',
       trackingId: '641768196',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 124,
@@ -274,6 +290,7 @@ export default {
         'Hör henne dela med sig av erfarenheter av att arbeta med publikutveckling, organisation och ledarskap. ',
       trackingId: '639535935',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 123,
@@ -290,6 +307,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '639016008',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 129,
@@ -306,6 +324,7 @@ export default {
       trackingId: 'Nmf2V55mlgw',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 122,
@@ -322,6 +341,7 @@ export default {
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 121,
@@ -338,6 +358,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'qgjKQrgL0o0',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 120,
@@ -354,6 +375,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'l2vcqaClw-A',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 119,
@@ -370,6 +392,7 @@ export default {
         'Det är alltid speciellt att se en filmatisering av en bok. Vilka val har gjorts i filmen och varför? ',
       trackingId: 'yGkn5KYk6sg',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 118,
@@ -386,6 +409,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
   ],
 
@@ -404,6 +428,7 @@ export default {
       content: 'Speaker: Niclas Ekström, screenwriter and project manager.  ',
       trackingId: 'Nmf2V55mlgw',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 128,
@@ -419,6 +444,7 @@ export default {
       content: 'Presented in collaboration with Kulturakademin and MediaXchange.  ',
       trackingId: '642376728',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
   ],
 
@@ -438,6 +464,7 @@ export default {
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
 
     {
@@ -454,6 +481,7 @@ export default {
       content: 'En filmatisering av en bok.',
       trackingId: 'yGkn5KYk6sg',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 118,
@@ -469,6 +497,7 @@ export default {
       content: 'Netflix’s ambitions for the Nordic Region.',
       url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
   ],
 
@@ -487,6 +516,7 @@ export default {
       content: 'Här förklarar kursledare Pia Olby vad skönsång är för henne. ',
       trackingId: 'Nmf2V55mlgw',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 128,
@@ -502,6 +532,7 @@ export default {
       content: 'Meet Netflix´s Lina Bronéus, Drirector of Co-Productions & Acquisitions. ',
       trackingId: '642376728',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
   ],
   mustShown: [
@@ -520,6 +551,7 @@ export default {
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
 
     {
@@ -537,6 +569,7 @@ export default {
         'Det är alltid speciellt att se en filmatisering av en bok. Vilka val har gjorts i filmen och varför? ',
       trackingId: 'yGkn5KYk6sg',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 118,
@@ -553,6 +586,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
   ],
 }
