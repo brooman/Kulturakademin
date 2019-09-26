@@ -26,10 +26,7 @@ const PlayCard = props => {
   }
 
   const ProgressBar = props => {
-    const { currentTime, duration } = props
-
-    const progress = (currentTime / duration) * 100
-
+    const progress = Math.floor(Math.random() * 100)
     const progressBar = {
       backgroundImage: `linear-gradient(to right, #cd7b2a, #cd7b2a ${progress}%, #fff ${progress}%, #fff 100%)`,
     }
