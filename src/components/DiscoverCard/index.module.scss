@@ -30,6 +30,30 @@
   }
 }
 
+.ShowMoreCard {
+  background-color: $defaultHighlight;
+
+  .content {
+    margin-top: 2rem;
+    background-color: $defaultHighlight;
+  }
+
+  .readMore {
+    background-color: $defaultHighlight !important;
+  }
+
+  .arrow {
+    background-color: $defaultHighlight !important;
+  }
+
+  border-right: 3rem solid black;
+}
+
+.body,
+.content {
+  height: 100%
+}
+
 .imageWrapper {
   position: relative;
   height: 12rem;
