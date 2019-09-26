@@ -9,7 +9,7 @@ const VideoPlaybar = props => {
   return (
     <div className={styles.wrapper}>
       <p>{play}</p>
-      <p>{save}</p>
+      <p className={styles.save}>{save}</p>
     </div>
   )
 }

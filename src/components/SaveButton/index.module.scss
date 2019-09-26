@@ -1,13 +1,13 @@
 @import '../../variables.scss';
 
 .button {
-  margin-left: 16px;
+  margin-right: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 164px;
-  height: 36px;
+  height: 2.2rem;
+  width: 10rem;
   background-color: $defaultHighlight;
   cursor: pointer;
 
@@ -21,6 +21,7 @@
     text-align: center;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    background-color: $defaultHighlight;
 
     outline: none;
     cursor: pointer;
