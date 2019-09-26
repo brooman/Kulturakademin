@@ -98,7 +98,7 @@ class Categories extends Component {
         >
           <div className={styles.categoryTitle}>Kategorier</div>
           <div>
-            <ExpandIcon />
+            <ExpandIcon expanded={isExpanded} />
           </div>
         </div>
         <div className={dropdownStyles}>
