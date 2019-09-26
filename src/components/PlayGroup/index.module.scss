@@ -1,5 +1,9 @@
 @import '../../variables.scss';
 
+.group {
+  margin: 0 1rem;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -19,6 +23,5 @@
   flex-direction: row;
   flex-wrap: nowrap;
   overflow-x: scroll;
-  /*height: 338px;*/
   -ms-overflow-style: none;
 }

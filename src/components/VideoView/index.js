@@ -21,7 +21,7 @@ const VideoView = props => {
             togglePlaying()
           }}
           play="play"
-          save="save"
+          save="spara"
         />
         <div className={styles.videoIconBox}>
           <VideoIcon />

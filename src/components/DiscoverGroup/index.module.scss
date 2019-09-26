@@ -1,5 +1,9 @@
 @import '../../variables.scss';
 
+.group {
+  margin: 0 1rem;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
