@@ -17,6 +17,7 @@ export default {
       trackingId: 'Nmf2V55mlgw',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 122,
@@ -34,6 +35,7 @@ export default {
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 121,
@@ -50,6 +52,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'qgjKQrgL0o0',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 120,
@@ -66,6 +69,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'l2vcqaClw-A',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 119,
@@ -82,6 +86,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'yGkn5KYk6sg',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 118,
@@ -98,6 +103,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
   ],
   pod: [
@@ -116,6 +122,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642376728',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 127,
@@ -132,6 +139,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642375006',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 126,
@@ -148,6 +156,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642369729',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 125,
@@ -164,6 +173,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '641768196',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 124,
@@ -180,6 +190,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '639535935',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 123,
@@ -196,6 +207,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '639016008',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
   ],
   all: [
@@ -214,6 +226,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642376728',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 127,
@@ -230,6 +243,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642375006',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 126,
@@ -246,6 +260,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642369729',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 125,
@@ -262,6 +277,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '641768196',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 124,
@@ -278,6 +294,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '639535935',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 123,
@@ -294,6 +311,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '639016008',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 129,
@@ -311,6 +329,7 @@ export default {
       trackingId: 'Nmf2V55mlgw',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 122,
@@ -328,6 +347,7 @@ export default {
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 121,
@@ -344,6 +364,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'qgjKQrgL0o0',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 120,
@@ -360,6 +381,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'l2vcqaClw-A',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 119,
@@ -376,6 +398,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'yGkn5KYk6sg',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 118,
@@ -392,6 +415,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
   ],
 
@@ -411,6 +435,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'Nmf2V55mlgw',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 128,
@@ -427,6 +452,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642376728',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
   ],
 
@@ -446,6 +472,7 @@ export default {
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
 
     {
@@ -462,6 +489,7 @@ export default {
       content: 'Netflix’s ambitions for the Nordic Region.',
       trackingId: 'yGkn5KYk6sg',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 118,
@@ -477,6 +505,7 @@ export default {
       content: 'Netflix’s ambitions for the Nordic Region.',
       url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
   ],
 
@@ -496,6 +525,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'Nmf2V55mlgw',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
     {
       id: 128,
@@ -512,6 +542,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: '642376728',
       tags: ['podcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
   ],
   mustShown: [
@@ -531,6 +562,7 @@ export default {
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
 
     {
@@ -548,6 +580,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       trackingId: 'yGkn5KYk6sg',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
     },
     {
       id: 118,
@@ -564,6 +597,7 @@ export default {
         'Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Nibh diam nulla amet, nunc tempus ante. ',
       url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
       tags: ['webcast', 'learning'],
+      coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
     },
   ],
 }
