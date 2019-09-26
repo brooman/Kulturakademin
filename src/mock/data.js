@@ -12,7 +12,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Här förklarar kursledare Pia Olby vad skönsång är för henne. ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: 'Nmf2V55mlgw',
 
       tags: ['webcast', 'learning'],
@@ -29,7 +30,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Här förklarar kursledare Pia Olby vad dansgestalning är för henne. ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
@@ -220,7 +222,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Meet Netflix´s Lina Bronéus, Drirector of Co-Productions & Acquisitions. ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: '642376728',
       tags: ['podcast', 'learning'],
       coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
@@ -253,7 +256,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Hur påverkar rådande villkor verksamma aktörer? Hur ser vardagen ut? ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: '642369729',
       tags: ['podcast', 'learning'],
       coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
@@ -320,7 +324,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Här förklarar kursledare Pia Olby vad skönsång är för henne. ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: 'Nmf2V55mlgw',
 
       tags: ['webcast', 'learning'],
@@ -337,7 +342,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Här förklarar kursledare Pia Olby vad dansgestalning är för henne. ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
@@ -425,7 +431,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Speaker: Niclas Ekström, screenwriter and project manager.  ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: 'Nmf2V55mlgw',
       tags: ['webcast', 'learning'],
       coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
@@ -441,7 +448,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Presented in collaboration with Kulturakademin and MediaXchange.  ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: '642376728',
       tags: ['podcast', 'learning'],
       coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
@@ -460,7 +468,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Netflix’s ambitions for the Nordic Region.',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
@@ -478,7 +487,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'En filmatisering av en bok.',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: 'yGkn5KYk6sg',
       tags: ['webcast', 'learning'],
       coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
@@ -494,7 +504,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Netflix’s ambitions for the Nordic Region.',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       url: 'https://www.youtube.com/watch?v=qvWzFtNPbB4',
       tags: ['webcast', 'learning'],
       coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
@@ -513,7 +524,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Här förklarar kursledare Pia Olby vad skönsång är för henne. ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: 'Nmf2V55mlgw',
       tags: ['webcast', 'learning'],
       coOrganizers: ['Kultur i väst', 'ADA', 'Business region'],
@@ -529,7 +541,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Meet Netflix´s Lina Bronéus, Drirector of Co-Productions & Acquisitions. ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: '642376728',
       tags: ['podcast', 'learning'],
       coOrganizers: ['Göteborgs universitet', 'Business region', 'Göteborg'],
@@ -545,7 +558,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Här förklarar kursledare Pia Olby vad dans är för henne. ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],
@@ -598,7 +612,8 @@ export default {
       episodesInSeries: '4',
       year: '2019',
       length: '34',
-      content: 'Här förklarar kursledare Pia Olby vad dans är för henne. ',
+      content:
+        'Kulturakademin och Teateralliansens kurs i sånggestaltning erbjuder professionella skådespelare möjlighet att arbeta med och utveckla sin egen vokala och musikaliska potential – och att utmana sig själva sångmässigt. Här förklarar kursledare Pia Olby begreppet sånggestaltning.',
       trackingId: 'OO-v7--wOtU',
 
       tags: ['webcast', 'learning'],

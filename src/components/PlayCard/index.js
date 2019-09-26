@@ -8,7 +8,7 @@ import usePlayer from '../../Hooks/usePlayer'
 const PlayCard = props => {
   const { item, displayMode } = props
   const { initPlayer } = usePlayer()
-  const { image, content } = item
+  const { image, title } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
   // trying
@@ -49,7 +49,7 @@ const PlayCard = props => {
           }}
         >
           <div className={styles.content}>
-            <p className={styles.description}>{content}</p>
+            <p className={styles.description}>{title}</p>
             <div className={styles.playIcon}>
               <PlayIcon />
             </div>
