@@ -48,6 +48,7 @@
 
   min-width: 12rem !important;
   max-width: 12rem !important;
+  border-right: 1rem solid $defaultBackground;
 }
 
 .body,
@@ -73,7 +74,7 @@
   bottom: 0;
   right: 0;
 
-  > svg {
+  >svg {
     height: 32px;
     width: 32px;
   }
