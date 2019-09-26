@@ -24,6 +24,7 @@ class CategoryView extends Component {
     }
     this.setShownTypes = this.setShownTypes.bind(this)
     this.setShownSubCategories = this.setShownSubCategories.bind(this)
+    this.myRef = React.createRef()
   }
 
   componentDidMount() {
@@ -104,7 +105,9 @@ class CategoryView extends Component {
           <p className={styles.filterTitle}>Filtrera innehåll</p>
           <FilterTypes setShownTypes={this.setShownTypes} />
           <div className={styles.titleWrapper}>
-            <p className={styles.subTitle}>{this.state.subCategory}</p>
+            <p className={styles.subTitle} ref={this.myRef}>
+              {this.state.subCategory}
+            </p>
             <div className={styles.sortDropDown}>
               <p>Senaste</p>
               <ExpandIcon color="#CBCBCB" />
@@ -114,15 +117,13 @@ class CategoryView extends Component {
             cardCounter += 1
             return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
           })}
-          {applySubCategoryFilter(data).map(card => {
-            cardCounter += 1
-            return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
-          })}
         </div>
       </>
     )
   }
 }
+
+// scrollToMyRef = () => window.scrollTo(0, this.myRef.current.offsetTop)
 
 // {applySubCategoryFilter(data).map(card => {
 //   cardCounter += 1
