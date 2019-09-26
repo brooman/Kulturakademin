@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 
 .wrapper {
-  margin: 5%;
+  margin: 1rem;
 
   font-family: Muli;
   font-style: normal;
@@ -25,16 +25,21 @@
       line-height: 150%;
       letter-spacing: 0.02em;
     }
+
+    .content {
+      padding: 1rem 0;
+    }
   }
 
   .linksContainer {
     display: flex;
     flex-direction: column;
     margin-top: 36px;
+
     a {
       text-decoration: none;
       color: $defaultWhite;
-      font-weight: 300;
+      font-weight: 700;
       font-size: 14px;
       line-height: 195%;
     }

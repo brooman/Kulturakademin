@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import styles from './index.module.scss'
 import DiscoverCard from '../DiscoverCard'
-import GridViewIcon from '../../icons/GridViewIcon'
+import ShowMoreCard from '../DiscoverCard/ShowMoreCard'
 
 class DiscoverGroup extends Component {
   constructor(props) {
@@ -32,7 +32,11 @@ class DiscoverGroup extends Component {
         </div>
         <div className={[styles.body, viewStyle].join(' ')}>
           {items.map(item => {
+            if (cardCounter > 4) {
+              return false
+            }
             cardCounter += 1
+
             return (
               <DiscoverCard
                 key={cardCounter}
@@ -42,6 +46,10 @@ class DiscoverGroup extends Component {
               />
             )
           })}
+          <ShowMoreCard
+            title={`Visa alla ${Math.floor(Math.random() * 500)}st, sorterat på ${title}`}
+            displayMode={displayMode}
+          />
         </div>
       </div>
     )

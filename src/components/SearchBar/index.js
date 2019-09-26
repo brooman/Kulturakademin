@@ -41,9 +41,7 @@ const SearchBar = props => {
         </button>
       </div>
       <div className={[styles.searchResult, show ? styles.show : styles.hide].join(' ')}>
-        <div className={styles.searchCards}>
-          <CategoryGroup displayMode="list" items={searchResult} />
-        </div>
+        <CategoryGroup title="Sökresultat" displayMode="list" items={searchResult} />
       </div>
     </>
   )

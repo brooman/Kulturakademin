@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import CloseIcon from '../../icons/CloseIcon'
 
@@ -12,8 +12,8 @@ const Menu = props => {
   if (show) {
     return (
       <div>
-        <button className={styles.closeIcon}>
-          <CloseIcon type="button" />
+        <button type="button" className={styles.closeIcon}>
+          <CloseIcon />
         </button>
 
         <div className={styles.menu}>

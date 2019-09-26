@@ -1,31 +1,27 @@
 import React from 'react'
-
 import styles from './index.module.scss'
-
-import Hero from '../Hero'
 import VideoPlaybar from '../VideoPlaybar'
 import VideoIcon from '../../icons/VideoIcon'
 import ShareButton from '../ShareButton'
 import SaveButton from '../SaveButton'
-
-import Mocker from '../../mock/mocker'
 import usePlayer from '../../Hooks/usePlayer'
 
 const VideoView = props => {
   const { togglePlaying } = usePlayer()
-  const { year, episodeNo, episodeNos, title, time, content, tags, image } = props.resource
+  const { resource, children } = props
+  const { year, episodeNo, episodeNos, title, time, content, tags } = resource
   let tagCounter = 0
 
   return (
     <div className={styles.container}>
-      {props.children}
+      {children}
       <div className={styles.videoOptionsBar}>
         <VideoPlaybar
           onClick={() => {
             togglePlaying()
           }}
           play="play"
-          save="save"
+          save="spara"
         />
         <div className={styles.videoIconBox}>
           <VideoIcon />

@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import ExpandIcon from '../../icons/ExpandIcon'
-import Mocker from '../../mock/mocker'
-
 import styles from './index.module.scss'
 
 const buttons = [
@@ -34,7 +31,10 @@ class SubCategories extends Component {
   }
 
   render() {
-    const { isExpanded } = this.state
+    const { isExpanded, color } = this.state
+    const { setShownSubCategories } = this.props
+
+    let buttonCounter = 0
 
     const dropdownStyles = isExpanded
       ? [styles.dropdown, styles.expanded].join(' ')
@@ -45,9 +45,12 @@ class SubCategories extends Component {
         <div
           className={styles.categories}
           style={{
-            backgroundColor: this.state.color,
+            backgroundColor: color,
           }}
           onClick={this.toggleExpanded}
+          onKeyUp={this.toggleExpanded}
+          role="link"
+          tabIndex={0}
         >
           <div className={styles.categoryTitle}>Underkategorier</div>
           <div>
@@ -55,17 +58,26 @@ class SubCategories extends Component {
           </div>
         </div>
         <div className={dropdownStyles}>
-          {buttons.map((button, key) => (
-            <button
-              value={button}
-              key={key}
-              onClick={() => {
-                this.props.setShownSubCategories(button)
-              }}
-            >
-              {button}
-            </button>
-          ))}
+          {buttons.map(button => {
+            buttonCounter += 1
+            return (
+              <button
+                value={button}
+                key={buttonCounter}
+                onClick={() => {
+                  setShownSubCategories(button)
+                  window.scrollTo({
+                    top: 750,
+                    left: 0,
+                    behavior: 'smooth',
+                  })
+                }}
+                type="button"
+              >
+                {button}
+              </button>
+            )
+          })}
         </div>
       </div>
     )

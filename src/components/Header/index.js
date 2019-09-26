@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from './index.module.scss'
 
 import Menu from '../Menu'
-import LogoIcon from '../../icons/LogoIcon'
 import HamburgerIcon from '../../icons/HamburgerIcon'
 import SearchIcon from '../../icons/SearchIcon'
 import SearchBar from '../SearchBar'
@@ -57,7 +56,7 @@ class Header extends Component {
   }
 
   render() {
-    const { menuShown, SearchBarOpen } = this.state
+    const { menuShown, SearchBarOpen, up } = this.state
 
     return (
       <div className={styles.top}>
@@ -68,7 +67,7 @@ class Header extends Component {
             </div>
           </Link>
 
-          <div className={this.state.up ? styles.up : styles.down}>
+          <div className={up ? styles.up : styles.down}>
             <div className={styles.navbar}>
               <button className={styles.menuBtn} type="button" onClick={this.toggleSearch}>
                 <SearchIcon />
