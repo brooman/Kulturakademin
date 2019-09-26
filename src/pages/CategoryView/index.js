@@ -19,7 +19,7 @@ class CategoryView extends Component {
     this.state = {
       shownTypes: 'allt',
       category: categoryType,
-      subCategory: 'Underkategori',
+      subCategory: 'Media',
       data: [],
     }
     this.setShownTypes = this.setShownTypes.bind(this)
@@ -73,7 +73,7 @@ class CategoryView extends Component {
     // Filter method for subcategory
     const applySubCategoryFilter = array => {
       return array.filter(card => {
-        if (this.state.subCategory === 'Underkategori') {
+        if (this.state.subCategory === 'Media') {
           return true
         }
         if (card.subcategory === this.state.subCategory) {
