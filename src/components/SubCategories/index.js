@@ -73,6 +73,7 @@ class SubCategories extends Component {
                   })
                 }}
                 type="button"
+                className={styles.category}
               >
                 {button}
               </button>
