@@ -36,7 +36,7 @@ header {
 
 .navbar {
   position: fixed;
-  top: 5%;
+  top: 1rem;
   margin: 0 auto;
   margin-left: -2rem;
   height: $headerHeight / 2;
@@ -61,7 +61,6 @@ header {
   background: none;
   border: none;
   outline: none;
-  margin-bottom: 10px;
 }
 
 .wrapper {

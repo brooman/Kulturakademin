@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import styles from './index.module.scss'
 
 import Menu from '../Menu'
-import LogoIcon from '../../icons/LogoIcon'
+
 import HamburgerIcon from '../../icons/HamburgerIcon'
 import SearchIcon from '../../icons/SearchIcon'
 import SearchBar from '../SearchBar'
