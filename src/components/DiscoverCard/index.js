@@ -29,6 +29,12 @@ const DiscoverCard = props => {
 
   const viewStyle = getViewStyle(displayMode)
   // const background = order % 2 === 1 ? styles.dark : styles.light
+<<<<<<< HEAD
+  const link = `/view/${item.type}/${item.id}`
+
+  return (
+    <div className={[styles.card, viewStyle].join(' ')}>
+=======
 
   return (
     <div
@@ -37,6 +43,7 @@ const DiscoverCard = props => {
         initPlayer(item.type, item.id)
       }}
     >
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
       <div className={styles.imageWrapper}>
         <div className={styles.image} style={img} />
         <div className={styles.iconWrapper}>{type === 'pod' ? <PodIcon /> : <VideoIcon />}</div>

@@ -5,12 +5,15 @@
   position: relative;
   overflow: hidden;
 
+<<<<<<< HEAD
+=======
   transition: transform 0.2s linear;
 
   &:active {
     transform: scale(0.9)
   }
 
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
   h3,
   p,
   a {
@@ -71,7 +74,11 @@
   bottom: 0;
   right: 0;
 
+<<<<<<< HEAD
+  > svg {
+=======
   >svg {
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
     height: 32px;
     width: 32px;
   }

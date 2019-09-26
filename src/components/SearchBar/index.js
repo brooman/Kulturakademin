@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import styles from './index.module.scss'
 import CloseIcon from '../../icons/CloseIcon'
+<<<<<<< HEAD
+// import ExpandIcon from '../../icons/ExpandIcon'
 import Mocker from '../../mock/mocker'
 import CategoryGroup from '../CategoryGroup'
+import Categories from '../../components/Categories'
+import FilterTypes from '../../components/FilterTypes'
+=======
+import Mocker from '../../mock/mocker'
+import CategoryGroup from '../CategoryGroup'
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
 
 const SearchBar = props => {
   const [search, setSearch] = useState('')
@@ -41,9 +49,23 @@ const SearchBar = props => {
         </button>
       </div>
       <div className={[styles.searchResult, show ? styles.show : styles.hide].join(' ')}>
+<<<<<<< HEAD
+        <div className={styles.topView}>
+          <h1>Allt matrial</h1>
+
+          <Categories />
+          <div className={styles.filterTypes}>
+            <h2 className={styles.titleFilter}>Filtera innehåll</h2>
+            <FilterTypes />
+          </div>
+        </div>
+
+        <CategoryGroup title="Sökresultat" displayMode="list" items={searchResult} />
+=======
         <div className={styles.searchCards}>
           <CategoryGroup displayMode="list" items={searchResult} />
         </div>
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
       </div>
     </>
   )
