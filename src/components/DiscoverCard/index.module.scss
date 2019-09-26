@@ -52,7 +52,7 @@
 
 .body,
 .content {
-  height: 100%
+  height: 100%;
 }
 
 .imageWrapper {
@@ -73,14 +73,14 @@
   bottom: 0;
   right: 0;
 
-  >svg {
+  > svg {
     height: 32px;
     width: 32px;
   }
 }
 
 .content {
-  padding: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
   overflow: hidden;
   background-color: $defaultDark;
 }
