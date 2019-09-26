@@ -6,7 +6,7 @@ import VideoIcon from '../../icons/VideoIcon'
 import styles from './index.module.scss'
 
 const CategoryCard = props => {
-  const { order, item, displayMode } = props
+  const { item } = props
 
   const { type, episodeNr, episodesInSeries, title, image } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
