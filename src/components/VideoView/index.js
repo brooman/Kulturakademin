@@ -80,15 +80,19 @@ const VideoView = props => {
           })}
         </div>
         <CategoryGroup title="Fler avsnitt" displayMode="list" items={items} />
-        <DiscoverGroup title="Relaterade" displayMode="grid" items={items} />
-        <Contact />
-        <Footer
-          text="LADDA NER APPVERSION"
-          infoTextLeft="Integritetspolicy"
-          infoTextRight="Inställningar"
-          cooperateCompany="K-Play finansieras av"
-          image="images/vrgLogo.png"
-        />
+        <div style={{ marginLeft: '-1rem' }}>
+          <DiscoverGroup title="Relaterade" displayMode="grid" items={items} />
+        </div>
+        <div style={{ marginRight: '-1rem', marginLeft: '-1rem' }}>
+          <Contact />
+          <Footer
+            text="LADDA NER APPVERSION"
+            infoTextLeft="Integritetspolicy"
+            infoTextRight="Inställningar"
+            cooperateCompany="K-Play finansieras av"
+            image="images/vrgLogo.png"
+          />
+        </div>
       </div>
     </div>
   )
