@@ -13,7 +13,6 @@ const SearchBar = props => {
   const handleSearch = e => {
     if (e.target.value.length < 25) setSearch(e.target.value)
   }
-
   useEffect(() => {
     setSearchResult(() => {
       return data.filter(item => {
@@ -40,7 +39,10 @@ const SearchBar = props => {
           <CloseIcon />
         </button>
       </div>
-      <div className={[styles.searchResult, show ? styles.show : styles.hide].join(' ')}>
+      <div
+        className={[styles.searchResult, show ? styles.show : styles.hide].join(' ')}
+        onClick={toggle}
+      >
         <CategoryGroup title="Sökresultat" displayMode="list" items={searchResult} />
       </div>
     </>
