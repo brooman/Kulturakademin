@@ -5,13 +5,22 @@ import VideoIcon from '../../icons/VideoIcon'
 import PodIcon from '../../icons/PodIcon'
 import ShareButton from '../ShareButton'
 import SaveButton from '../SaveButton'
+import CategoryGroup from '../CategoryGroup'
+import DiscoverGroup from '../DiscoverGroup'
+import Contact from '../Contact'
+import Footer from '../Footer'
 import usePlayer from '../../Hooks/usePlayer'
+
+import Mocker from '../../mock/mocker'
 
 const VideoView = props => {
   const { togglePlaying } = usePlayer()
   const { resource, children } = props
-  const { year, episodeNr, episodesInSeries, title, time, content, tags } = resource
+  const { year, episodeNr, episodesInSeries, title, time, content, tags, coOrganizers } = resource
   let tagCounter = 0
+  let coOrganizerCounter = 0
+
+  const items = Mocker('highlighted')
 
   return (
     <div className={styles.container}>
@@ -59,7 +68,27 @@ const VideoView = props => {
               </p>
             )
           })}
+          <p className={styles.coOrganizersTitle}>Medarrangörer</p>
+          {coOrganizers.map(coOrganizer => {
+            coOrganizerCounter += 1
+
+            return (
+              <p className={styles.tag} key={coOrganizerCounter}>
+                {coOrganizer}
+              </p>
+            )
+          })}
         </div>
+        <CategoryGroup title="Fler avsnitt" displayMode="list" items={items} />
+        <DiscoverGroup title="Relaterade" displayMode="grid" items={items} />
+        <Contact />
+        <Footer
+          text="LADDA NER APPVERSION"
+          infoTextLeft="Integritetspolicy"
+          infoTextRight="Inställningar"
+          cooperateCompany="K-Play finansieras av"
+          image="images/vrgLogo.png"
+        />
       </div>
     </div>
   )
