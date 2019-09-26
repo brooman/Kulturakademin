@@ -8,15 +8,13 @@ const About = () => {
       <div className={styles.aboutWrapper}>
         <p className={styles.title}>Om K-play</p>
         <p className={styles.content}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies eget feugiat lectus
-          varius nec amet et ut. Sit viverra sed in vulputate commodo urna tellus. Auctor lobortis
-          at neque, arcu quam metus, ac metus lorem. Nunc consectetur vel sed turpis sed aliquet
-          lacus, suspendisse. Id dui magna tincidunt ut nisi justo, felis sed ac.
+          K-Play erbjuder kompetensutveckling med såväl spets som bredd för professionella
+          verksamheter, grupper och individer inom scenkonst, musik, film och tv i Västsverige.
+          Ägare är Film i Väst, Göteborgs Operan, Göteborgs Symfoniker, Folkteatern, Regionteater
+          Väst samt Teater Halland
         </p>
         <p className={styles.content}>
-          Läs mer på 
-          {' '}
-          <a href="http://kulturakademin.com">Kulturakademin.com</a>
+          Läs mer på <a href="http://kulturakademin.com">Kulturakademin.com</a>
         </p>
       </div>
     </div>

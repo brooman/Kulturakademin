@@ -8,7 +8,7 @@
   transition: transform 0.2s linear;
 
   &:active {
-    transform: scale(0.9)
+    transform: scale(0.9);
   }
 
   h3,
@@ -32,6 +32,7 @@
 
 .imageWrapper {
   position: relative;
+  height: 12rem;
 }
 
 .image {
@@ -42,12 +43,12 @@
 
 .iconWrapper {
   background-color: $defaultLightDark;
-  padding: 1rem 1.2rem 0.6rem 1.2rem;
+  padding: 0.5rem;
   position: absolute;
   bottom: 0;
   right: 0;
 
-  >svg {
+  > svg {
     height: 32px;
     width: 32px;
   }
@@ -135,13 +136,14 @@
   margin: 0 0.5rem;
 
   .image {
-    height: 8rem;
+    height: 12rem;
     width: 100%;
   }
 
   .description {
     max-height: 10rem;
     overflow: hidden;
+    color: $defaultLightGrey;
   }
 
   .readMore {
