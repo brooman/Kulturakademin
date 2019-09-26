@@ -105,12 +105,18 @@
   padding: 0 0.5rem;
 }
 
+.title {
+  margin-bottom: 1rem;
+  line-height: 1.5em !important;
+}
+
 .description {
   font-weight: 300;
   font-size: 14px;
   line-height: 150%;
   letter-spacing: 0.02em;
   color: $defaultWhite;
+  margin: 0 0 1rem 0;
 }
 
 .readMore {
@@ -182,7 +188,7 @@
 .singleCard {
   display: flex;
   flex-direction: column;
-  margin: 0 1rem 1rem 1rem;
+  margin: 0 1rem 2.25rem 1rem;
 
   .description {
     padding-right: 26.24%;

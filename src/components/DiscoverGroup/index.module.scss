@@ -2,13 +2,18 @@
 
 .group {
   margin-left: 1rem;
+  margin-bottom: 2.25rem;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2.25rem 0 0 1rem;
+  margin: 0 0 0 1rem;
+
+  >h2 {
+    margin-top: 0;
+  }
 }
 
 .body {

@@ -28,7 +28,6 @@ const DiscoverCard = props => {
   }
 
   const viewStyle = getViewStyle(displayMode)
-  // const background = order % 2 === 1 ? styles.dark : styles.light
 
   return (
     <div
@@ -60,7 +59,7 @@ const DiscoverCard = props => {
             </div>
           </div>
 
-          <h3>{title}</h3>
+          <h3 className={styles.title}>{title}</h3>
           <p className={styles.description}>{content}</p>
         </div>
         <div
