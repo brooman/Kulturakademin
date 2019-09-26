@@ -5,6 +5,12 @@
   position: relative;
   overflow: hidden;
 
+  transition: transform 0.2s linear;
+
+  &:active {
+    transform: scale(0.9)
+  }
+
   h3,
   p,
   a {
@@ -41,7 +47,7 @@
   bottom: 0;
   right: 0;
 
-  > svg {
+  >svg {
     height: 32px;
     width: 32px;
   }
