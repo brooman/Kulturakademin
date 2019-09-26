@@ -24,6 +24,15 @@ body {
   }
 }
 
+button,
+a {
+  transition: transform 0.2s linear;
+
+  &:active {
+    transform: scale(0.8)
+  }
+}
+
 .App {
   display: flex;
   flex-direction: column;

@@ -7,6 +7,12 @@
   margin: 0 0 1em 0;
   background-color: $defaultDark;
 
+  transition: transform 0.2s linear;
+
+  &:active {
+    transform: scale(0.9)
+  }
+
   h3,
   p,
   a {
@@ -55,7 +61,7 @@
 }
 
 .iconWrapper {
-  > svg {
+  >svg {
     width: 17px;
     height: 21px;
   }

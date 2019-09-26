@@ -4,15 +4,22 @@ import PodIcon from '../../icons/PodIcon'
 import VideoIcon from '../../icons/VideoIcon'
 
 import styles from './index.module.scss'
+import usePlayer from '../../Hooks/usePlayer'
 
 const CategoryCard = props => {
+  const { initPlayer } = usePlayer()
   const { order, item } = props
 
   const { type, episodeNr, episodesInSeries, title, image } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
   return (
-    <div className={styles.card}>
+    <div
+      className={styles.card}
+      onClick={() => {
+        initPlayer(item.type, item.id)
+      }}
+    >
       <div className={styles.imageWrapper}>
         <div className={styles.image} style={img} />
       </div>
