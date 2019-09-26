@@ -1,7 +1,7 @@
 /* eslint-disable */
 import data from './data'
 
-export default Mocker = (type = null, id = null) => {
+export default (type = null, id = null) => {
   if (type) {
     if (id === null) {
       return data[type]
