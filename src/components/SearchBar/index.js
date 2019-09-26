@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './index.module.scss'
 import CloseIcon from '../../icons/CloseIcon'
-// import ExpandIcon from '../../icons/ExpandIcon'
-// import Categories from '../../components/Categories'
-// import FilterTypes from '../../components/FilterTypes'
 import Mocker from '../../mock/mocker'
 import CategoryGroup from '../CategoryGroup'
 
@@ -44,25 +41,9 @@ const SearchBar = props => {
         </button>
       </div>
       <div className={[styles.searchResult, show ? styles.show : styles.hide].join(' ')}>
-        {/* <div className={styles.topView}>
-          <h1>Allt matrial</h1>
-
-          <Categories />
-          <div className={styles.filterTypes}>
-            <h2 className={styles.titleFilter}>Filtera innehåll</h2>
-            <FilterTypes />
-          </div>
-        </div> */}
-        {/* <div>
-          <div className={styles.sortDropDown}>
-            <h2>Sökresultat</h2>
-            <div>
-              <p>Senaste</p>
-              <ExpandIcon color="#CBCBCB" />
-            </div>
-          </div>
-        </div> */}
-        <CategoryGroup displayMode="list" items={searchResult} />
+        <div className={styles.searchCards}>
+          <CategoryGroup displayMode="list" items={searchResult} />
+        </div>
       </div>
     </>
   )
