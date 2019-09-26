@@ -64,9 +64,15 @@
 }
 
 .iconWrapper {
+  width: 4rem;
+  height: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   >svg {
-    width: 17px;
-    height: 21px;
+    width: 2rem;
   }
 }
 
