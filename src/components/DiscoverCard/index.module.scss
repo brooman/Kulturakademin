@@ -73,7 +73,7 @@
   bottom: 0;
   right: 0;
 
-  > svg {
+  >svg {
     height: 32px;
     width: 32px;
   }
@@ -180,7 +180,7 @@
 .singleCard {
   display: flex;
   flex-direction: column;
-  margin-bottom: 5%;
+  margin: 0 1rem 1rem 1rem;
 
   .description {
     padding-right: 26.24%;
