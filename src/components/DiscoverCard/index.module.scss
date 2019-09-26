@@ -51,9 +51,8 @@
   border-right: 1rem solid $defaultBackground;
 }
 
-.body,
-.content {
-  height: 100%;
+.content>p {
+  height: 150px;
 }
 
 .imageWrapper {
