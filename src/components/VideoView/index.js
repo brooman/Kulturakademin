@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './index.module.scss'
 import VideoPlaybar from '../VideoPlaybar'
 import VideoIcon from '../../icons/VideoIcon'
+import PodIcon from '../../icons/PodIcon'
 import ShareButton from '../ShareButton'
 import SaveButton from '../SaveButton'
 import usePlayer from '../../Hooks/usePlayer'
@@ -24,7 +25,7 @@ const VideoView = props => {
           save="spara"
         />
         <div className={styles.videoIconBox}>
-          <VideoIcon />
+          {resource.type === 'video' ? <VideoIcon /> : <PodIcon />}
           <p className={styles.videoIconBoxText}>{time}</p>
         </div>
       </div>

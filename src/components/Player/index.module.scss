@@ -110,10 +110,13 @@ $playerHeight: 70px;
 }
 
 .largePreview {
-  > .preview {
-    height: 0 !important;
-    width: 100% !important;
-    padding-top: 60% !important;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  .preview {
+    height: 212px;
+    width: 100%;
   }
 }
 
