@@ -1,13 +1,22 @@
 @import '../../variables.scss';
 
 .button {
+<<<<<<< HEAD
   margin-left: 1rem;
+=======
+  margin-left: 16px;
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
   display: flex;
   justify-content: center;
   align-items: center;
 
+<<<<<<< HEAD
   height: 2.2rem;
   width: 10rem;
+=======
+  width: 164px;
+  height: 36px;
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
   background-color: $defaultHighlight;
   cursor: pointer;
 
@@ -21,7 +30,10 @@
     text-align: center;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+<<<<<<< HEAD
     background-color: $defaultHighlight;
+=======
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
 
     outline: none;
     cursor: pointer;

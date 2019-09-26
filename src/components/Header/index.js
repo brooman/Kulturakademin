@@ -63,7 +63,13 @@ class Header extends Component {
       <div className={styles.top}>
         <header>
           <Link to={`${process.env.PUBLIC_URL}/`}>
+<<<<<<< HEAD
             <LogoIcon />
+=======
+            <div className={styles.imageWrapper}>
+              <img src={`${process.env.PUBLIC_URL}/images/k-logo.gif`} alt="K-Play" />
+            </div>
+>>>>>>> b7630e7fafbbabb058ff0038a6e9cad81c11b0e3
           </Link>
 
           <div className={this.state.up ? styles.up : styles.down}>
