@@ -86,10 +86,8 @@ class CategoryView extends Component {
           <div className={styles.categoryInfo}>
             <h1>{category}</h1>
             <p>
-              Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till
-              {' '}
-              {category.toLowerCase()}
-.
+              Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till{' '}
+              {category.toLowerCase()}.
             </p>
           </div>
           <SubCategories setShownSubCategories={this.setShownSubCategories} />
@@ -121,17 +119,4 @@ class CategoryView extends Component {
     )
   }
 }
-
-// {applySubCategoryFilter(data).map(card => {
-//   cardCounter += 1
-//   return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
-// })}
-
-// {data.map(items => {
-//   applyCategoryFilter(items).map(card => {
-//     console.log(card)
-//     cardCounter += 1
-//     return <CategoryCard key={cardCounter} order={cardCounter} item={card} />
-//   })
-// })}
 export default CategoryView
