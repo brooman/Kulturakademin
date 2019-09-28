@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styles from './index.module.scss'
 import CloseIcon from '../../icons/CloseIcon'
-// import ExpandIcon from '../../icons/ExpandIcon'
 import Mocker from '../../mock/mocker'
 import CategoryGroup from '../CategoryGroup'
-import Categories from "../Categories"
-import FilterTypes from "../FilterTypes"
 
 const SearchBar = props => {
   const [search, setSearch] = useState('')
@@ -16,7 +13,6 @@ const SearchBar = props => {
   const handleSearch = e => {
     if (e.target.value.length < 25) setSearch(e.target.value)
   }
-
   useEffect(() => {
     setSearchResult(() => {
       return data.filter(item => {
@@ -43,17 +39,10 @@ const SearchBar = props => {
           <CloseIcon />
         </button>
       </div>
-      <div className={[styles.searchResult, show ? styles.show : styles.hide].join(' ')}>
-        <div className={styles.topView}>
-          <h1>Allt matrial</h1>
-
-          <Categories />
-          <div className={styles.filterTypes}>
-            <h2 className={styles.titleFilter}>Filtera innehåll</h2>
-            <FilterTypes />
-          </div>
-        </div>
-
+      <div
+        className={[styles.searchResult, show ? styles.show : styles.hide].join(' ')}
+        onClick={toggle}
+      >
         <CategoryGroup title="Sökresultat" displayMode="list" items={searchResult} />
       </div>
     </>

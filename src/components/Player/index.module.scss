@@ -22,7 +22,7 @@ $playerHeight: 70px;
 .button {
   border: none;
   background: none;
-  height: 48px;
+  height: 32px;
   padding: 0 1rem;
 }
 
@@ -57,6 +57,7 @@ $playerHeight: 70px;
   align-items: center;
   white-space: nowrap;
   overflow: hidden;
+  outline: none;
 }
 
 .marquee span {
@@ -109,10 +110,13 @@ $playerHeight: 70px;
 }
 
 .largePreview {
-  >.preview {
-    height: 0 !important;
-    width: 100% !important;
-    padding-top: 56.25% !important;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  .preview {
+    height: 230px;
+    width: 100%;
   }
 }
 

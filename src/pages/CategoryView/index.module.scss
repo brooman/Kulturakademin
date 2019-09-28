@@ -36,33 +36,39 @@
   align-items: center;
   margin-left: 1rem;
   width: 80%;
+  margin-top: 2.25rem;
   height: 2.5rem;
 
-  > .field {
+  >.field {
     border: none;
     height: 100%;
     width: 100%;
     background-color: $defaultLightDark;
     color: $defaultWhite;
     padding: 0 1rem;
+    font-family: muli;
     font-weight: 800;
     font-size: 12px;
     line-height: 170%;
     letter-spacing: 0.15em;
     text-transform: uppercase;
   }
+
   ::placeholder {
     color: $defaultWhite;
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
   }
+
   :-ms-input-placeholder {
     color: $defaultWhite;
   }
+
   ::-ms-input-placeholder {
     color: $defaultWhite;
   }
 
-  > button {
+  >button {
     display: flex;
     justify-content: center;
     align-items: center;

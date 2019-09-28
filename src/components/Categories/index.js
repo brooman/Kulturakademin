@@ -76,7 +76,7 @@ class Categories extends Component {
 
   toggleExpanded = () => {
     this.setState(prevState => {
-      return { isExpanded: !prevState.isExpanded, color: '#242424' }
+      return { isExpanded: !prevState.isExpanded }
     })
   }
 
@@ -87,18 +87,18 @@ class Categories extends Component {
       ? [styles.dropdown, styles.expanded].join(' ')
       : styles.dropdown
 
+    const headerStyle = isExpanded
+      ? {
+          backgroundColor: '#242424',
+        }
+      : {}
+
     return (
       <div>
-        <div
-          className={styles.categories}
-          style={{
-            backgroundColor: this.state.color,
-          }}
-          onClick={this.toggleExpanded}
-        >
+        <div className={styles.categories} style={headerStyle} onClick={this.toggleExpanded}>
           <div className={styles.categoryTitle}>Kategorier</div>
           <div>
-            <ExpandIcon />
+            <ExpandIcon expanded={isExpanded} />
           </div>
         </div>
         <div className={dropdownStyles}>

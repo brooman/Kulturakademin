@@ -13,13 +13,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  margin-top: 32px;
+  margin-top: 1rem;
   background-color: $defaultHighlight;
   transition: transform 1s ease-out;
   width: 100%;
   padding: 0.5rem 1rem;
 
-  >.field {
+  > .field {
     border: none;
     height: 100%;
     width: 100%;
@@ -96,7 +96,7 @@
   overflow-y: scroll;
   z-index: 9997;
 
-  >div {
+  > div {
     margin-top: 5rem;
   }
 }

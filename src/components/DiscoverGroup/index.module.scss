@@ -1,14 +1,23 @@
 @import '../../variables.scss';
 
 .group {
-  margin: 0 1rem;
+  margin-left: 1rem;
+  margin-bottom: 2.25rem;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   margin: 2.25rem 0 0 1rem;
+=======
+  margin-bottom: 1rem;
+
+  >h2 {
+    margin-top: 0;
+  }
+>>>>>>> 94fd07287de1167b82c913789d4566617f21040d
 }
 
 .body {

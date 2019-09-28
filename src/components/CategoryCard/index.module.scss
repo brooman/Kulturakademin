@@ -8,7 +8,7 @@
   display: flex;
   position: relative;
   overflow: hidden;
-  margin: 1rem 1rem;
+  margin-bottom: 1rem;
   background-color: $defaultDark;
 
   transition: transform 0.2s linear;
@@ -61,13 +61,6 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 0.5em;
-}
-
-.iconWrapper {
-  >svg {
-    width: 17px;
-    height: 21px;
-  }
 }
 
 .content {
