@@ -28,9 +28,15 @@
   }
 
   @media screen and (min-width: $desktopBreakpoint) {
-    a {
-      color: red;
-    }
+    width: 30%;
+    font-weight: 600;
+    line-height: 304%;
+    position: absolute;
+    z-index: 9999;
+    margin-top: 7rem;
+    right: 30%;
+    background-color: #000;
+    animation: none;
   }
 }
 
@@ -50,7 +56,6 @@
   background-color: #242424;
 }
 
-// Denna ska ev tas bort
 .closeIcon {
   position: fixed;
   background-color: $defaultBackground;
@@ -66,4 +71,16 @@
   -webkit-animation-delay: 0.3s;
   animation: slide 0.7s forwards;
   animation-delay: 0.2s;
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    position: fixed;
+    background-color: #000;
+    top: 4rem;
+    right: 30%;
+    animation: none;
+    width: 60px;
+    height: 50px;
+    border: none;
+    z-index: 1000;
+  }
 }
