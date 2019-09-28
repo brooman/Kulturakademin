@@ -27,6 +27,12 @@
     letter-spacing: 0.02em;
     padding-left: 5%;
   }
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    a {
+      color: red;
+    }
+  }
 }
 
 @-webkit-keyframes slide {
