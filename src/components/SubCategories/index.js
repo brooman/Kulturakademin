@@ -41,12 +41,7 @@ class SubCategories extends Component {
 
     return (
       <div>
-        <div
-          className={styles.categories}
-          style={headerStyle}
-          onClick={this.toggleExpanded}
-          role="button"
-        >
+        <div className={styles.categories} style={headerStyle} onClick={this.toggleExpanded}>
           <div className={styles.categoryTitle}>Subkategorier</div>
           <div>
             <ExpandIcon expanded={isExpanded} />

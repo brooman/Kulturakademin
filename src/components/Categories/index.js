@@ -98,7 +98,8 @@ class Categories extends Component {
           className={styles.categories}
           style={headerStyle}
           onClick={this.toggleExpanded}
-          type="button"
+          role="link"
+          tabIndex={0}
         >
           <div className={styles.categoryTitle}>Kategorier</div>
           <div>

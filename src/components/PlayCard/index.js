@@ -46,6 +46,8 @@ const PlayCard = props => {
           onClick={() => {
             initPlayer(item.type, item.id)
           }}
+          role="link"
+          tabIndex={0}
         >
           <div className={styles.content}>
             <p className={styles.description}>{title}</p>

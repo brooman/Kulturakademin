@@ -19,7 +19,8 @@ const CategoryCard = props => {
       onClick={() => {
         initPlayer(item.type, item.id)
       }}
-      role="button"
+      role="link"
+      tabIndex={0}
     >
       <div className={styles.imageWrapper}>
         <div className={styles.image} style={img} />

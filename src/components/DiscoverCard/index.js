@@ -33,6 +33,8 @@ const DiscoverCard = props => {
       onClick={() => {
         initPlayer(item.type, item.id)
       }}
+      role="link"
+      tabIndex={0}
     >
       <div className={styles.imageWrapper}>
         <div className={styles.image} style={img} />
@@ -64,6 +66,8 @@ const DiscoverCard = props => {
           onClick={() => {
             initPlayer(item.type, item.id)
           }}
+          role="link"
+          tabIndex={0}
         >
           <div className={styles.readMore}>
             <p>Läs mer</p>
