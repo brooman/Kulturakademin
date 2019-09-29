@@ -30,6 +30,7 @@ class Contact extends Component {
           <div className={styles.title}>
             <p>Kontakt</p>
             <button
+              type="button"
               className="scroll"
               onClick={() => {
                 this.scrollToTop()

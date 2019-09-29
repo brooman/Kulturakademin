@@ -10,7 +10,6 @@ class Categories extends Component {
 
     this.state = {
       isExpanded: false,
-      color: '',
       categories: [
         {
           id: 0,
@@ -95,7 +94,12 @@ class Categories extends Component {
 
     return (
       <div>
-        <div className={styles.categories} style={headerStyle} onClick={this.toggleExpanded}>
+        <div
+          className={styles.categories}
+          style={headerStyle}
+          onClick={this.toggleExpanded}
+          type="button"
+        >
           <div className={styles.categoryTitle}>Kategorier</div>
           <div>
             <ExpandIcon expanded={isExpanded} />

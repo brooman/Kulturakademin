@@ -26,6 +26,17 @@
     letter-spacing: 0.02em;
     padding: 0.1rem 1rem;
   }
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    width: 31%;
+    font-weight: 600;
+    line-height: 304%;
+    z-index: 9999;
+    margin-top: 7rem;
+    right: 29%;
+    background-color: #000;
+    animation: none;
+  }
 }
 
 @-webkit-keyframes slide {
@@ -44,7 +55,6 @@
   background-color: #242424;
 }
 
-// Denna ska ev tas bort
 .closeIcon {
   position: fixed;
   background-color: $defaultBackground;
@@ -60,4 +70,16 @@
   -webkit-animation-delay: 0.3s;
   animation: slide 0.7s forwards;
   animation-delay: 0.2s;
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    position: fixed;
+    background-color: #000;
+    top: 4rem;
+    right: 30%;
+    animation: none;
+    width: 60px;
+    height: 50px;
+    border: none;
+    z-index: 1000;
+  }
 }
