@@ -86,8 +86,10 @@ class CategoryView extends Component {
           <div className={styles.categoryInfo}>
             <h1>{category}</h1>
             <p>
-              Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till{' '}
-              {category.toLowerCase()}.
+              Här kan du lyssna och se på utbildande poddar och videoklipp relaterade till
+              {' '}
+              {category.toLowerCase()}
+.
             </p>
           </div>
           <SubCategories setShownSubCategories={this.setShownSubCategories} />
