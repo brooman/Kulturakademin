@@ -8,7 +8,7 @@ import usePlayer from '../../Hooks/usePlayer'
 
 const CategoryCard = props => {
   const { initPlayer } = usePlayer()
-  const { order, item } = props
+  const { item } = props
 
   const { type, episodeNr, episodesInSeries, title, image } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
@@ -19,6 +19,7 @@ const CategoryCard = props => {
       onClick={() => {
         initPlayer(item.type, item.id)
       }}
+      role="button"
     >
       <div className={styles.imageWrapper}>
         <div className={styles.image} style={img} />

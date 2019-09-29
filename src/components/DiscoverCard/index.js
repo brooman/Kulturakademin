@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 import ReadMoreIcon from '../../icons/ReadMoreIcon'
 import PodIcon from '../../icons/PodIcon'
 import VideoIcon from '../../icons/VideoIcon'
@@ -8,12 +7,11 @@ import usePlayer from '../../Hooks/usePlayer'
 import styles from './index.module.scss'
 
 const DiscoverCard = props => {
-  const { order, item, displayMode } = props
+  const { item, displayMode } = props
   const { initPlayer } = usePlayer()
   const { type, length, year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
-  // trying
   const getViewStyle = displayMode => {
     switch (displayMode) {
       case 'list':

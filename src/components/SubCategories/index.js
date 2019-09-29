@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+
 import ExpandIcon from '../../icons/ExpandIcon'
 
 import styles from './index.module.scss'
@@ -10,7 +10,6 @@ class SubCategories extends Component {
 
     this.state = {
       isExpanded: false,
-      color: '',
       categories: {
         left: ['Koreografer', 'Danspedagoger', 'Dansare', 'Dansmusik', 'Folkdans'],
         right: ['Egenföretagande', 'Ekonomi', 'Fakturering', 'Event'],
@@ -42,7 +41,12 @@ class SubCategories extends Component {
 
     return (
       <div>
-        <div className={styles.categories} style={headerStyle} onClick={this.toggleExpanded}>
+        <div
+          className={styles.categories}
+          style={headerStyle}
+          onClick={this.toggleExpanded}
+          role="button"
+        >
           <div className={styles.categoryTitle}>Subkategorier</div>
           <div>
             <ExpandIcon expanded={isExpanded} />
