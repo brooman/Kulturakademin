@@ -9,7 +9,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2.25rem 0 0 1rem;
+  margin: 2.25rem 0 1rem 0;
+
+  >h2 {
+    margin-top: 0;
+  }
 }
 
 .body {
