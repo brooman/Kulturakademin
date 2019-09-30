@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 import ReadMoreIcon from '../../icons/ReadMoreIcon'
 import PodIcon from '../../icons/PodIcon'
 import VideoIcon from '../../icons/VideoIcon'
@@ -8,12 +7,11 @@ import usePlayer from '../../Hooks/usePlayer'
 import styles from './index.module.scss'
 
 const DiscoverCard = props => {
-  const { order, item, displayMode } = props
+  const { item, displayMode } = props
   const { initPlayer } = usePlayer()
   const { type, length, year, episodeNr, episodesInSeries, title, image, content } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
-  // trying
   const getViewStyle = displayMode => {
     switch (displayMode) {
       case 'list':
@@ -28,7 +26,6 @@ const DiscoverCard = props => {
   }
 
   const viewStyle = getViewStyle(displayMode)
-  // const background = order % 2 === 1 ? styles.dark : styles.light
 
   return (
     <div
@@ -36,6 +33,8 @@ const DiscoverCard = props => {
       onClick={() => {
         initPlayer(item.type, item.id)
       }}
+      role="link"
+      tabIndex={0}
     >
       <div className={styles.imageWrapper}>
         <div className={styles.image} style={img} />
@@ -60,13 +59,15 @@ const DiscoverCard = props => {
             </div>
           </div>
 
-          <h3>{title}</h3>
+          <h3 className={styles.title}>{title}</h3>
           <p className={styles.description}>{content}</p>
         </div>
         <div
           onClick={() => {
             initPlayer(item.type, item.id)
           }}
+          role="link"
+          tabIndex={0}
         >
           <div className={styles.readMore}>
             <p>Läs mer</p>

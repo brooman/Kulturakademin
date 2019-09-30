@@ -18,6 +18,7 @@ class FilterTypes extends Component {
       <div className={styles.row}>
         {buttons.map((button, key) => (
           <button
+            type="button"
             className={this.state.active === button ? styles.active : styles.notActive}
             value={button}
             onClick={() => {

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 import PlayIcon from '../../icons/PlayIcon'
 import styles from './index.module.scss'
 import usePlayer from '../../Hooks/usePlayer'
@@ -8,10 +7,9 @@ import usePlayer from '../../Hooks/usePlayer'
 const PlayCard = props => {
   const { item, displayMode } = props
   const { initPlayer } = usePlayer()
-  const { image, content } = item
+  const { image, title } = item
   const img = { backgroundImage: `url('${process.env.PUBLIC_URL}/${image}')` }
 
-  // trying
   const getViewStyle = displayMode => {
     switch (displayMode) {
       case 'list':
@@ -25,7 +23,7 @@ const PlayCard = props => {
     }
   }
 
-  const ProgressBar = props => {
+  const ProgressBar = () => {
     const progress = Math.floor(Math.random() * 100)
     const progressBar = {
       backgroundImage: `linear-gradient(to right, #cd7b2a, #cd7b2a ${progress}%, #fff ${progress}%, #fff 100%)`,
@@ -43,13 +41,16 @@ const PlayCard = props => {
       </div>
       <div className={styles.body}>
         <ProgressBar />
+
         <div
           onClick={() => {
             initPlayer(item.type, item.id)
           }}
+          role="link"
+          tabIndex={0}
         >
           <div className={styles.content}>
-            <p className={styles.description}>{content}</p>
+            <p className={styles.description}>{title}</p>
             <div className={styles.playIcon}>
               <PlayIcon />
             </div>

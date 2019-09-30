@@ -19,6 +19,13 @@
   width: 100%;
   padding: 0.5rem 1rem;
 
+  @media screen and (min-width: $desktopBreakpoint) {
+    left: auto;
+    margin-top: 1rem;
+    background-color: #cd7b2a;
+    width: 38%;
+  }
+
   > .field {
     border: none;
     height: 100%;
@@ -58,6 +65,10 @@
 
 .hide {
   transform: translateX(100%);
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    display: none;
+  }
 }
 
 .searchResult {

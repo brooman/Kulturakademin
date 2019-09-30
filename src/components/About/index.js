@@ -14,7 +14,9 @@ const About = () => {
           Väst samt Teater Halland
         </p>
         <p className={styles.content}>
-          Läs mer på <a href="http://kulturakademin.com">Kulturakademin.com</a>
+          Läs mer på 
+          {' '}
+          <a href="http://kulturakademin.com">Kulturakademin.com</a>
         </p>
       </div>
     </div>

@@ -42,6 +42,8 @@ const SearchBar = props => {
       <div
         className={[styles.searchResult, show ? styles.show : styles.hide].join(' ')}
         onClick={toggle}
+        role="link"
+        tabIndex={0}
       >
         <CategoryGroup title="Sökresultat" displayMode="list" items={searchResult} />
       </div>
