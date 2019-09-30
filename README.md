@@ -27,7 +27,7 @@ npm install
 3. Start running the project from the root k-play folder
 
 ```
-npm run
+npm run start
 ```
 
 #### Developers
