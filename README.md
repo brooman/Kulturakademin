@@ -24,7 +24,7 @@ $ git clone https://github.com/brooman/Kulturakademin.git
 npm install
 ```
 
-3. Start running the project from the root k-play folder
+3. Start running the project from the root Kulturakademin folder
 
 ```
 npm run start
