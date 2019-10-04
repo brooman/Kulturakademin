@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Kulturakademin/static/css/main.dcc22818.chunk.css",
+    "main.js": "/Kulturakademin/static/js/main.d824feeb.chunk.js",
+    "main.js.map": "/Kulturakademin/static/js/main.d824feeb.chunk.js.map",
+    "runtime~main.js": "/Kulturakademin/static/js/runtime~main.30640ec4.js",
+    "runtime~main.js.map": "/Kulturakademin/static/js/runtime~main.30640ec4.js.map",
+    "static/js/2.0c08ff2c.chunk.js": "/Kulturakademin/static/js/2.0c08ff2c.chunk.js",
+    "static/js/2.0c08ff2c.chunk.js.map": "/Kulturakademin/static/js/2.0c08ff2c.chunk.js.map",
+    "index.html": "/Kulturakademin/index.html",
+    "precache-manifest.0372ec55c97d1b2f645e3d04e847eae5.js": "/Kulturakademin/precache-manifest.0372ec55c97d1b2f645e3d04e847eae5.js",
+    "service-worker.js": "/Kulturakademin/service-worker.js",
+    "static/css/main.dcc22818.chunk.css.map": "/Kulturakademin/static/css/main.dcc22818.chunk.css.map"
+  }
+}
